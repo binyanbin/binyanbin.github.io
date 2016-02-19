@@ -1,26 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[bindog]]></title>
-  
-  <link href="/atom.xml" rel="self"/>
-  <link href="http://binyanbin.github.io/"/>
-  <updated>2016-02-19T05:29:45.108Z</updated>
-  <id>http://binyanbin.github.io/</id>
-  
-  <author>
-    <name><![CDATA[bindog]]></name>
-    
-  </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title><![CDATA[电商面试题]]></title>
-    <link href="http://binyanbin.github.io/2016/02/18/interview-hishop/"/>
-    <id>http://binyanbin.github.io/2016/02/18/interview-hishop/</id>
-    <published>2016-02-17T16:00:00.000Z</published>
-    <updated>2016-02-19T05:29:45.108Z</updated>
-    <content type="html"><![CDATA[<p>15年年底去一家电商服务公司面试，其中有一道题目是如何解决电商站点商品秒杀的相关问题。<a href="https://github.com/hishopdc/dc2015" target="_blank" rel="external">示例题目可以参见</a>。固定的数据库结构下实现三个接口，查看、下单、付款。<br><a id="more"></a></p>
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 电商面试题 · bindog</title><meta name="description" content="电商 抢购 超卖"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="https://github.com/binyanbin" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">电商面试题</h1><div class="post-meta"><div class="post-time">2016年2月18日</div></div><div class="post-content"><p>15年年底去一家电商服务公司面试，其中有一道题目是如何解决电商站点商品秒杀的相关问题。<a href="https://github.com/hishopdc/dc2015" target="_blank" rel="external">示例题目可以参见</a>。固定的数据库结构下实现三个接口，查看、下单、付款。<br><a id="more"></a></p>
 <h2 id="u4E3B_u8981_u95EE_u9898_3A_u9AD8_u5E76_u53D1_u67E5_u8BE2_u53CA_u66F4_u65B0_u6570_u636E_u5E93"><a href="#u4E3B_u8981_u95EE_u9898_3A_u9AD8_u5E76_u53D1_u67E5_u8BE2_u53CA_u66F4_u65B0_u6570_u636E_u5E93" class="headerlink" title="主要问题:高并发查询及更新数据库"></a>主要问题:高并发查询及更新数据库</h2><p>解决的方案其实比较其实并不复杂，也很常规。无非就是用缓存队列实现批量更新数据库。把下单的数据放入队列中，然后批量更新到数据库中去。说起来比较简单，实践中还是踩了一些坑。</p>
 <h3 id="u4E3B_u8981_u5B9E_u73B0_u903B_u8F91"><a href="#u4E3B_u8981_u5B9E_u73B0_u903B_u8F91" class="headerlink" title="主要实现逻辑"></a>主要实现逻辑</h3><p>订单处理类<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/// &#60;summary&#62;&#10;/// &#35746;&#21333;&#32531;&#23384;&#38431;&#21015;&#22788;&#29702;&#31867;&#10;/// &#60;/summary&#62;&#10;public class OrderCacheQuene&#10;&#123;&#10;    /// &#60;summary&#62;&#10;    /// &#35746;&#21333;&#38431;&#21015;&#32531;&#23384;&#10;    /// &#60;/summary&#62;&#10;    private static List&#60;Order&#62; _orders;&#10;    /// &#60;summary&#62;&#10;    /// &#25968;&#25454;&#24211;&#25805;&#20316;&#25509;&#21475;&#10;    /// &#60;/summary&#62;&#10;    private static IPromotion _service;&#10;    /// &#60;summary&#62;&#10;    /// &#38145;&#10;    /// &#60;/summary&#62;&#10;    private static object _locker = new object();&#10;    /// &#60;summary&#62;&#10;    /// &#38431;&#21015;&#22788;&#29702;&#32447;&#31243;&#10;    /// &#60;/summary&#62;&#10;    private static Thread _thread;&#10;&#10;    /// &#60;summary&#62;&#10;    /// &#35746;&#21333;&#38431;&#21015;&#21551;&#21160;&#10;    /// &#60;/summary&#62;&#10;    public static void Start()&#10;    &#123;&#10;        _thread = new Thread(new ThreadStart(OrderDispose));&#10;        _thread.Start();&#10;    &#125;&#10;&#10;    /// &#60;summary&#62;&#10;    /// &#32531;&#23384;&#32467;&#26463;&#10;    /// &#60;/summary&#62;&#10;    public static void End()&#10;    &#123;&#10;        lock (_locker)&#10;        &#123;&#10;            _thread.Abort();&#10;            _service.OrderTrans(_orders);&#10;            _orders.Clear();&#10;        &#125;&#10;    &#125;&#10;&#10;&#10;    /// &#60;summary&#62;&#10;    /// &#19979;&#21333;&#10;    /// &#60;/summary&#62;&#10;    public static string OrderBuy(Order o)&#10;    &#123;&#10;        lock (_locker)&#10;        &#123;&#10;            _orders.Add(o);&#10;        &#125;&#10;        return o.OrderId;&#10;    &#125;&#10;&#10;    /// &#60;summary&#62;&#10;    /// &#25903;&#20184;&#10;    /// &#60;/summary&#62;&#10;    public static bool OrderPay(RequestPay o, DateTime? paytime)&#10;    &#123;&#10;        lock (_locker)&#10;        &#123;&#10;        &#9;Order order = null;&#10;            int index = _orders.FindIndex(t =&#62; t.OrderId == o.order_id &#38;&#38; t.UserId == o.uid);&#10;            if (index &#62;= 0)///&#24050;&#23384;&#22312;&#32531;&#23384;&#20013;&#10;            &#123;&#10;                _orders[index].PayTime = paytime;&#10;                return true;&#10;            &#125;            &#9;&#10;            order = _service.GetOrder(o.order_id);&#10;            if (order == null)&#10;                return false;&#10;            else///&#24050;&#23384;&#22312;&#25968;&#25454;&#24211;&#20013;&#10;            &#123;&#10;                order.PayTime = paytime;&#10;                lock (_locker)&#10;                &#123;&#10;                    _orders.Add(order);&#10;                &#125;&#10;                return true;&#10;            &#125;&#10;        &#125;&#10;    &#125;&#10;&#10;&#10;    /// &#60;summary&#62;&#10;    /// &#21028;&#26029;&#38431;&#21015;&#26159;&#21542;&#24050;&#28385;&#10;    /// &#60;/summary&#62;&#10;    public static bool isFull()&#10;    &#123;&#10;        return _orders.Count &#62;= Constant.QueueMaxCount ? true : false;&#10;    &#125;&#10;&#10;    /// &#60;summary&#62;&#10;    /// &#35746;&#21333;&#38431;&#21015;&#22788;&#29702;&#20107;&#20214;&#10;    /// &#60;/summary&#62;&#10;    private static void OrderDispose()&#10;    &#123;&#10;        while (true)&#10;        &#123;&#10;            //DateTime starttime = DateTime.Now;&#10;            lock (_locker)&#10;            &#123;&#10;               List&#60;Order&#62; orders =  _orders.Take(Constant.MaxOrderDispose).ToList();&#10;                _service.OrderTrans(orders.ToList());//&#35843;&#29992;&#25968;&#25454;&#24211;&#25509;&#21475;&#22788;&#29702;&#35746;&#21333;&#10;                foreach (Order o in orders)&#10;                    _orders.Remove(o);&#10;            &#125;&#10;            Thread.Sleep(Constant.QueueDisposeTimeSpan);//&#27599;&#27425;&#22788;&#29702;&#23436;&#25104;&#20241;&#30496;&#10;            //DateTime endtime = DateTime.Now;&#10;            //System.Diagnostics.Debug.WriteLine(&#34;Yanbin TimeSpan:&#34;+endtime.Subtract(starttime).Milliseconds);&#10;        &#125;&#10;    &#125;&#10;&#125;</span><br></pre></td></tr></table></figure></p>
 <p>订单队列启动<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> public class WebApiApplication : System.Web.HttpApplication&#10; &#123;&#10;protected void Application_Start()&#10;     &#123;&#10;&#10;         //&#35746;&#21333;&#38431;&#21015;&#21551;&#21160;&#10;         OrderCacheQuene.Start();&#10;     &#125;&#10; &#125;</span><br></pre></td></tr></table></figure></p>
@@ -140,57 +118,14 @@
 </tbody>
 </table>
 <p>从上图可以看出，在高并发情况下webapi的性能确实不行。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>15年年底去一家电商服务公司面试，其中有一道题目是如何解决电商站点商品秒杀的相关问题。<a href="https://github.com/hishopdc/dc2015">示例题目可以参见</a>。固定的数据库结构下实现三个接口，查看、下单、付款。<br>]]>
-    
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[如何用hexo上做个blog站点]]></title>
-    <link href="http://binyanbin.github.io/2016/01/01/hello-world/"/>
-    <id>http://binyanbin.github.io/2016/01/01/hello-world/</id>
-    <published>2015-12-31T16:00:00.000Z</published>
-    <updated>2016-02-19T05:33:32.180Z</updated>
-    <content type="html"><![CDATA[<p>2016年起，我要写博客了!各种博客网站都不合我意，最后用hexo+github搭了一个博客网站，全免费，还可以把开源项目放在里面，关键完全可以自己控制，入门虽然有一点难度，但是熟习以后使用起来其实相当简单. <a href="http://hexo.io/docs/" target="_blank" rel="external">了解关于hexo更多信息</a>. <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">hexo常见问题</a> 你也可以在<a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>上提问.</p>
-<h2 id="u5F00_u542F"><a href="#u5F00_u542F" class="headerlink" title="开启"></a>开启</h2><h3 id="u521B_u5EFA_u65B0blog"><a href="#u521B_u5EFA_u65B0blog" class="headerlink" title="创建新blog"></a>创建新blog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br><a id="more"></a></p>
-<h3 id="u542F_u52A8web_u670D_u52A1_u5668"><a href="#u542F_u52A8web_u670D_u52A1_u5668" class="headerlink" title="启动web服务器"></a>启动web服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="u751F_u6210_u9759_u6001_u6587_u4EF6"><a href="#u751F_u6210_u9759_u6001_u6587_u4EF6" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="u53D1_u5E03_u7AD9_u70B9"><a href="#u53D1_u5E03_u7AD9_u70B9" class="headerlink" title="发布站点"></a>发布站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-<p>一切看上去就是那么简单。但是用hexo做博客网站你需要了解除了hexo之外，还需要懂一点nodejs,markdown语法，但然你也需要会用git shell。16年新的开始，一起出发。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>2016年起，我要写博客了!各种博客网站都不合我意，最后用hexo+github搭了一个博客网站，全免费，还可以把开源项目放在里面，关键完全可以自己控制，入门虽然有一点难度，但是熟习以后使用起来其实相当简单. <a href="http://hexo.io/docs/">了解关于hexo更多信息</a>. <a href="http://hexo.io/docs/troubleshooting.html">hexo常见问题</a> 你也可以在<a href="https://github.com/hexojs/hexo/issues">GitHub</a>上提问.</p>
-<h2 id="u5F00_u542F"><a href="#u5F00_u542F" class="headerlink" title="开启"></a>开启</h2><h3 id="u521B_u5EFA_u65B0blog"><a href="#u521B_u5EFA_u65B0blog" class="headerlink" title="创建新blog"></a>创建新blog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html">Writing</a><br>]]>
-    
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[关于我]]></title>
-    <link href="http://binyanbin.github.io/2015/12/20/self-introduce/"/>
-    <id>http://binyanbin.github.io/2015/12/20/self-introduce/</id>
-    <published>2015-12-19T16:00:00.000Z</published>
-    <updated>2016-02-19T06:21:28.049Z</updated>
-    <content type="html"><![CDATA[<p>##基本信息<br>|姓名|严彬|<br>|——-|——-|<br>|年龄|34|<br>|邮箱|yanbin.yb@hotmail.com|<br>|qq|8999482|</p>
-<p>##评价<br><em>10+年的开发经验。
-</em>热爱开源,熟习一些开源项目node.js,web前端的较多。<br><em>热爱分享经验，曾在多家公司做过技术培训。
-</em></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>##基本信息<br>|姓名|严彬|<br>|——-|——-|<br>|年龄|34|<br>|邮箱|yanbin.yb@hotmail.com|<br>|qq|8999482|</p>
-<p>##评价<br><em>10+年的开发经验。
-</em>热爱开源,熟习一些开源项目n]]>
-    </summary>
-    
-  </entry>
-  
-</feed>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/01/01/hello-world/" class="next">下一篇</a></div><div data-thread-key="2016/02/18/interview-hishop/" data-title="电商面试题" data-url="http://binyanbin.github.io/2016/02/18/interview-hishop/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"binyanbin"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2016 <a href="http://binyanbin.github.io">bindog</a>, unless otherwise noted.</p></div></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?fcf7e8f303b6e03be86f5619636d0f7e";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></body></html>
