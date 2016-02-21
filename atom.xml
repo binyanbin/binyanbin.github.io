@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-02-20T02:11:22.007Z</updated>
+  <updated>2016-02-21T16:00:19.932Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -13,6 +13,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Javascript的匿名函数]]></title>
+    <link href="http://binyanbin.github.io/2016/02/20/javascript-base-2/"/>
+    <id>http://binyanbin.github.io/2016/02/20/javascript-base-2/</id>
+    <published>2016-02-19T16:00:00.000Z</published>
+    <updated>2016-02-21T16:00:19.932Z</updated>
+    <content type="html"><![CDATA[<p>匿名函数在javascript中非常常见且实用，它最大的用途是创建闭包（这是JavaScript语言的特性之一），并且还可以构建命名空间，以减少全局变量的使用。javascript的框架这种用法随处可见。下面看二个例子，如何定义匿名函数。<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span>(<span class="params">t</span>)</span>&#123;</span><br><span class="line">       alert(t);</span><br><span class="line">   &#125;;</span><br><span class="line">f(<span class="string">"abc"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>“=”右边的函数就是一个匿名函数，创造完毕函数后，又将该函数赋给了变量f。通过f再调用这个匿名函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">t</span>)</span>&#123;</span><br><span class="line">	alert(t)</span><br><span class="line">   &#125;)(<span class="string">"abc"</span>);</span><br></pre></td></tr></table></figure>
+<p>这里创建了一个匿名函数(在第一个括号内)，第二个括号用于调用该匿名函数，并传入参数。<br>这就是匿名函数常用的使用方式，通常用得最多的是第二种。</p>
+<p>前端人员一般为了避免声明了一些全局变量而污染，把代码放在一个“沙箱执行”，然后在暴露出命名空间（可以为API，函数，对象）,如Jquery:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"> window, undefined </span>) </span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.jQuery = <span class="built_in">window</span>.$ = jQuery;</span><br><span class="line">&#125;)( <span class="built_in">window</span> );</span><br></pre></td></tr></table></figure>
+<p>再如我想建一个自己的框架叫yb:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">window,undefined</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> yb = &#123;</span><br><span class="line">		add:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			alert(<span class="string">"add"</span>);</span><br><span class="line">		&#125;,</span><br><span class="line">		sub:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			alert(<span class="string">"sub"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="built_in">window</span>.yb = yb;</span><br><span class="line">&#125;)(<span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
+<p>你的方法add和sub只能通过全局对象yb访问，这个是函数闭包规则决定的。如不能理解闭包请参见<a href="http://binyanbin.github.io/2016/01/03/javascript-base-1/">函数的闭包</a>;</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>匿名函数在javascript中非常常见且实用，它最大的用途是创建闭包（这是JavaScript语言的特性之一），并且还可以构建命名空间，以减少全局变量的使用。javascript的框架这种用法随处可见。下面看二个例子，如何定义匿名函数。<br>]]>
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[电商面试题]]></title>
@@ -162,7 +185,7 @@
     <link href="http://binyanbin.github.io/2016/01/03/javascript-base-1/"/>
     <id>http://binyanbin.github.io/2016/01/03/javascript-base-1/</id>
     <published>2016-01-02T16:00:00.000Z</published>
-    <updated>2016-02-20T01:45:46.139Z</updated>
+    <updated>2016-02-21T14:51:30.124Z</updated>
     <content type="html"><![CDATA[<p>闭包是Javascript的一个重点的概念，在开发过程中用得非常多，但是在了解闭包之前我们需要了解全局与局部的概念，下面来看这个例子。<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> global = <span class="number">1</span>;</span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">myfun</span>(<span class="params"></span>)</span><br><span class="line">   </span>&#123;</span><br><span class="line">   	<span class="keyword">var</span> my = <span class="number">1</span>;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">infun</span>(<span class="params"></span>)</span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> <span class="keyword">in</span> = <span class="number">2</span>;</span><br><span class="line">		<span class="function"><span class="keyword">function</span> <span class="title">innerfun</span>(<span class="params"></span>)</span><br><span class="line">		</span>&#123;</span><br><span class="line">			<span class="keyword">var</span> inner = <span class="number">2</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">infun2</span>(<span class="params"></span>)</span><br><span class="line">   ｛</span><br><span class="line">	｝</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="title">function</span> <span class="title">myfun2</span>(<span class="params"></span>)</span><br><span class="line">   </span>&#123;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
 <p>这是一个三层嵌套的函数。我对局部的了解是指函数的内部，局部对像就是指函数内部的变量及函数。全局对象就是没有定义在任何函数内的变量和函数。全局对象是window的子对象。</p>
 <p>在上面的这个程序中，全局对象有:<br><em>global变量

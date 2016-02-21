@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://binyanbin.github.io/2016/02/20/javascript-base-2/</loc>
+    <lastmod>2016-02-21T16:00:19.932Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/01/03/javascript-base-1/</loc>
+    <lastmod>2016-02-21T14:51:30.124Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://binyanbin.github.io/2015/12/20/self-introduce/</loc>
     <lastmod>2016-02-20T02:21:55.082Z</lastmod>
   </url>
@@ -14,11 +24,6 @@
   <url>
     <loc>http://binyanbin.github.io/2016/01/02/hello-world/</loc>
     <lastmod>2016-02-20T02:09:40.357Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/01/03/javascript-base-1/</loc>
-    <lastmod>2016-02-20T01:45:46.139Z</lastmod>
   </url>
   
 </urlset>
