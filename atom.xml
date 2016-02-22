@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-02-22T05:10:44.421Z</updated>
+  <updated>2016-02-22T05:16:33.397Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -16,10 +16,10 @@
   
   <entry>
     <title><![CDATA[Javascript的面向对象编程]]></title>
-    <link href="http://binyanbin.github.io/2016/02/21/javascript-base-4/"/>
-    <id>http://binyanbin.github.io/2016/02/21/javascript-base-4/</id>
+    <link href="http://binyanbin.github.io/2016/02/21/javascript-base-3/"/>
+    <id>http://binyanbin.github.io/2016/02/21/javascript-base-3/</id>
     <published>2016-02-20T16:00:00.000Z</published>
-    <updated>2016-02-22T05:10:44.421Z</updated>
+    <updated>2016-02-22T05:16:33.397Z</updated>
     <content type="html"><![CDATA[<p>Javascript里的所有东西都是对象，可是它又不并像Java,C#。不是严格意义上的OOP语言。但是它可以实现OOP的效果。但在之前你需要了解哪些关键的知识点呢?</p>
 <h2 id="u5173_u952E_u70B9"><a href="#u5173_u952E_u70B9" class="headerlink" title="关键点"></a>关键点</h2><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>我们看下面这个使用this的例子</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">"yanbin"</span>,</span><br><span class="line">    showName :<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> other =&#123;</span><br><span class="line">    name:<span class="string">"changsha"</span>,</span><br><span class="line">    showName:obj.showName</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -49,29 +49,6 @@
 <h2 id="u5173_u952E_u70B9"><a href="#u5173_u952E_u70B9" class="headerlink" title="关键点"></a>关键点</h2><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>我们看下面这个使用this的例子</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">"yanbin"</span>,</span><br><span class="line">    showName :<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> other =&#123;</span><br><span class="line">    name:<span class="string">"changsha"</span>,</span><br><span class="line">    showName:obj.showName</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>obj.showName()提示的是yanbin,obj.showName()提示的是changsha，this是指执行时当前的对象。<br>]]>
-    
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Javascript的匿名函数]]></title>
-    <link href="http://binyanbin.github.io/2016/02/20/javascript-base-3/"/>
-    <id>http://binyanbin.github.io/2016/02/20/javascript-base-3/</id>
-    <published>2016-02-19T16:00:00.000Z</published>
-    <updated>2016-02-21T16:00:19.932Z</updated>
-    <content type="html"><![CDATA[<p>匿名函数在javascript中非常常见且实用，它最大的用途是创建闭包（这是JavaScript语言的特性之一），并且还可以构建命名空间，以减少全局变量的使用。javascript的框架这种用法随处可见。下面看二个例子，如何定义匿名函数。<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span>(<span class="params">t</span>)</span>&#123;</span><br><span class="line">       alert(t);</span><br><span class="line">   &#125;;</span><br><span class="line">f(<span class="string">"abc"</span>);</span><br></pre></td></tr></table></figure></p>
-<p>“=”右边的函数就是一个匿名函数，创造完毕函数后，又将该函数赋给了变量f。通过f再调用这个匿名函数。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">t</span>)</span>&#123;</span><br><span class="line">	alert(t)</span><br><span class="line">   &#125;)(<span class="string">"abc"</span>);</span><br></pre></td></tr></table></figure>
-<p>这里创建了一个匿名函数(在第一个括号内)，第二个括号用于调用该匿名函数，并传入参数。<br>这就是匿名函数常用的使用方式，通常用得最多的是第二种。</p>
-<p>前端人员一般为了避免声明了一些全局变量而污染，把代码放在一个“沙箱执行”，然后在暴露出命名空间（可以为API，函数，对象）,如Jquery:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"> window, undefined </span>) </span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.jQuery = <span class="built_in">window</span>.$ = jQuery;</span><br><span class="line">&#125;)( <span class="built_in">window</span> );</span><br></pre></td></tr></table></figure>
-<p>再如我想建一个自己的框架叫yb:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">window,undefined</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> yb = &#123;</span><br><span class="line">		add:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			alert(<span class="string">"add"</span>);</span><br><span class="line">		&#125;,</span><br><span class="line">		sub:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			alert(<span class="string">"sub"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="built_in">window</span>.yb = yb;</span><br><span class="line">&#125;)(<span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
-<p>你的方法add和sub只能通过全局对象yb访问，这个是函数闭包规则决定的。如不能理解闭包请参见<a href="http://binyanbin.github.io/2016/01/03/javascript-base-1/">函数的闭包</a>;</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>匿名函数在javascript中非常常见且实用，它最大的用途是创建闭包（这是JavaScript语言的特性之一），并且还可以构建命名空间，以减少全局变量的使用。javascript的框架这种用法随处可见。下面看二个例子，如何定义匿名函数。<br>]]>
     
     </summary>
     
@@ -299,7 +276,7 @@
     <link href="http://binyanbin.github.io/2015/12/20/self-introduce/"/>
     <id>http://binyanbin.github.io/2015/12/20/self-introduce/</id>
     <published>2015-12-19T16:00:00.000Z</published>
-    <updated>2016-02-20T02:21:55.082Z</updated>
+    <updated>2016-02-22T05:18:06.761Z</updated>
     <content type="html"><![CDATA[<h2 id="u4E3A_u4EC0_u4E48_u8981_u5EFA_u535A_u5BA2"><a href="#u4E3A_u4EC0_u4E48_u8981_u5EFA_u535A_u5BA2" class="headerlink" title="为什么要建博客"></a>为什么要建博客</h2><p>其实很早的时候我写过博客，是在第三方网站上，当时的博客网站系统排个版都让我很头疼，可能也是因为不太熟习怎么用，最后坚持了一小会就放弃了。今年准备换工作，所以15年底去了几家公司面试，面对一堆的笔试，面试，机试各种试，感觉很累。想想原因，还是用人单位不了解你，就算你一份简历吹上天，也很难让用人单位相信你，你又没有人推荐。为了让我这把老骨头不在那么折腾,今年我一定要写博客，一定要做或者参与开源项目。<br><a id="more"></a></p>
 <h2 id="u6211_u662F_u8C01"><a href="#u6211_u662F_u8C01" class="headerlink" title="我是谁"></a>我是谁</h2><p>下面是我的基本资料：</p>
 <table>
@@ -315,15 +292,7 @@
 <td style="text-align:left">34</td>
 </tr>
 <tr>
-<td style="text-align:left">邮箱</td>
-<td style="text-align:left">yanbin.yb@hotmail.com</td>
-</tr>
-<tr>
-<td style="text-align:left">qq</td>
-<td style="text-align:left">8999482</td>
-</tr>
-<tr>
-<td style="text-align:left">居地</td>
+<td style="text-align:left">居住地</td>
 <td style="text-align:left">长沙</td>
 </tr>
 </tbody>
