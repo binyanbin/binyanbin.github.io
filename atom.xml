@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-02-27T16:05:38.830Z</updated>
+  <updated>2016-02-27T16:12:34.744Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://binyanbin.github.io/2016/02/26/lock/"/>
     <id>http://binyanbin.github.io/2016/02/26/lock/</id>
     <published>2016-02-25T16:00:00.000Z</published>
-    <updated>2016-02-27T16:05:38.830Z</updated>
-    <content type="html"><![CDATA[<p>在<a href="http://binyanbin.github.io/2016/02/18/interview-hishop/">电商面试题</a>中，我使用了锁来控制并发时的缓存使用。为什么要加锁，因为在并发环境下，一个线程正在修改缓存，另一个线程在读缓存时，缓存数据很可能会被破坏;另外，使用锁可以控制超卖现像。下面我介绍常用的二种锁：读写锁和互斥锁。</p>
+    <updated>2016-02-27T16:12:34.744Z</updated>
+    <content type="html"><![CDATA[<p>在<a href="http://binyanbin.github.io/2016/02/18/interview-hishop/">电商面试题</a>中，我使用了锁来控制并发时的缓存使用。为什么要加锁，因为在并发环境下，一个线程正在修改缓存，另一个线程在读缓存时，缓存数据很可能会被破坏;另外，使用锁可以控制超卖现像。下面我介绍常用的二种锁：读写锁和互斥锁。<br><a id="more"></a></p>
 <h1 id="u8BFB_u5199_u9501"><a href="#u8BFB_u5199_u9501" class="headerlink" title="读写锁"></a>读写锁</h1><p>缓存一般使用的情况应该是:</p>
 <ul>
 <li>只能由一个线程写，但可以多个线程读。</li>
@@ -29,8 +29,7 @@
 <p>实现以上两种情况的锁称读写锁，读写锁有两种模式。</p>
 <ul>
 <li>读模式:可以有多个线程同时占有。</li>
-<li>写模式:一次只有一个线程可以占有。<a id="more"></a>
-</li>
+<li>写模式:一次只有一个线程可以占有。</li>
 </ul>
 <h1 id="u4E92_u65A5_u9501"><a href="#u4E92_u65A5_u9501" class="headerlink" title="互斥锁"></a>互斥锁</h1><p>在我面试题的代码中所有操作使用的是互斥锁，即保证lock上的代码同一时刻只被一个线程操作。这么做可以保证在任意时刻只有单个线程访问缓存，做到线程安全，但是这种方式效率并不高。原因如下:</p>
 <ul>
@@ -40,16 +39,7 @@
 <h1 id="u9650_u65F6_u62A2_u8D2D_u3001_u79D2_u6740_u5E76_u53D1_u573A_u666F_u7684_u5E94_u7528"><a href="#u9650_u65F6_u62A2_u8D2D_u3001_u79D2_u6740_u5E76_u53D1_u573A_u666F_u7684_u5E94_u7528" class="headerlink" title="限时抢购、秒杀并发场景的应用"></a>限时抢购、秒杀并发场景的应用</h1><p>1.应为每个商品订单缓存建一个读写锁。<br>2.在对商品下单时，应该对该商品加上写模式锁，保证该商品同一时刻只有一个用户下单，不会引起商品超卖。<br>3.获取订单缓存数据时，应为该商品加上读模式锁，保证其它线程也可以读到缓存订单数据。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>在<a href="http://binyanbin.github.io/2016/02/18/interview-hishop/">电商面试题</a>中，我使用了锁来控制并发时的缓存使用。为什么要加锁，因为在并发环境下，一个线程正在修改缓存，另一个线程在读缓存时，缓存数据很可能会被破坏;另外，使用锁可以控制超卖现像。下面我介绍常用的二种锁：读写锁和互斥锁。</p>
-<h1 id="u8BFB_u5199_u9501"><a href="#u8BFB_u5199_u9501" class="headerlink" title="读写锁"></a>读写锁</h1><p>缓存一般使用的情况应该是:</p>
-<ul>
-<li>只能由一个线程写，但可以多个线程读。</li>
-<li>在读操作时，不能同时让其它线程写，在写操作时，不能同时读。</li>
-</ul>
-<p>实现以上两种情况的锁称读写锁，读写锁有两种模式。</p>
-<ul>
-<li>读模式:可以有多个线程同时占有。</li>
-<li>写模式:一次只有一个线程可以占有。]]>
+    <![CDATA[<p>在<a href="http://binyanbin.github.io/2016/02/18/interview-hishop/">电商面试题</a>中，我使用了锁来控制并发时的缓存使用。为什么要加锁，因为在并发环境下，一个线程正在修改缓存，另一个线程在读缓存时，缓存数据很可能会被破坏;另外，使用锁可以控制超卖现像。下面我介绍常用的二种锁：读写锁和互斥锁。<br>]]>
     
     </summary>
     
@@ -79,9 +69,9 @@
     <link href="http://binyanbin.github.io/2016/02/21/javascript-base-3/"/>
     <id>http://binyanbin.github.io/2016/02/21/javascript-base-3/</id>
     <published>2016-02-20T16:00:00.000Z</published>
-    <updated>2016-02-23T03:01:03.004Z</updated>
-    <content type="html"><![CDATA[<p>Javascript里的所有东西都是对象，可是它又不并像Java,C#。不是严格意义上的OOP语言。但是它可以实现OOP的效果。但在之前你需要了解哪些关键的知识点呢?</p>
-<h2 id="u5173_u952E_u70B9"><a href="#u5173_u952E_u70B9" class="headerlink" title="关键点"></a>关键点</h2><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>我们看下面这个使用this的例子</p>
+    <updated>2016-02-27T16:33:03.403Z</updated>
+    <content type="html"><![CDATA[<p>Javascript里的所有东西都是对象，可是它又不并像Java,C#。不是严格意义上的OOP语言。但是它可以实现OOP的效果。但在之前你需要了解哪些关键的知识点?</p>
+<h2 id="u5173_u952E_u77E5_u8BC6_u70B9"><a href="#u5173_u952E_u77E5_u8BC6_u70B9" class="headerlink" title="关键知识点"></a>关键知识点</h2><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>我们看下面这个使用this的例子</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">"yanbin"</span>,</span><br><span class="line">    showName :<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> other =&#123;</span><br><span class="line">    name:<span class="string">"changsha"</span>,</span><br><span class="line">    showName:obj.showName</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>obj.showName()提示的是yanbin,obj.showName()提示的是changsha，this是指执行时当前的对象。<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>执行时函数不属于任何对象时,this表示window。(使用var定义的对象也属于window)</p>
@@ -105,8 +95,8 @@
 <p>Employee继承man的say方法和realname属性，Emplayee有一个私有属性sex和一个getsex方法。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Javascript里的所有东西都是对象，可是它又不并像Java,C#。不是严格意义上的OOP语言。但是它可以实现OOP的效果。但在之前你需要了解哪些关键的知识点呢?</p>
-<h2 id="u5173_u952E_u70B9"><a href="#u5173_u952E_u70B9" class="headerlink" title="关键点"></a>关键点</h2><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>我们看下面这个使用this的例子</p>
+    <![CDATA[<p>Javascript里的所有东西都是对象，可是它又不并像Java,C#。不是严格意义上的OOP语言。但是它可以实现OOP的效果。但在之前你需要了解哪些关键的知识点?</p>
+<h2 id="u5173_u952E_u77E5_u8BC6_u70B9"><a href="#u5173_u952E_u77E5_u8BC6_u70B9" class="headerlink" title="关键知识点"></a>关键知识点</h2><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>我们看下面这个使用this的例子</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">"yanbin"</span>,</span><br><span class="line">    showName :<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> other =&#123;</span><br><span class="line">    name:<span class="string">"changsha"</span>,</span><br><span class="line">    showName:obj.showName</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>obj.showName()提示的是yanbin,obj.showName()提示的是changsha，this是指执行时当前的对象。<br>]]>
     
@@ -336,7 +326,7 @@
     <link href="http://binyanbin.github.io/2015/12/20/self-introduce/"/>
     <id>http://binyanbin.github.io/2015/12/20/self-introduce/</id>
     <published>2015-12-19T16:00:00.000Z</published>
-    <updated>2016-02-22T05:18:06.761Z</updated>
+    <updated>2016-02-27T16:15:45.422Z</updated>
     <content type="html"><![CDATA[<h2 id="u4E3A_u4EC0_u4E48_u8981_u5EFA_u535A_u5BA2"><a href="#u4E3A_u4EC0_u4E48_u8981_u5EFA_u535A_u5BA2" class="headerlink" title="为什么要建博客"></a>为什么要建博客</h2><p>其实很早的时候我写过博客，是在第三方网站上，当时的博客网站系统排个版都让我很头疼，可能也是因为不太熟习怎么用，最后坚持了一小会就放弃了。今年准备换工作，所以15年底去了几家公司面试，面对一堆的笔试，面试，机试各种试，感觉很累。想想原因，还是用人单位不了解你，就算你一份简历吹上天，也很难让用人单位相信你，你又没有人推荐。为了让我这把老骨头不在那么折腾,今年我一定要写博客，一定要做或者参与开源项目。<br><a id="more"></a></p>
 <h2 id="u6211_u662F_u8C01"><a href="#u6211_u662F_u8C01" class="headerlink" title="我是谁"></a>我是谁</h2><p>下面是我的基本资料：</p>
 <table>
@@ -359,9 +349,9 @@
 </table>
 <p>在IT行业差不多干了12年，最近的一家公司呆了8年，做了5年技术管理之后，16年初离职，去一家电商公司做开发。</p>
 <h2 id="u81EA_u6211_u8BC4_u4EF7"><a href="#u81EA_u6211_u8BC4_u4EF7" class="headerlink" title="自我评价"></a>自我评价</h2><ul>
-<li>丰富的架构设计经验和开发经验，特别是电力行业系统的业务架构和web技术架构。</li>
-<li>多年的开发技能，C#,node.js，web前端开发 。</li>
-<li>能独立阅读英文技术文档，用业余时间参加在线外教实时英语教学。</li>
+<li>丰富的架构设计经验和开发经验</li>
+<li>多年的开发技能，C#,node.js，web前端开发。</li>
+<li>能独立阅读英文技术文档，如cordova,nodejs及npmjs,markdown等官网及官方api文档都有阅读。</li>
 <li>崇尚开源技术，把开源技术应用到实际项目中，如cordova,node.js,mongodb,memcache.</li>
 <li>乐于分享技术经验，曾在多家公司组织技术培训，如cordova开发培训，web前端开发培训等。</li>
 <li>重视总结及文档，平时会记录各种问题及处理问题的经验。</li>
