@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-03-03T15:35:14.699Z</updated>
+  <updated>2016-03-05T17:14:58.831Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -13,6 +13,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[redis学习4 事务]]></title>
+    <link href="http://binyanbin.github.io/2016/03/05/redis-4/"/>
+    <id>http://binyanbin.github.io/2016/03/05/redis-4/</id>
+    <published>2016-03-04T16:00:00.000Z</published>
+    <updated>2016-03-05T17:14:58.831Z</updated>
+    <content type="html"><![CDATA[<p>事务可以一次执行多个命令， 并且带有以下两个重要的保证：</p>
+<ul>
+<li>事务是一个单独的隔离操作：事务中的所有命令都会序列化、按顺序地执行。事务在执行的过程中，不会被其他客户端发送来的命令请求所打断。</li>
+<li>事务是一个原子操作：事务中的命令要么全部被执行，要么全部都不执行。<a id="more"></a>
+<h2 id="u547D_u4EE4"><a href="#u547D_u4EE4" class="headerlink" title="命令"></a>命令</h2></li>
+<li>multi 开启事务</li>
+<li>discard 放弃事务</li>
+<li>WATCH 事务执行条件</li>
+<li>事务执行</li>
+</ul>
+<p>简单事务:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;multi</span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;<span class="built_in">set</span> yanbin <span class="number">1</span></span><br><span class="line">QUEUED</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;<span class="built_in">exec</span></span><br><span class="line"><span class="number">1</span>) OK</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;get yanbin</span><br><span class="line"><span class="string">"1"</span></span><br></pre></td></tr></table></figure></p>
+<p>放弃事务:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;multi</span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;<span class="built_in">set</span> yanbin <span class="number">1</span></span><br><span class="line">QUEUED</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;discard</span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;<span class="built_in">exec</span></span><br><span class="line">(error) ERR EXEC without MULTI</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;get yanbin</span><br><span class="line">(nil)</span><br></pre></td></tr></table></figure></p>
+<p>事务条件:WATCH 使得 EXEC 命令需要有条件地执行： 事务只能在所有被监视键都没有被修改的前提下执行， 如果这个前提不能满足的话，事务就不会被执行。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;watch yanbin</span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;<span class="built_in">set</span> yanbin <span class="number">1</span></span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;multi</span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;incr yanbin</span><br><span class="line">QUEUED</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;<span class="built_in">exec</span></span><br><span class="line">(nil)</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;get yanbin</span><br><span class="line"><span class="string">"1"</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>事务可以一次执行多个命令， 并且带有以下两个重要的保证：</p>
+<ul>
+<li>事务是一个单独的隔离操作：事务中的所有命令都会序列化、按顺序地执行。事务在执行的过程中，不会被其他客户端发送来的命令请求所打断。</li>
+<li>事务是一个原子操作：事务中的命令要么全部被执行，要么全部都不执行。]]>
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[redis学习3 数据类型]]></title>
@@ -421,7 +451,7 @@
     <link href="http://binyanbin.github.io/2015/12/20/self-introduce/"/>
     <id>http://binyanbin.github.io/2015/12/20/self-introduce/</id>
     <published>2015-12-19T16:00:00.000Z</published>
-    <updated>2016-02-28T14:26:53.056Z</updated>
+    <updated>2016-03-05T16:47:10.269Z</updated>
     <content type="html"><![CDATA[<h2 id="u4E3A_u4EC0_u4E48_u5EFA_u8FD9_u4E2A_u535A_u5BA2"><a href="#u4E3A_u4EC0_u4E48_u5EFA_u8FD9_u4E2A_u535A_u5BA2" class="headerlink" title="为什么建这个博客"></a>为什么建这个博客</h2><p>其实很早的时候我写过博客，是在第三方网站上，当时的博客网站系统排个版都让我很头疼，可能也是因为不太熟习怎么用，最后坚持了一小会就放弃了。今年准备换工作，所以15年底去了几家公司面试，面对一堆的笔试，面试，机试各种试，感觉很累。想想原因，还是用人单位不了解你，就算你一份简历吹上天，也很难让用人单位相信你，你又没有人推荐。为了让我这把老骨头不在那么折腾,今年我一定要写博客，一定要做或者参与开源项目。<br><a id="more"></a></p>
 <h2 id="u5173_u4E8E_u6211"><a href="#u5173_u4E8E_u6211" class="headerlink" title="关于我"></a>关于我</h2><table>
 <thead>
@@ -449,9 +479,6 @@
 </ul>
 <h2 id="u670D_u52A1"><a href="#u670D_u52A1" class="headerlink" title="服务"></a>服务</h2><ul>
 <li>承接长沙当地企业技术培训及咨询工作。</li>
-<li>cordova手机开发培训及咨询。</li>
-<li>web前端开发培训。</li>
-<li>nodejs技术培训及咨询。</li>
 </ul>
 <p>QQ:8999482 邮箱:yanbin.yb@hotmail.com 欢迎骚扰。</p>
 ]]></content>
