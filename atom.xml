@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-03-05T17:14:58.831Z</updated>
+  <updated>2016-03-07T12:29:37.224Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -13,6 +13,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[redis学习5 lua脚本]]></title>
+    <link href="http://binyanbin.github.io/2016/03/07/redis-5/"/>
+    <id>http://binyanbin.github.io/2016/03/07/redis-5/</id>
+    <published>2016-03-06T16:00:00.000Z</published>
+    <updated>2016-03-07T12:29:37.224Z</updated>
+    <content type="html"><![CDATA[<p>redis内置的 Lua 解释器，可以使用lua对redis进行操作。使用脚本有以下好处:</p>
+<ul>
+<li>减少网络开销:批量执行redis命令。</li>
+<li>原子性操作:Redis也保证脚本会以原子性的方式执行:当某个脚本正在运行的时候，不会有其他脚本或Redis 命令被执行。</li>
+<li>复用：客户端发送的脚本会永久存储在Redis中，意味着其他客户端可以复用这一脚本而不需要使用代码完成同样的逻辑。<a id="more"></a>
+<h2 id="u4F7F_u7528"><a href="#u4F7F_u7528" class="headerlink" title="使用"></a>使用</h2></li>
+<li>lua脚本<br>lua是一个很容易嵌入其它语言中使用的语言。很多应用程序、游戏使用LUA作为自己的嵌入式脚本语言，以此来实现可配置性、可扩展性。查看<a href="http://manual.luaer.cn/" target="_blank" rel="external">lua5.1在线中文用户手册</a>。</li>
+<li>Eval<br>通过redis-cli客户端单独调用Lua脚本文件，格式如下:<br>redis-cli –eval myscript.lua [key …] arg [arg …]<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--[[ </span><br><span class="line">限制一定时间内的调用次数 </span><br><span class="line">KEYS[1]:key </span><br><span class="line">ARGV[1]:存在时长</span><br><span class="line">ARGV[2]:调用次数</span><br><span class="line">]]</span></span><br><span class="line"><span class="keyword">local</span> times = redis.call(<span class="string">'incr'</span>,KEYS[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> times == <span class="number">1</span> <span class="keyword">then</span></span><br><span class="line">    redis.call(<span class="string">'expire'</span>,KEYS[<span class="number">1</span>], ARGV[<span class="number">1</span>])</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> times &gt; <span class="built_in">tonumber</span>(ARGV[<span class="number">2</span>]) <span class="keyword">then</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>调用 redis-cli –eval d:\test.lua test:127.0.0.1 , 10 3</p>
+<p>通过EVAL命令执行脚本，格式如下:<br>EVAL script numkeys key [key …] arg [arg …]<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;<span class="built_in">eval</span> <span class="string">"local times = redis.call('incr',KEYS[1]);if times == 1 then redis.call('expire',KEYS[1], ARGV[1]);end;if times &gt; tonumber(ARGV[2]) then return 0;end;return 1"</span> <span class="number">1</span> <span class="built_in">test</span>:<span class="number">127.0</span>.<span class="number">0.1</span> , <span class="number">10</span> <span class="number">3</span></span><br><span class="line">(<span class="built_in">integer</span>) <span class="number">1</span></span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt;get <span class="built_in">test</span>:<span class="number">127.0</span>.<span class="number">0.1</span></span><br><span class="line"><span class="string">"1"</span></span><br></pre></td></tr></table></figure></p>
+<p>redis.call lua脚本通过redis.call调用redis命令。</p>
+<p> 总结:我们可以通过Lua来实现很多功功能:用Lua来封装复杂了Redis操作的业务;计数，统计，分析，收集数据;实现业务操作事务控制等等。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>redis内置的 Lua 解释器，可以使用lua对redis进行操作。使用脚本有以下好处:</p>
+<ul>
+<li>减少网络开销:批量执行redis命令。</li>
+<li>原子性操作:Redis也保证脚本会以原子性的方式执行:当某个脚本正在运行的时候，不会有其他脚本或Redis 命令被执行。</li>
+<li>复用：客户端发送的脚本会永久存储在Redis中，意味着其他客户端可以复用这一脚本而不需要使用代码完成同样的逻辑。]]>
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[redis学习4 事务]]></title>
@@ -451,7 +483,7 @@
     <link href="http://binyanbin.github.io/2015/12/20/self-introduce/"/>
     <id>http://binyanbin.github.io/2015/12/20/self-introduce/</id>
     <published>2015-12-19T16:00:00.000Z</published>
-    <updated>2016-03-05T16:47:10.269Z</updated>
+    <updated>2016-03-05T17:17:53.915Z</updated>
     <content type="html"><![CDATA[<h2 id="u4E3A_u4EC0_u4E48_u5EFA_u8FD9_u4E2A_u535A_u5BA2"><a href="#u4E3A_u4EC0_u4E48_u5EFA_u8FD9_u4E2A_u535A_u5BA2" class="headerlink" title="为什么建这个博客"></a>为什么建这个博客</h2><p>其实很早的时候我写过博客，是在第三方网站上，当时的博客网站系统排个版都让我很头疼，可能也是因为不太熟习怎么用，最后坚持了一小会就放弃了。今年准备换工作，所以15年底去了几家公司面试，面对一堆的笔试，面试，机试各种试，感觉很累。想想原因，还是用人单位不了解你，就算你一份简历吹上天，也很难让用人单位相信你，你又没有人推荐。为了让我这把老骨头不在那么折腾,今年我一定要写博客，一定要做或者参与开源项目。<br><a id="more"></a></p>
 <h2 id="u5173_u4E8E_u6211"><a href="#u5173_u4E8E_u6211" class="headerlink" title="关于我"></a>关于我</h2><table>
 <thead>
