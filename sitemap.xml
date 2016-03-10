@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://binyanbin.github.io/2016/03/10/redis-8/</loc>
+    <lastmod>2016-03-10T15:43:22.577Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://binyanbin.github.io/2016/03/09/redis-7/</loc>
     <lastmod>2016-03-09T14:52:32.154Z</lastmod>
   </url>
