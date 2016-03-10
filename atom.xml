@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-03-10T15:43:22.577Z</updated>
+  <updated>2016-03-10T15:53:20.146Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://binyanbin.github.io/2016/03/10/redis-8/"/>
     <id>http://binyanbin.github.io/2016/03/10/redis-8/</id>
     <published>2016-03-09T16:00:00.000Z</published>
-    <updated>2016-03-10T15:43:22.577Z</updated>
+    <updated>2016-03-10T15:53:20.146Z</updated>
     <content type="html"><![CDATA[<p>Redis-Sentinel是Redis官方推荐的高可用性(HA)解决方案，当用Redis做Master-slave的高可用方案时，假如master宕机了，Redis本身(包括它的很多客户端)都没有实现自动进行主备切换，而Redis-sentinel本身也是一个独立运行的进程，它能监控多个master-slave集群，发现master宕机后能进行自懂切换。<br><a id="more"></a></p>
 <h2 id="Sentinel_u4EFB_u52A1"><a href="#Sentinel_u4EFB_u52A1" class="headerlink" title="Sentinel任务"></a>Sentinel任务</h2><ul>
 <li>监控:Sentinel 会不断地检查你的主服务器和从服务器是否运作正常。</li>
@@ -35,7 +35,7 @@ sentinel_masters:1
 sentinel_tilt:0
 sentinel_running_scripts:0
 sentinel_scripts_queue_length:0
-master0:name=master,status=ok,address=192.168.9.19:6379,slaves=2,sentinels=1
+master0:name=master,status=ok,address=127.0.0.1:6379,slaves=2,sentinels=1
 </code></pre>
 <p>接着我关闭一个服务</p>
 <pre><code class="bash">redis-cli -h 127.0.0.1 -p 6379 shutdow
@@ -47,7 +47,7 @@ sentinel_masters:1
 sentinel_tilt:0
 sentinel_running_scripts:0
 sentinel_scripts_queue_length:0
-master0:name=master,status=ok,address=192.168.9.19:6381,slaves=1,sentinels=1
+master0:name=master,status=ok,address=127.0.0.1:6381,slaves=1,sentinels=1
 </code></pre>
 <p>6381变成主redis,可以write操作。<br>再次启动6379</p>
 <pre><code class="bash">$ redis-cli -h 127.0.0.1 -p 26380 info Sentinel
@@ -56,7 +56,7 @@ sentinel_masters:1
 sentinel_tilt:0
 sentinel_running_scripts:0
 sentinel_scripts_queue_length:0
-master0:name=master,status=ok,address=192.168.9.19:6381,slaves=2,sentinels=1
+master0:name=master,status=ok,address=127.0.0.1:6381,slaves=2,sentinels=1
 </code></pre>
 <p>6379已不是主redis，变成了从redis,不能再write操作，只能read.</p>
 ]]></content>

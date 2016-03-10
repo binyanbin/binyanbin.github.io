@@ -13,7 +13,7 @@ sentinel_masters:1
 sentinel_tilt:0
 sentinel_running_scripts:0
 sentinel_scripts_queue_length:0
-master0:name=master,status=ok,address=192.168.9.19:6379,slaves=2,sentinels=1
+master0:name=master,status=ok,address=127.0.0.1:6379,slaves=2,sentinels=1
 </code></pre>
 <p>接着我关闭一个服务</p>
 <pre><code class="bash">redis-cli -h 127.0.0.1 -p 6379 shutdow
@@ -25,7 +25,7 @@ sentinel_masters:1
 sentinel_tilt:0
 sentinel_running_scripts:0
 sentinel_scripts_queue_length:0
-master0:name=master,status=ok,address=192.168.9.19:6381,slaves=1,sentinels=1
+master0:name=master,status=ok,address=127.0.0.1:6381,slaves=1,sentinels=1
 </code></pre>
 <p>6381变成主redis,可以write操作。<br>再次启动6379</p>
 <pre><code class="bash">$ redis-cli -h 127.0.0.1 -p 26380 info Sentinel
@@ -34,7 +34,7 @@ sentinel_masters:1
 sentinel_tilt:0
 sentinel_running_scripts:0
 sentinel_scripts_queue_length:0
-master0:name=master,status=ok,address=192.168.9.19:6381,slaves=2,sentinels=1
+master0:name=master,status=ok,address=127.0.0.1:6381,slaves=2,sentinels=1
 </code></pre>
 <p>6379已不是主redis，变成了从redis,不能再write操作，只能read.</p>
 </div></article></div></section><footer><div class="paginator"><a href="/2016/03/09/redis-7/" class="next">下一篇</a></div><div data-thread-key="2016/03/10/redis-8/" data-title="redis学习8  Sentinel集群控制" data-url="http://binyanbin.github.io/2016/03/10/redis-8/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"binyanbin"};
