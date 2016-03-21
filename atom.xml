@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-03-12T16:53:31.616Z</updated>
+  <updated>2016-03-21T14:25:18.781Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -13,6 +13,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Javascript模块化开发]]></title>
+    <link href="http://binyanbin.github.io/2016/03/21/javascript-base-4/"/>
+    <id>http://binyanbin.github.io/2016/03/21/javascript-base-4/</id>
+    <published>2016-03-20T16:00:00.000Z</published>
+    <updated>2016-03-21T14:25:18.781Z</updated>
+    <content type="html"><![CDATA[<p>Javascript不算模块化编程语言，但是web开发需要团队开发和团队协做。现在javascript模块化开发已非常正熟，支持模块化开发的框架非常多。</p>
+<h2 id="u539F_u59CB_u5199_u6CD5"><a href="#u539F_u59CB_u5199_u6CD5" class="headerlink" title="原始写法"></a>原始写法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>只要把不同的函数简单地放在一个文件中，就算是一个模块，通常一个文件一个模块。<br><a id="more"></a></p>
+<h2 id="jquery_u65F6_u4EE3"><a href="#jquery_u65F6_u4EE3" class="headerlink" title="jquery时代"></a>jquery时代</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="keyword">var</span> module1 = (<span class="function"><span class="keyword">function</span> (<span class="params">$, windows</span>) </span>&#123;</span><br><span class="line">　　　　<span class="comment">//...</span></span><br><span class="line">　　&#125;)(jQuery, windows);</span><br></pre></td></tr></table></figure>
+<p>通过立即执行匿名函数来达到封装的作用,如模块内部调用全局变量，则将其输入模块中。</p>
+<h2 id="commonjs_u65F6_u4EE3"><a href="#commonjs_u65F6_u4EE3" class="headerlink" title="commonjs时代"></a>commonjs时代</h2><p>commonjs规范是目前JavaScript模块化的事实标准。支持commonjs规范的框架及程序比较多，如node,seajs.规范中最重要的二点:</p>
+<ul>
+<li>require它是一个函数,引用其它模块使用require。</li>
+<li>exports是一个对象，导出模块api使用exports，可供其它模块调用。<br>当然除了这两点还有一些其它细节不一一介绍。下面看一个示例:</li>
+</ul>
+<p>math.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">exports.add=<span class="function"><span class="keyword">function</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x+y;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>increment.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = <span class="built_in">require</span>(<span class="string">'math'</span>).add;</span><br><span class="line">exports.increment = <span class="function"><span class="keyword">function</span> (<span class="params">val</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> add(val,<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>program.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> inc = <span class="built_in">require</span>(<span class="string">'increment'</span>).increment;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">inc(a);</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Javascript不算模块化编程语言，但是web开发需要团队开发和团队协做。现在javascript模块化开发已非常正熟，支持模块化开发的框架非常多。</p>
+<h2 id="u539F_u59CB_u5199_u6CD5"><a href="#u539F_u59CB_u5199_u6CD5" class="headerlink" title="原始写法"></a>原始写法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>只要把不同的函数简单地放在一个文件中，就算是一个模块，通常一个文件一个模块。<br>]]>
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[jmeter 基础概念]]></title>
