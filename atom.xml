@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-03-23T14:29:35.363Z</updated>
+  <updated>2016-03-24T14:23:27.068Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -13,6 +13,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[C之个性化cmd]]></title>
+    <link href="http://binyanbin.github.io/2016/03/24/c-2/"/>
+    <id>http://binyanbin.github.io/2016/03/24/c-2/</id>
+    <published>2016-03-23T16:00:00.000Z</published>
+    <updated>2016-03-24T14:23:27.068Z</updated>
+    <content type="html"><![CDATA[<p>很多牛人有自己的个性化的命令行，为什么我没有呢?晚上我就写了一个。效果如下:<br><img src="/img/c-1.png" alt="效果"></p>
+<h2 id="u56FE_u5F62_u5B9E_u73B0"><a href="#u56FE_u5F62_u5B9E_u73B0" class="headerlink" title="图形实现"></a>图形实现</h2><p>图形是使用C打出来的，就当练手。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;<span class="number">6</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (j=<span class="number">6</span>;j&gt;i ;j-- ) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (j=<span class="number">0</span>; j&lt;=i; j++) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"*"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i==<span class="number">5</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"    write by binyanbin"</span>);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    system(<span class="string">"c:"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后用gcc编译成exe。</p>
+<h2 id="cmd_u5FEB_u6377_u65B9_u5F0F"><a href="#cmd_u5FEB_u6377_u65B9_u5F0F" class="headerlink" title="cmd快捷方式"></a>cmd快捷方式</h2><p>新建快捷方式，输入C:\Windows\System32\cmd.exe /k “C:\yanbin\mycmd.exe”。最后为你编译exe的位置。<br><img src="/img/c-2.png" alt="cmd快捷方式"></p>
+<p>当然你也可以打印出更漂亮的图形做你的terminal。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>很多牛人有自己的个性化的命令行，为什么我没有呢?晚上我就写了一个。效果如下:<br><img src="/img/c-1.png" alt="效果"></p>
+<h2 id="u56FE_u5F62_u5B9E_u73B0"><a href="#u56FE_u5F62_u5]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[C之GCC]]></title>
