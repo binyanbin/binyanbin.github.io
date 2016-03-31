@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-03-25T14:48:29.216Z</updated>
+  <updated>2016-03-31T15:52:03.258Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -13,6 +13,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[C语言之函数库]]></title>
+    <link href="http://binyanbin.github.io/2016/03/31/c-4/"/>
+    <id>http://binyanbin.github.io/2016/03/31/c-4/</id>
+    <published>2016-03-30T16:00:00.000Z</published>
+    <updated>2016-03-31T15:52:03.258Z</updated>
+    <content type="html"><![CDATA[<p>为什么写C的需要了解更多系统方面的知识，我们可以从C语言的函数库说起。</p>
+<h1 id="C_u6807_u51C6_u5E93"><a href="#C_u6807_u51C6_u5E93" class="headerlink" title="C标准库"></a>C标准库</h1><p>C标准库，顾名思义既然是标准，就是由标准组织制定的。C标准库就是任何平台都可以使用的基本C语言库。<br>标准库是C标准定义了一系列常用的函数，称为C库函数。C标准仅仅定义了函数原型，并没有提供实现。因此这个任务留给了各个支持C语言标准的编译器。你只使用标准库写的代码可以跨平台使用。</p>
+<h1 id="u8FD0_u884C_u5E93"><a href="#u8FD0_u884C_u5E93" class="headerlink" title="运行库"></a>运行库</h1><p>它由不同操作系统不同开发平台提供不同的C运行库。但是C运行库的部分实现是基于C标准库的，即C运行库是各个操作系统各个开发工具根据自身平台开发的库，某种程度上，可以说C运行库是C标准库的一个扩展库，只是加了很多C标准库所没有的与平台相关的或者不相关的库接口函数。<br>一个运行库包括以下功能:<br>1.启动与退出：包括入口函数及入口函数所依赖的其他函数等。<br>2.标准函数：由C语言标准规定的C语言标准库所拥有的函数实现。（C标准库）<br>3.I/O：I/O功能的封装和实现，参见上一节中I/O初始化部分。<br>4.堆：堆的封装和实现，参见上一节中堆初始化部分。<br>5.语言实现：语言中一些特殊功能的实现。<br>6.调试：实现调试功能的代码。</p>
+<ul>
+<li>运行库是平台相关的，因为它与操作系统结合得非常紧密。C语言的运行库从某种程度上来讲是C语言的程序和不同操作系统平台之间的抽象层，它将不同的操作系统API抽象成相同的库函数。比如我们可以在不同的操作系统平台下使用fread来读取文件，而事实上fread(标准库函数)在不同的操作系统平台下的实现是不同的，但作为运行库的使用者我们不需要关心这一点。</li>
+<li>虽然各个平台下的C语言运行库提供了很多功能，但很多时候它们毕竟有限，比如用户的权限控制等都不是属于标准的C语言运行库。于是我们不得不通过其他的办法，诸如绕过C语言运行库直接调用操作系统API或使用其他的库。</li>
+<li>linux和Windows平台下的两个主要C语言运行库分别为glibc（GNU C Library）和MSVCRT（Microsoft Visual C Run-time），我们在下面将会分别介绍它们。值得注意的是，像线程操作这样的功能并不是标准的C语言运行库的一部分，但是glibc和MSVCRT都包含了线程操作的库函数。比如glibc有一个可选的pthread库中的pthread_create()函数可以用来创建线程；而MSVCRT中可以使用_beginthread()函数来创建线程。所以glibc和MSVCRT事实上是标准C语言运行库的超集，它们各自对C标准库进行了一些扩展。<br><img src="/img/c-6.jpg" alt="关系图"></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>为什么写C的需要了解更多系统方面的知识，我们可以从C语言的函数库说起。</p>
+<h1 id="C_u6807_u51C6_u5E93"><a href="#C_u6807_u51C6_u5E93" class="headerlink" title="C标准库"></a>C]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[C语言之由内存模型说起]]></title>
@@ -732,32 +754,6 @@ master0:name=master,status=ok,address=127.0.0.1:6381,slaves=2,sentinels=1
 ]]></content>
     <summary type="html">
     <![CDATA[<p>闭包是Javascript的一个重点的概念，在开发过程中用得非常多，但是在了解闭包之前我们需要了解全局与局部的概念，下面来看这个例子。<br>]]>
-    
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[如何用hexo上做个blog站点]]></title>
-    <link href="http://binyanbin.github.io/2016/01/02/hello-world/"/>
-    <id>http://binyanbin.github.io/2016/01/02/hello-world/</id>
-    <published>2016-01-01T16:00:00.000Z</published>
-    <updated>2016-02-20T02:09:40.357Z</updated>
-    <content type="html"><![CDATA[<p>2016年起，我要写博客了!各种博客网站都不合我意，最后用hexo+github搭了一个博客网站，全免费，还可以把开源项目放在里面，关键完全可以自己控制，入门虽然有一点难度，但是熟习以后使用起来其实相当简单. <a href="http://hexo.io/docs/" target="_blank" rel="external">了解关于hexo更多信息</a>. <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">hexo常见问题</a> 你也可以在<a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>上提问.</p>
-<h2 id="u5F00_u542F"><a href="#u5F00_u542F" class="headerlink" title="开启"></a>开启</h2><h3 id="u521B_u5EFA_u65B0blog"><a href="#u521B_u5EFA_u65B0blog" class="headerlink" title="创建新blog"></a>创建新blog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br><a id="more"></a></p>
-<h3 id="u542F_u52A8web_u670D_u52A1_u5668"><a href="#u542F_u52A8web_u670D_u52A1_u5668" class="headerlink" title="启动web服务器"></a>启动web服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="u751F_u6210_u9759_u6001_u6587_u4EF6"><a href="#u751F_u6210_u9759_u6001_u6587_u4EF6" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="u53D1_u5E03_u7AD9_u70B9"><a href="#u53D1_u5E03_u7AD9_u70B9" class="headerlink" title="发布站点"></a>发布站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-<p>一切看上去就是那么简单。但是用hexo做博客网站，你还需要懂一点nodejs,markdown语法，如果你想把网站放到github上，你还需要了解点git shell。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>2016年起，我要写博客了!各种博客网站都不合我意，最后用hexo+github搭了一个博客网站，全免费，还可以把开源项目放在里面，关键完全可以自己控制，入门虽然有一点难度，但是熟习以后使用起来其实相当简单. <a href="http://hexo.io/docs/">了解关于hexo更多信息</a>. <a href="http://hexo.io/docs/troubleshooting.html">hexo常见问题</a> 你也可以在<a href="https://github.com/hexojs/hexo/issues">GitHub</a>上提问.</p>
-<h2 id="u5F00_u542F"><a href="#u5F00_u542F" class="headerlink" title="开启"></a>开启</h2><h3 id="u521B_u5EFA_u65B0blog"><a href="#u521B_u5EFA_u65B0blog" class="headerlink" title="创建新blog"></a>创建新blog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html">Writing</a><br>]]>
     
     </summary>
     
