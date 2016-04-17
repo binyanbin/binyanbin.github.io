@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-04-13T13:07:47.664Z</updated>
+  <updated>2016-04-17T06:06:01.321Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -13,6 +13,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[c windows版开源http服务]]></title>
+    <link href="http://binyanbin.github.io/2016/04/17/c-7/"/>
+    <id>http://binyanbin.github.io/2016/04/17/c-7/</id>
+    <published>2016-04-16T16:00:00.000Z</published>
+    <updated>2016-04-17T06:06:01.321Z</updated>
+    <content type="html"><![CDATA[<h2 id="minihttpd"><a href="#minihttpd" class="headerlink" title="minihttpd"></a>minihttpd</h2><p><a href="https://github.com/binyanbin/minihttpd" target="_blank" rel="external">minihttpd</a>这是周末做的一个超小型http服务,参考了linux下的tinyhttpd实现。功能更少，仅支持html和get动词，暂不支持中文(稍后会解决),去掉注释及空行的剩余代码量小于300行。可支持windows和linux gcc编译。</p>
+<h4 id="windwos_MinGW_u7F16_u8BD1_3A"><a href="#windwos_MinGW_u7F16_u8BD1_3A" class="headerlink" title="windwos MinGW编译:"></a>windwos MinGW编译:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -o http http.c <span class="operator">-l</span> wsock32</span><br></pre></td></tr></table></figure>
+<p>linux编译去掉首行 #define MINGW32</p>
+<h4 id="u7AD9_u70B9_u642D_u5EFA"><a href="#u7AD9_u70B9_u642D_u5EFA" class="headerlink" title="站点搭建"></a>站点搭建</h4><p>站点搭建:<br>创建站点目录，把http.exe复制到站点目录下，创建www目录并把网站的所有静态页面copy到目录下。<br><img src="/img/c-7.png" alt="效果"></p>
+<h4 id="u542F_u52A8"><a href="#u542F_u52A8" class="headerlink" title="启动"></a>启动</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http <span class="number">8080</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/binyanbin/minihttpd" target="_blank" rel="external">源码查看</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="minihttpd"><a href="#minihttpd" class="headerlink" title="minihttpd"></a>minihttpd</h2><p><a href="https://github.com/binyanbin/mini]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[c语言之socket 简易客户端]]></title>
@@ -612,29 +631,6 @@ master0:name=master,status=ok,address=127.0.0.1:6381,slaves=2,sentinels=1
 <h2 id="u5173_u952E_u77E5_u8BC6_u70B9"><a href="#u5173_u952E_u77E5_u8BC6_u70B9" class="headerlink" title="关键知识点"></a>关键知识点</h2><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>我们看下面这个使用this的例子</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">"yanbin"</span>,</span><br><span class="line">    showName :<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> other =&#123;</span><br><span class="line">    name:<span class="string">"changsha"</span>,</span><br><span class="line">    showName:obj.showName</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>obj.showName()提示的是yanbin,obj.showName()提示的是changsha，this是指执行时当前的对象。<br>]]>
-    
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Javascript的匿名函数]]></title>
-    <link href="http://binyanbin.github.io/2016/02/20/javascript-base-2/"/>
-    <id>http://binyanbin.github.io/2016/02/20/javascript-base-2/</id>
-    <published>2016-02-19T16:00:00.000Z</published>
-    <updated>2016-02-22T02:16:39.892Z</updated>
-    <content type="html"><![CDATA[<p>匿名函数在javascript中非常常见且实用，它最大的用途是创建闭包（这是JavaScript语言的特性之一），并且还可以构建命名空间，以减少全局变量的使用。javascript的框架这种用法随处可见。下面看二个例子，如何定义匿名函数。<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span>(<span class="params">t</span>)</span>&#123;</span><br><span class="line">       alert(t);</span><br><span class="line">   &#125;;</span><br><span class="line">f(<span class="string">"abc"</span>);</span><br></pre></td></tr></table></figure></p>
-<p>“=”右边的函数就是一个匿名函数，创造完毕函数后，又将该函数赋给了变量f。通过f再调用这个匿名函数。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">t</span>)</span>&#123;</span><br><span class="line">	alert(t)</span><br><span class="line">   &#125;)(<span class="string">"abc"</span>);</span><br></pre></td></tr></table></figure>
-<p>这里创建了一个匿名函数(在第一个括号内)，第二个括号用于调用该匿名函数，并传入参数。<br>这就是匿名函数常用的使用方式，通常用得最多的是第二种。</p>
-<p>前端人员一般为了避免声明了一些全局变量而污染，把代码放在一个“沙箱执行”，然后在暴露出命名空间（可以为API，函数，对象）,如Jquery:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"> window, undefined </span>) </span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.jQuery = <span class="built_in">window</span>.$ = jQuery;</span><br><span class="line">&#125;)( <span class="built_in">window</span> );</span><br></pre></td></tr></table></figure>
-<p>再如我想建一个自己的框架叫yb:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">window,undefined</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> yb = &#123;</span><br><span class="line">		add:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			alert(<span class="string">"add"</span>);</span><br><span class="line">		&#125;,</span><br><span class="line">		sub:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			alert(<span class="string">"sub"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="built_in">window</span>.yb = yb;</span><br><span class="line">&#125;)(<span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
-<p>你的方法add和sub只能通过全局对象yb访问，这个是函数闭包规则决定的。如不能理解闭包请参见<a href="http://binyanbin.github.io/2016/01/03/javascript-base-1/">函数的闭包</a>;</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>匿名函数在javascript中非常常见且实用，它最大的用途是创建闭包（这是JavaScript语言的特性之一），并且还可以构建命名空间，以减少全局变量的使用。javascript的框架这种用法随处可见。下面看二个例子，如何定义匿名函数。<br>]]>
     
     </summary>
     
