@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-04-17T06:47:50.257Z</updated>
+  <updated>2016-04-20T16:51:02.732Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -15,12 +15,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[浅谈Himall商城限时购设计]]></title>
+    <link href="http://binyanbin.github.io/2016/04/21/hishop-1/"/>
+    <id>http://binyanbin.github.io/2016/04/21/hishop-1/</id>
+    <published>2016-04-20T16:00:00.000Z</published>
+    <updated>2016-04-20T16:51:02.732Z</updated>
+    <content type="html"><![CDATA[<p>互联网正在高速发展，使用互联网服务的用户越多，高并发的场景也变得越来越多。<a href="http://www.hishop.com.cn/products/himall/" target="_blank" rel="external">Himall</a>限时购功能则是一个典型的短时间高并发场景。虽然我们解决问题的具体技术方案可能千差万别，但是遇到的挑战却是相似的，因此解决问题的思路也异曲同工。<br>什么是限时购?限时购跟大部分电商抢购业务相同,即限时且限量抢购。不管小米还是华为，或是其它电商公司，对抢购业务运营总是最为火爆，每发一款新品，都限量发售，每次搞的大家心里痒痒的。抢购太火爆有时引起站点打不开，崩溃了;还有就是卖出的数量比设置可购买的数量要多。那么问题来了：我们如何在设计中如何解决。通常我们需要从设计中考虑以下问题:</p>
+<ul>
+<li>针对高并发，我们如何解耦后端压力，特别是数据库的压力。</li>
+<li>如何保障库存可靠。<a id="more"></a>
+</li>
+</ul>
+<p>我们可以试想一下抢购时哪些页面会请求最多。抢购之前人们通常会通常刷页面等待，一般在抢购开始前一点时间会频繁刷新抢购倒数的页面或购买详情页面。抢购开始以后前一段时间下单的人会很多。付款并发量相对较小，通常订单在下单后几小时内都能付款，缓解了并发压力。针对以上问题及场景，我们做了以下处理，增加限时购缓存订单系统，去支持限时购高并发处理，并保持限时购业务的可靠性。<br><img src="/img/hishop-1.png" alt="图1"></p>
+<p><a href="http://www.hishop.com.cn/products/himall/" target="_blank" rel="external">Hiamll</a>在2.3版本做了如下改进:<br>1.引入Redis做缓存。<br>2.在用户抢购开始前频繁刷页面时,系统只从缓存中取商品数据，解耦了数据库查询的压力。<br>3.用户下单时系统只把订单数据存入订单缓存队列后然后告诉用户你的订单正在处理。然后由Redis Pub/Sub服务通知Web服务器，服务器把库存订单进行串行化处理，解耦数据库并发下单压力，保证库存可靠。<br>4.支付功能保持原来实现不变。</p>
+<p>具体实现如下:<br>买家前端查询限时购商品数据时只走缓存。<br><img src="/img/hishop-2.png" alt="图2"><br>卖家后台更新限时购或库存信息时需同步更新数据库及缓存。<br><img src="/img/hishop-3.png" alt="图3"><br>系统为每个正在开卖的限时购商品库存创建锁，买家对某库存下单时锁住该库存的下单操作，每一个商品库存只允许一个会员下单，下单的订单数据直接加入订单缓存后告诉买家[您的订单正在处理,请稍等]。然后通过Redis Pub/Sub服务通知服务器处理订单，将订单按库存串行化处理，订单处理完成后，则更新限时购订单缓存的处理状态。<br><img src="/img/hishop-4.png" alt="图4"><br>买家得知订单正在处理后，则不断查询缓存的订单处理状态。直到获取订单处理结果，下单成功则进行支付页面，失败则提示失败原因并引导买家重新下单。<br><img src="/img/hishop-5.png" alt="图5"><br>最后就是在Web服务启动时，需要对限时购订单缓存系统初始化，把商品数据加入缓存中，并处理上次未处理完成的订单。<br><img src="/img/hishop-6.png" alt="图6"></p>
+<p>总结:无论你用什么方式处理性能问题，性能优化的核心思想是分治。这种思想在日常生活中无处不在，大家都知道一次做不了的事，就分多次做，这就是分治。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>互联网正在高速发展，使用互联网服务的用户越多，高并发的场景也变得越来越多。<a href="http://www.hishop.com.cn/products/himall/">Himall</a>限时购功能则是一个典型的短时间高并发场景。虽然我们解决问题的具体技术方案可能千差万别，但是遇到的挑战却是相似的，因此解决问题的思路也异曲同工。<br>什么是限时购?限时购跟大部分电商抢购业务相同,即限时且限量抢购。不管小米还是华为，或是其它电商公司，对抢购业务运营总是最为火爆，每发一款新品，都限量发售，每次搞的大家心里痒痒的。抢购太火爆有时引起站点打不开，崩溃了;还有就是卖出的数量比设置可购买的数量要多。那么问题来了：我们如何在设计中如何解决。通常我们需要从设计中考虑以下问题:</p>
+<ul>
+<li>针对高并发，我们如何解耦后端压力，特别是数据库的压力。</li>
+<li>如何保障库存可靠。]]>
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[C windows版开源http服务]]></title>
     <link href="http://binyanbin.github.io/2016/04/17/c-7/"/>
     <id>http://binyanbin.github.io/2016/04/17/c-7/</id>
     <published>2016-04-16T16:00:00.000Z</published>
-    <updated>2016-04-17T06:47:50.257Z</updated>
-    <content type="html"><![CDATA[<h2 id="minihttpd"><a href="#minihttpd" class="headerlink" title="minihttpd"></a>minihttpd</h2><p><a href="https://github.com/binyanbin/minihttpd" target="_blank" rel="external">minihttpd</a>这是周末做的一个超小型http服务,参考了linux下的tinyhttpd实现。功能更少，仅支持html和get动词，暂不支持中文(稍后会解决),去掉注释及空行的剩余代码量小于300行。可支持windows和linux gcc编译。</p>
+    <updated>2016-04-19T11:39:51.872Z</updated>
+    <content type="html"><![CDATA[<h2 id="minihttpd"><a href="#minihttpd" class="headerlink" title="minihttpd"></a>minihttpd</h2><p><a href="https://github.com/binyanbin/minihttpd" target="_blank" rel="external">minihttpd</a>这是一个超小型http服务,参考了linux下的tinyhttpd实现。功能更少，仅支持html和get动词，暂不支持中文(稍后会解决),去掉注释及空行的剩余代码量小于300行。可支持windows和linux gcc编译。做这个服务可以让我更了解http服务器的运作方式及基本原理,也是用C做网络服务的一个范本，方便以做其它网络服务。</p>
 <h4 id="windwos_MinGW_u7F16_u8BD1_3A"><a href="#windwos_MinGW_u7F16_u8BD1_3A" class="headerlink" title="windwos MinGW编译:"></a>windwos MinGW编译:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -o http http.c <span class="operator">-l</span> wsock32</span><br></pre></td></tr></table></figure>
 <p>linux编译去掉首行 #define MINGW32</p>
 <h4 id="u7AD9_u70B9_u642D_u5EFA"><a href="#u7AD9_u70B9_u642D_u5EFA" class="headerlink" title="站点搭建"></a>站点搭建</h4><p>站点搭建:<br>创建站点目录，把http.exe复制到站点目录下，创建www目录并把网站的所有静态页面copy到目录下。<br><img src="/img/c-7.png" alt="效果"></p>
@@ -592,46 +619,6 @@ master0:name=master,status=ok,address=127.0.0.1:6381,slaves=2,sentinels=1
     <summary type="html">
     <![CDATA[<p>今天离职手续终于办完了，顺便回顾一下公司这几年研发技术的发展。</p>
 <h2 id="asp-net_webform"><a href="#asp-net_webform" class="headerlink" title="asp.net webform"></a>as]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Javascript的面向对象编程]]></title>
-    <link href="http://binyanbin.github.io/2016/02/21/javascript-base-3/"/>
-    <id>http://binyanbin.github.io/2016/02/21/javascript-base-3/</id>
-    <published>2016-02-20T16:00:00.000Z</published>
-    <updated>2016-02-27T16:33:03.403Z</updated>
-    <content type="html"><![CDATA[<p>Javascript里的所有东西都是对象，可是它又不并像Java,C#。不是严格意义上的OOP语言。但是它可以实现OOP的效果。但在之前你需要了解哪些关键的知识点?</p>
-<h2 id="u5173_u952E_u77E5_u8BC6_u70B9"><a href="#u5173_u952E_u77E5_u8BC6_u70B9" class="headerlink" title="关键知识点"></a>关键知识点</h2><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>我们看下面这个使用this的例子</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">"yanbin"</span>,</span><br><span class="line">    showName :<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> other =&#123;</span><br><span class="line">    name:<span class="string">"changsha"</span>,</span><br><span class="line">    showName:obj.showName</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>obj.showName()提示的是yanbin,obj.showName()提示的是changsha，this是指执行时当前的对象。<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>执行时函数不属于任何对象时,this表示window。(使用var定义的对象也属于window)</p>
-<h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><p>在Javascript中,new一个函数它做了以下3件事:</p>
-<ul>
-<li>创建新对象。</li>
-<li>拷贝prototype到新对象。</li>
-<li>设置构造函数</li>
-<li>执行函数返回给新对象。<br>请看下面这个示例<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">'yanbin'</span>;</span><br><span class="line">    <span class="keyword">this</span>.showcity =<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    	alert(<span class="string">'changsha'</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span>  model =<span class="keyword">new</span> func();</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>通过代码还原new的步骤<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> newobj = &#123;&#125;;</span><br><span class="line">newobj.__proto__ = func.prototype;</span><br><span class="line">func.prototype.constructor = func;</span><br><span class="line">p.apply(newobj)</span><br><span class="line"><span class="keyword">var</span> model = newobj;</span><br></pre></td></tr></table></figure></p>
-<p>这段代码我们需要搞清楚二个属性:</p>
-<ul>
-<li>prototype:在定义一个新函数，都会给函数创建一个prototype属性，也就是原型对象，把它看成普通对象也行了，但它可以影响这个函数实例的<strong>protype</strong>.</li>
-<li>__protype__:是函数实例的原型对象指针，每次new一个函数的时候都会给实例生成一个指针newobj.__proto__=func.protype。当函数的原型对象改变时，那么实例也会发生改变，因为__proto__只是指针，所以它也不能修改，只能对应的原型方法或属性访问它。<br>弄清楚了这些我们就可以开始OPP实践了。</li>
-</ul>
-<h2 id="u5C01_u88C5_u793A_u4F8B"><a href="#u5C01_u88C5_u793A_u4F8B" class="headerlink" title="封装示例"></a>封装示例</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">name,sex,s</span>)</span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name =name;</span><br><span class="line">    <span class="keyword">this</span>.sex = sex;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">sayname</span>(<span class="params"></span>)</span><br><span class="line">    </span>&#123;</span><br><span class="line">        alert(<span class="string">"my name is "</span>+ name +<span class="string">", i'm a "</span>+sex);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.say =<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span><br><span class="line">    </span>&#123;</span><br><span class="line">        sayname();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> secret = s;</span><br><span class="line">    <span class="keyword">this</span>.getsecret = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> secret;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.setsecret = <span class="function"><span class="keyword">function</span>(<span class="params">ss</span>)</span>&#123;</span><br><span class="line">        secret = ss;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> model =<span class="keyword">new</span> Person(<span class="string">'yanbin'</span>,<span class="string">'man'</span>,<span class="string">'test'</span>);</span><br></pre></td></tr></table></figure>
-<p>name,sex是公开属性,sayname是一个私有方法，say是一个公共方法。secret是一个私有属性,对它的赋值和取值则是通过getsecret和setsecret这二个方法。</p>
-<h2 id="u7EE7_u627F_u793A_u4F8B"><a href="#u7EE7_u627F_u793A_u4F8B" class="headerlink" title="继承示例"></a>继承示例</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Man</span>(<span class="params">n</span>)</span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span><br><span class="line">    </span>&#123;</span><br><span class="line">        alert(<span class="string">"my name is:"</span>+ <span class="keyword">this</span>.realname);</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">    <span class="keyword">this</span>.realname = n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Man.prototype = &#123;</span><br><span class="line">    realname : <span class="keyword">this</span>.realname,</span><br><span class="line">    say : <span class="keyword">this</span>.say</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Employee</span>(<span class="params">sex</span>)</span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> sex = sex;</span><br><span class="line">    <span class="keyword">this</span>.getsex = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">       <span class="keyword">return</span> sex;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Employee.prototype = <span class="keyword">new</span> Man(<span class="string">'yanbin'</span>);</span><br><span class="line"><span class="keyword">var</span> model = <span class="keyword">new</span> Employee(<span class="string">"female"</span>);</span><br></pre></td></tr></table></figure>
-<p>Employee继承man的say方法和realname属性，Emplayee有一个私有属性sex和一个getsex方法。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Javascript里的所有东西都是对象，可是它又不并像Java,C#。不是严格意义上的OOP语言。但是它可以实现OOP的效果。但在之前你需要了解哪些关键的知识点?</p>
-<h2 id="u5173_u952E_u77E5_u8BC6_u70B9"><a href="#u5173_u952E_u77E5_u8BC6_u70B9" class="headerlink" title="关键知识点"></a>关键知识点</h2><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>我们看下面这个使用this的例子</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">"yanbin"</span>,</span><br><span class="line">    showName :<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> other =&#123;</span><br><span class="line">    name:<span class="string">"changsha"</span>,</span><br><span class="line">    showName:obj.showName</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>obj.showName()提示的是yanbin,obj.showName()提示的是changsha，this是指执行时当前的对象。<br>]]>
-    
     </summary>
     
   </entry>
