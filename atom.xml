@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-05-14T04:55:57.523Z</updated>
+  <updated>2016-05-14T05:38:49.851Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -15,41 +15,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[jmeter himall多用户商城模拟抢购测试]]></title>
+    <title><![CDATA[jmeter himall抢购业务简单测试]]></title>
     <link href="http://binyanbin.github.io/2016/05/13/jmeter-2/"/>
     <id>http://binyanbin.github.io/2016/05/13/jmeter-2/</id>
     <published>2016-05-12T16:00:00.000Z</published>
-    <updated>2016-05-14T04:55:57.523Z</updated>
-    <content type="html"><![CDATA[<h2 id="himall_u9879_u76EE_u7684_u9650_u65F6_u8D2D_u6A21_u62DF_u62A2_u8D2D_u4E1A_u52A1_u7684_u5E76_u53D1_u6D4B_u8BD5"><a href="#himall_u9879_u76EE_u7684_u9650_u65F6_u8D2D_u6A21_u62DF_u62A2_u8D2D_u4E1A_u52A1_u7684_u5E76_u53D1_u6D4B_u8BD5" class="headerlink" title="himall项目的限时购模拟抢购业务的并发测试"></a>himall项目的限时购模拟抢购业务的并发测试</h2><p>测试要求:1000用户同时登陆himall商城，同时购买固定活动商品库存，全部下单完成之后，去管理后台验证是否超卖。<br>整个测试摸拟过程为:</p>
+    <updated>2016-05-14T05:38:49.851Z</updated>
+    <content type="html"><![CDATA[<p>Jmeter是一款比较好测试工具，我以<a href="http://www.hishop.com.cn/" target="_blank" rel="external">Hishop</a>旗下<a href="http://www.hishop.com.cn/products/himall/" target="_blank" rel="external">Himall</a>(多用户商城产品)为例，使用jmeter对电商网站的抢购业务建立一个简单测试方案。</p>
+<h2 id="himall_u62A2_u8D2D_u4E1A_u52A1_u7684_u6D4B_u8BD5"><a href="#himall_u62A2_u8D2D_u4E1A_u52A1_u7684_u6D4B_u8BD5" class="headerlink" title="himall抢购业务的测试"></a><a href="http://www.hishop.com.cn/products/himall/" target="_blank" rel="external">himall</a>抢购业务的测试</h2><p>测试要求:模拟1000用户同时登陆himall商城，同时购买固定活动商品库存，全部下单完成之后，去验证结果。<br>整个测试摸拟过程为:</p>
 <ul>
 <li>登陆 </li>
 <li>频刷活动商品页面 </li>
-<li>下单一次或多次 </li>
+<li>下单<a id="more"></a>
+<h2 id="JMeter_u8BBE_u7F6E"><a href="#JMeter_u8BBE_u7F6E" class="headerlink" title="JMeter设置"></a>JMeter设置</h2>整个测试的结构如下图</li>
 </ul>
-<h2 id="JMeter_u8BBE_u7F6E"><a href="#JMeter_u8BBE_u7F6E" class="headerlink" title="JMeter设置"></a>JMeter设置</h2><p>整个测试的结构如下图</p>
-<p><img src="/img/jemeter-6.png" alt="图"></p>
+<p><img src="/img/jmeter-6.png" alt="图"></p>
 <ul>
-<li>线程组 模拟用户的数量</li>
-<li>聚合报告 测试的性能数据</li>
-<li>查看结果树 具体每个请求的详细信息。</li>
-<li>一个事务控件器 定义从登陆到下单的所有http请求</li>
-<li>HttpCookie管理器 登陆的用户信息在Cookie中，你需要它了保持cookie用户信息</li>
-<li>用户定义变量 记录这次测试指定活动的产品ID及库存ID</li>
+<li>线程组:模拟用户的数量</li>
+<li>聚合报告:测试的性能数据</li>
+<li>查看结果树:具体每个请求的详细信息。</li>
+<li>一个事务控件器:定义从登陆到下单的所有http请求</li>
+<li>HttpCookie管理器:登陆的用户信息在Cookie中，你需要它了保持cookie用户信息</li>
+<li>用户定义变量:记录这次测试指定活动的产品ID及库存ID</li>
 </ul>
-<p><img src="/img/jemeter-7.png" alt="图"><br>设置模拟用户数1000</p>
-<p><img src="/img/jemeter-8.png" alt="图"><br>skuid为库存ID,productid为商品ID。此测试只操作单个库存</p>
-<p><img src="/img/jemeter-9.png" alt="图"><br>准备1000个用户名和账号，以.csv保存，用户名与密码以’,’隔开。</p>
-<p><img src="/img/jemeter-10.png" alt="图"><br>设置登陆请求,ip和端口,路径。请求方法:post。重要的是BodyData的内容,其中包括用户名，密码及验证码。<br>__CSVRead是一个读csv文件数据的方法。<br>第一参数为目录:C:\Users\admin\Desktop\jmeterdata\account.csv这是我本地的账户信息文件路径。<br>第二参数指你要读第几列数据，列数由0开始。<br>checkCode 验证码验证<br>keep 是否保持登陆</p>
+<p>1.设置模拟用户数1000<br><img src="/img/jmeter-7.png" alt="图"></p>
+<p>2.设置商品及库存ID<br><img src="/img/jmeter-8.png" alt="图"><br>skuid为库存ID,productid为商品ID。此测试只操作单个库存</p>
+<p>3.设置账号数据<br><img src="/img/jmeter-9.png" alt="图"><br>准备1000个用户名和账号，以.csv保存，用户名与密码以’,’隔开。</p>
+<p>4.设置登陆请求<br><img src="/img/jmeter-10.png" alt="图"><br>设置登陆请求,ip和端口,路径。请求方法:post。重要的是BodyData的内容,其中包括用户名，密码及验证码。<br>__CSVRead是一个读csv文件数据的方法。<br>第一参数为目录:C:\Users\admin\Desktop\jmeterdata\account.csv这是我本地的账户信息文件路径。<br>第二参数指你要读第几列数据，列数由0开始。<br>checkCode 验证码验证<br>keep 是否保持登陆</p>
 <ul>
-<li>注意需要在代码中注释掉验证环节才可以测试，否则你无法登陆成功。</li>
+<li>注意:需要在网站代码中注释掉验证环节才可以测试，否则你无法登陆成功。</li>
 </ul>
-<p><img src="/img/jemeter-11.png" alt="图"><br>设置刷新活动页面次数.10次20次你随便设吧</p>
-<p><img src="/img/jemeter-12.png" alt="图"><br>刷活动设置比较简单，就是一个路径，${productid}代表是你自定义的产品ID,couts是购买数量。</p>
-<p><img src="/img/jemeter-13.png" alt="图"><br>定单提交页面也是一个路径，这个请求参数相对较多一些，最重要的是设置好库存ID<br>integral是使用积分,没有为0<br>couponIds红包ID,没有为空<br>skuIds购买库存ID,${skuid}则是开始配置的库存ID<br>counts购买数量<br>collpIds组合购ID，没有为空<br>recieveAddressId收货地区ID<br>invoiceType发票类型 0 不要发票 1 增值税发票 2普通发票<br>&amp;invoiceTitle发票抬头,没有为空<br>invoiceContext内容，没有为空<br>isCashOnDelivery是否货到付款</p>
+<p>4.设置活动页面刷新请求<br><img src="/img/jmeter-11.png" alt="图"><br>设置刷新活动页面次数.10次20次你随便设吧</p>
+<p><img src="/img/jmeter-12.png" alt="图"><br>刷活动设置比较简单，就是一个路径，${productid}代表是你自定义的产品ID,couts是购买数量。</p>
+<p>5.设置提交订单请求<br><img src="/img/jmeter-13.png" alt="图"><br>定单提交页面也是一个路径，这个请求参数相对较多一些，最重要的是设置好库存ID<br>integral:使用积分,没有为0<br>couponIds:红包ID,没有为空<br>skuIds:购买库存ID,${skuid}则是开始配置的库存ID<br>counts:购买数量<br>collpIds:组合购ID，没有为空<br>recieveAddressId:收货地区ID<br>invoiceType:发票类型 0 不要发票 1 增值税发票 2普通发票<br>&amp;invoiceTitle:发票抬头,没有为空<br>invoiceContext:发票内容，没有为空<br>isCashOnDelivery:是否货到付款</p>
 <p>设置完成，你现在可以泡杯茶坐等结果。当然你也可以修改相应相关参数，如摸拟用户数，指定活动页面的刷新次数等，来看看结果会有哪些不同。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="himall_u9879_u76EE_u7684_u9650_u65F6_u8D2D_u6A21_u62DF_u62A2_u8D2D_u4E1A_u52A1_u7684_u5E76_u53D1_u6D4B_u8BD5"><a href="#himall_u9879]]>
+    <![CDATA[<p>Jmeter是一款比较好测试工具，我以<a href="http://www.hishop.com.cn/">Hishop</a>旗下<a href="http://www.hishop.com.cn/products/himall/">Himall</a>(多用户商城产品)为例，使用jmeter对电商网站的抢购业务建立一个简单测试方案。</p>
+<h2 id="himall_u62A2_u8D2D_u4E1A_u52A1_u7684_u6D4B_u8BD5"><a href="#himall_u62A2_u8D2D_u4E1A_u52A1_u7684_u6D4B_u8BD5" class="headerlink" title="himall抢购业务的测试"></a><a href="http://www.hishop.com.cn/products/himall/">himall</a>抢购业务的测试</h2><p>测试要求:模拟1000用户同时登陆himall商城，同时购买固定活动商品库存，全部下单完成之后，去验证结果。<br>整个测试摸拟过程为:</p>
+<ul>
+<li>登陆 </li>
+<li>频刷活动商品页面 </li>
+<li>下单]]>
+    
     </summary>
     
   </entry>
