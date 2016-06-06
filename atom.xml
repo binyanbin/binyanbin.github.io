@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-06-06T07:18:57.262Z</updated>
+  <updated>2016-06-06T07:22:52.565Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://binyanbin.github.io/2016/06/05/hishop-2/"/>
     <id>http://binyanbin.github.io/2016/06/05/hishop-2/</id>
     <published>2016-06-04T16:00:00.000Z</published>
-    <updated>2016-06-06T07:18:57.262Z</updated>
-    <content type="html"><![CDATA[<p>这段时间一直做<a href="http://www.hishop.com.cn/products/himall/" target="_blank" rel="external">Himall</a>的架构优化，也一直思考什么样的架构设计更合适大型商城系统或者是大型业务系统。从早期的集中化架构到现在的分布式架构，中间经历的各种问题，现在做一个总结。</p>
+    <updated>2016-06-06T07:22:52.565Z</updated>
+    <content type="html"><![CDATA[<p>这段时间一直做<a href="http://www.hishop.com.cn/products/himall/" target="_blank" rel="external">Himall</a>的架构优化，也一直思考什么样的架构设计更合适大型商城系统或者是大型业务系统。从早期的集中化架构到现在的分布式架构，中间经历的各种问题，现在做一个总结。<br><a id="more"></a></p>
 <h2 id="u96C6_u4E2D_u5316_u67B6_u6784"><a href="#u96C6_u4E2D_u5316_u67B6_u6784" class="headerlink" title="集中化架构"></a>集中化架构</h2><p><img src="/img/hishop-7.png" alt="图"><br>Himall早期功能比较少，而且业务相对简单。经过一段时间的开发，一个简单的应用诞生了。同时，集中式设计毫无争议的成为了团队的选择。但是，随着几次迭代开发之后，功能越来越多，业务越来越复杂，这种架构的缺点也渐渐地浮出了水面：</p>
 <ol>
 <li>系统的可维护性受到影响，尤其是那些大型应用<br>多人开发的一个复杂的应用系统，团队人数越多,开发人员必然层次不一，规范难统一，系统模块之间的耦合非常重,模块之间太多相互依赖，非常容易出问题。</li>
@@ -52,7 +52,8 @@
 <p>虽然这些只是这段时间的经验总结，Himall也未完成达到我们所期望的状态，但是我们会继续朝这个访问努力。经过1-2年的迭代之后，我们的架构会更加成熟，经验变得更加丰富。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>这段时间一直做<a href="http://www.hishop.com.cn/products/himall/" target="_blank" rel="external">Himall</a>的架构优化，也一直思考什么样的架构设计更合适大型商城系统或者是大型业务系统]]>
+    <![CDATA[<p>这段时间一直做<a href="http://www.hishop.com.cn/products/himall/">Himall</a>的架构优化，也一直思考什么样的架构设计更合适大型商城系统或者是大型业务系统。从早期的集中化架构到现在的分布式架构，中间经历的各种问题，现在做一个总结。<br>]]>
+    
     </summary>
     
   </entry>
