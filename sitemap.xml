@@ -3,172 +3,247 @@
   
   <url>
     <loc>http://binyanbin.github.io/2015/12/20/self-introduce/</loc>
-    <lastmod>2016-06-07T13:18:22.770Z</lastmod>
+    
+    <lastmod>2016-06-25T15:17:55.000Z</lastmod>
+    
   </url>
   
   <url>
-    <loc>http://binyanbin.github.io/2016/06/07/hishop-3/</loc>
-    <lastmod>2016-06-07T12:52:42.837Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/06/05/hishop-2/</loc>
-    <lastmod>2016-06-06T07:22:52.565Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/05/02/CSharp-2/</loc>
-    <lastmod>2016-05-24T11:36:20.007Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/05/14/english-2/</loc>
-    <lastmod>2016-05-24T11:31:31.765Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/05/08/go-1/</loc>
-    <lastmod>2016-05-14T08:17:48.500Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/04/21/hishop-1/</loc>
-    <lastmod>2016-05-14T08:17:14.810Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/05/13/jmeter-2/</loc>
-    <lastmod>2016-05-14T08:12:55.078Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/04/30/CSharp-1/</loc>
-    <lastmod>2016-05-11T13:46:39.641Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/05/06/english-1/</loc>
-    <lastmod>2016-05-08T15:14:11.662Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/04/17/c-7/</loc>
-    <lastmod>2016-05-06T13:58:24.499Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/03/25/c-3/</loc>
-    <lastmod>2016-04-28T13:39:46.485Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/04/12/c-5/</loc>
-    <lastmod>2016-04-17T06:47:56.916Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/04/13/c-6/</loc>
-    <lastmod>2016-04-17T06:47:53.525Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/03/31/c-4/</loc>
-    <lastmod>2016-03-31T15:52:03.258Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/03/24/c-2/</loc>
-    <lastmod>2016-03-25T14:46:11.326Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/03/23/c-1/</loc>
-    <lastmod>2016-03-25T13:22:02.402Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/02/18/interview-hishop/</loc>
-    <lastmod>2016-03-23T14:20:24.876Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/03/21/javascript-base-4/</loc>
-    <lastmod>2016-03-21T14:25:18.781Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/03/12/jmeter-1/</loc>
-    <lastmod>2016-03-12T16:53:31.616Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/03/10/redis-8/</loc>
-    <lastmod>2016-03-10T15:53:20.146Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/03/09/redis-7/</loc>
-    <lastmod>2016-03-09T14:52:32.154Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/02/28/redis-1/</loc>
-    <lastmod>2016-03-09T14:51:42.420Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/03/07/redis-5/</loc>
-    <lastmod>2016-03-07T14:19:29.124Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/03/08/redis-6/</loc>
-    <lastmod>2016-03-07T14:17:00.704Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/03/05/redis-4/</loc>
-    <lastmod>2016-03-05T17:14:58.831Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/03/03/redis-3/</loc>
-    <lastmod>2016-03-03T15:35:14.699Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/03/02/redis-2/</loc>
-    <lastmod>2016-03-03T15:34:59.504Z</lastmod>
+    <loc>http://binyanbin.github.io/2016/06/23/hishop-4/</loc>
+    
+    <lastmod>2016-06-25T15:16:39.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://binyanbin.github.io/2016/02/21/javascript-base-3/</loc>
-    <lastmod>2016-02-27T16:33:03.403Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/02/26/lock/</loc>
-    <lastmod>2016-02-27T16:12:34.744Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/02/23/8year-review/</loc>
-    <lastmod>2016-02-23T17:10:37.294Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://binyanbin.github.io/2016/02/20/javascript-base-2/</loc>
-    <lastmod>2016-02-22T02:16:39.892Z</lastmod>
+    
+    <lastmod>2016-06-25T13:15:38.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://binyanbin.github.io/2016/01/03/javascript-base-1/</loc>
-    <lastmod>2016-02-21T14:51:30.124Z</lastmod>
+    
+    <lastmod>2016-06-16T03:57:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/03/24/c-2/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/03/25/c-3/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/03/31/c-4/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/04/17/c-7/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/04/13/c-6/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/04/12/c-5/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/05/06/english-1/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/05/14/english-2/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/05/08/go-1/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://binyanbin.github.io/2016/01/02/hello-world/</loc>
-    <lastmod>2016-02-20T02:09:40.357Z</lastmod>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/04/21/hishop-1/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/06/05/hishop-2/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/02/23/8year-review/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/05/02/CSharp-2/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/02/18/interview-hishop/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/04/30/CSharp-1/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/03/23/c-1/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/02/20/javascript-base-2/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/03/21/javascript-base-4/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/03/12/jmeter-1/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/05/13/jmeter-2/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/02/26/lock/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/02/28/redis-1/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/03/02/redis-2/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/03/03/redis-3/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/03/05/redis-4/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/03/07/redis-5/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/03/08/redis-6/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/03/10/redis-8/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/03/09/redis-7/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binyanbin.github.io/2016/06/07/hishop-3/</loc>
+    
+    <lastmod>2016-06-15T15:52:46.000Z</lastmod>
+    
   </url>
   
 </urlset>
