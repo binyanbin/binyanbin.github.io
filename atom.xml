@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-07-04T13:59:05.000Z</updated>
+  <updated>2016-09-04T14:25:14.000Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mac 我的常用快捷键</title>
+    <link href="http://binyanbin.github.io/2016/09/04/shortcut/"/>
+    <id>http://binyanbin.github.io/2016/09/04/shortcut/</id>
+    <published>2016-09-03T16:00:00.000Z</published>
+    <updated>2016-09-04T14:25:14.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;mac基础&quot;&gt;&lt;a href=&quot;#mac基础&quot; class=&quot;headerlink&quot; title=&quot;mac基础:&quot;&gt;&lt;/a&gt;mac基础:&lt;/h2&gt;&lt;p&gt;ctrl+上下左右   切屏&lt;br&gt;cmd+上下左右  定位&lt;br&gt;cmd+shift+上下左右  定位+选择&lt;br&gt;fn+上下左右  滚动&lt;br&gt;ctrl+cmd+f  全屏&lt;/p&gt;
+&lt;h2 id=&quot;vim&quot;&gt;&lt;a href=&quot;#vim&quot; class=&quot;headerlink&quot; title=&quot;vim&quot;&gt;&lt;/a&gt;vim&lt;/h2&gt;&lt;p&gt;:set number 显示行号&lt;br&gt;:syntax on 语法显示&lt;br&gt;w下一个单词&lt;br&gt;b上一个单词&lt;br&gt;gg文件首&lt;br&gt;Ｇ文件尾&lt;br&gt;0行首&lt;br&gt;^行首文字&lt;br&gt;$行尾&lt;br&gt;dd删除当前行&lt;br&gt;行号G 调到第几行&lt;br&gt;Ctrl+f Ctrl+b 翻页&lt;br&gt;/word 查找&lt;br&gt;u  ctrl+r   撤销 重做&lt;/p&gt;
+&lt;h2 id=&quot;bash&quot;&gt;&lt;a href=&quot;#bash&quot; class=&quot;headerlink&quot; title=&quot;bash&quot;&gt;&lt;/a&gt;bash&lt;/h2&gt;&lt;p&gt;ctrl+a 开头&lt;br&gt;ctrl+e 结毛&lt;br&gt;ctrl+k 清除光标后至行尾&lt;br&gt;ctrl+u清除光标至之前&lt;br&gt;tab 补全&lt;br&gt;ctrl+c 终止&lt;/p&gt;
+&lt;h2 id=&quot;sublime&quot;&gt;&lt;a href=&quot;#sublime&quot; class=&quot;headerlink&quot; title=&quot;sublime&quot;&gt;&lt;/a&gt;sublime&lt;/h2&gt;&lt;p&gt;ctrl+k+b 目录显示/隐藏&lt;br&gt;cmd+option+number 分屏&lt;br&gt;ctrl+shift+number 移屏&lt;br&gt;cmd+p 查找文件&lt;br&gt;cmd+shift+p  插件命令&lt;br&gt;cmd+alt+g 快找&lt;br&gt;cmd+f 查找 alt+cmd+r 正则&lt;br&gt;cmd+shift+f 替换&lt;br&gt;cmd+k+u 大写 cmd+k+l 小写&lt;br&gt;cmd+k+num 折到第几层&lt;br&gt;cmd+k+j 全部展开&lt;br&gt;cmd+k+k 删除到行末尾&lt;br&gt;ctrl+shift+k 删除行&lt;br&gt;F6 拼写检查&lt;/p&gt;
+&lt;h2 id=&quot;eclispe&quot;&gt;&lt;a href=&quot;#eclispe&quot; class=&quot;headerlink&quot; title=&quot;eclispe&quot;&gt;&lt;/a&gt;eclispe&lt;/h2&gt;&lt;p&gt;cmd+e 已打开文件&lt;br&gt;cmd+o 文件导航&lt;br&gt;cmd+alt+s 生成&lt;br&gt;cmd+f7 切换窗体&lt;br&gt;f3 转定义&lt;br&gt;cmd+shift+g 转引用&lt;br&gt;cmd+shift+r 打开文件&lt;br&gt;cmd+shift+h 打开类型&lt;br&gt;cmd+alt+r 重命名&lt;br&gt;cmd+1 快速修复&lt;br&gt;ctrl+q 回到最后一次编辑的地方&lt;br&gt;alt+/  内容提示&lt;br&gt;cmd+/ 注释&lt;br&gt;cmd+t 查看继承关系&lt;br&gt;cmd+shift+f 格式化&lt;br&gt;cmd+alt+j 添加完整注释&lt;br&gt;ctrl+m 隐藏package&lt;br&gt;cmd+shift+[ 分坚屏&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;mac基础&quot;&gt;&lt;a href=&quot;#mac基础&quot; class=&quot;headerlink&quot; title=&quot;mac基础:&quot;&gt;&lt;/a&gt;mac基础:&lt;/h2&gt;&lt;p&gt;ctrl+上下左右   切屏&lt;br&gt;cmd+上下左右  定位&lt;br&gt;cmd+shift+上下左右  定位+选择&lt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>你确定真的要做互联网项目吗</title>
@@ -826,77 +849,6 @@ sb.Append(str3);
       &lt;p&gt;Javascript不算模块化编程语言，但是web开发需要团队开发和团队协做。现在javascript模块化开发已非常正熟，支持模块化开发的框架非常多。&lt;/p&gt;
 &lt;h2 id=&quot;原始写法&quot;&gt;&lt;a href=&quot;#原始写法&quot; class=&quot;headerlink&quot; title=&quot;原始写法&quot;&gt;&lt;/a&gt;原始写法&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;func1&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;func2&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;只要把不同的函数简单地放在一个文件中，就算是一个模块，通常一个文件一个模块。&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>jmeter 基础概念</title>
-    <link href="http://binyanbin.github.io/2016/03/12/jmeter-1/"/>
-    <id>http://binyanbin.github.io/2016/03/12/jmeter-1/</id>
-    <published>2016-03-11T16:00:00.000Z</published>
-    <updated>2016-06-15T15:52:46.000Z</updated>
-    
-    <content type="html">&lt;p&gt;最近做性能优化工作，同时要给自己的工作给一个总结。需要自己弄性能测试及编写性能测试报告。在别人推荐下使用JMeter对项目进行性能测试。JMeter可以进行配置和执行负载测试、性能测试和压力测试的工具。了解一下几个概念:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;负载测试: 这类测试使系统或者应用程序在预先设计好的极端场景下测试运行。这类测试用来评估系统或者程序在极端条件下的行为。&lt;/li&gt;
-&lt;li&gt;性能测试: 这种测试被用来检测系统的性能表现，包括特定情况下，系统的响应能力和稳定性。&lt;/li&gt;
-&lt;li&gt;压力测试: 这类测试通过载入更多的外部资源，并使系统组件超越其所设定的能力范围,试图使系统挂掉.&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-JMeter 的安装非常简单,从官方网站上下载，解压之后即可使用。运行命令在%JMETER_HOME%/bin下,对于 Windows用户来说,命令是jmeter.bat。运行前请检查JMeter的文档,查看是否具备相关的运行条件:JDK的版本要求是否满足.&lt;h2 id=&quot;Test-Plan配置&quot;&gt;&lt;a href=&quot;#Test-Plan配置&quot; class=&quot;headerlink&quot; title=&quot;Test Plan配置&quot;&gt;&lt;/a&gt;Test Plan配置&lt;/h2&gt;&lt;img src=&quot;/img/jmeter-1.png&quot; alt=&quot;基本配置&quot;&gt;&lt;br&gt;进去之后，你会看到Test Plan和WorkBench。这两个块东西没有太多区别，不同的是Test Plan是测试的相关配置，workbench可以帮你创建一个代理服务器帮Test Plan录制测试脚本。&lt;h4 id=&quot;ThreadGroup-线程组&quot;&gt;&lt;a href=&quot;#ThreadGroup-线程组&quot; class=&quot;headerlink&quot; title=&quot;ThreadGroup 线程组&quot;&gt;&lt;/a&gt;ThreadGroup 线程组&lt;/h4&gt;一个线程组基本上是不同的测试计划元素的组合，它是一个测试计划的核心，它控制着基本核心参数。&lt;br&gt;为了创建一个测试计划，首先你不得不去创建一个线程组，配置如下参数:线程数量，过渡时期，循环次数和正常情况或者错误情况下的行为：&lt;h4 id=&quot;Samplers-采样器&quot;&gt;&lt;a href=&quot;#Samplers-采样器&quot; class=&quot;headerlink&quot; title=&quot;Samplers 采样器&quot;&gt;&lt;/a&gt;Samplers 采样器&lt;/h4&gt;采样器用于发送请求到不同类型的服务器。它们是每一个测试计划的基本要素，一切都围绕这些采样器而工作：采样器执行请求，这些请求产生一个或多个响应，后续将被分析。&lt;h4 id=&quot;Logic-Controllers-逻辑控制器&quot;&gt;&lt;a href=&quot;#Logic-Controllers-逻辑控制器&quot; class=&quot;headerlink&quot; title=&quot;Logic Controllers 逻辑控制器&quot;&gt;&lt;/a&gt;Logic Controllers 逻辑控制器&lt;/h4&gt;逻辑控制器允许你配置一个线程组内不同采样器的执行顺序。&lt;h4 id=&quot;Listeners-监听器&quot;&gt;&lt;a href=&quot;#Listeners-监听器&quot; class=&quot;headerlink&quot; title=&quot;Listeners 监听器&quot;&gt;&lt;/a&gt;Listeners 监听器&lt;/h4&gt;监听器提供不同的方式查看由采样器请求产生的结果。监听器以报表、树型结构、或简明的日志文件的形式分析结果。&lt;h4 id=&quot;Timers-定时器&quot;&gt;&lt;a href=&quot;#Timers-定时器&quot; class=&quot;headerlink&quot; title=&quot;Timers 定时器&quot;&gt;&lt;/a&gt;Timers 定时器&lt;/h4&gt;定时器来定义请求之间的等待时间。如果不指定，JMeter会一个请求完成后立即执行下一个请求，没有任何等待时间。&lt;h4 id=&quot;Assertions-断言&quot;&gt;&lt;a href=&quot;#Assertions-断言&quot; class=&quot;headerlink&quot; title=&quot;Assertions 断言&quot;&gt;&lt;/a&gt;Assertions 断言&lt;/h4&gt;断言通过验证采样器请求产生的响应，来验证测试计划的有效性。类似于单元测试断言，用来检测被测试应用程序的响应质量。&lt;h4 id=&quot;Configuration-nodes-配置节点&quot;&gt;&lt;a href=&quot;#Configuration-nodes-配置节点&quot; class=&quot;headerlink&quot; title=&quot;Configuration nodes 配置节点&quot;&gt;&lt;/a&gt;Configuration nodes 配置节点&lt;/h4&gt;配置节点可以将不同的参数传递给取样器请求。&lt;h4 id=&quot;Pre-processors-前置处理器&quot;&gt;&lt;a href=&quot;#Pre-processors-前置处理器&quot; class=&quot;headerlink&quot; title=&quot;Pre processors 前置处理器&quot;&gt;&lt;/a&gt;Pre processors 前置处理器&lt;/h4&gt;前置处理器在采样器执行前被触发的元素。&lt;h4 id=&quot;Post-processors-后置处理器&quot;&gt;&lt;a href=&quot;#Post-processors-后置处理器&quot; class=&quot;headerlink&quot; title=&quot;Post processors 后置处理器&quot;&gt;&lt;/a&gt;Post processors 后置处理器&lt;/h4&gt;后置处理器是取样器被执行后被触发执行的元素。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;WorkBench&quot;&gt;&lt;a href=&quot;#WorkBench&quot; class=&quot;headerlink&quot; title=&quot;WorkBench&quot;&gt;&lt;/a&gt;WorkBench&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/img/jmeter-2.png&quot; alt=&quot;非测试元素&quot;&gt;&lt;br&gt;WorkBench可以Add三个Non-test Elements:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Http Mirror Server 镜像的服务器&lt;br&gt;其实就是一个代理服务器,它把所有接收到的请求原封不动地返回，这样就可以看到发出请求和响应的具体内容了。&lt;/li&gt;
-&lt;li&gt;Http(s) Test Script Recorder 脚本录制器&lt;br&gt;也是一个代理服务器,它会把所有接受的请求全部记录到Test Plan配置中,你在测试中可以使用这些录制的脚本。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;测试计划元素执行顺序&quot;&gt;&lt;a href=&quot;#测试计划元素执行顺序&quot; class=&quot;headerlink&quot; title=&quot;测试计划元素执行顺序&quot;&gt;&lt;/a&gt;测试计划元素执行顺序&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;配置节点&lt;/li&gt;
-&lt;li&gt;前置处理器&lt;/li&gt;
-&lt;li&gt;定时器&lt;/li&gt;
-&lt;li&gt;取样器&lt;/li&gt;
-&lt;li&gt;后置处理器（只在有结果可用情况下执行）&lt;/li&gt;
-&lt;li&gt;断言（只在有结果可用情况下执行）&lt;/li&gt;
-&lt;li&gt;监听器（只在有结果可用情况下执行）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;性能指标&quot;&gt;&lt;a href=&quot;#性能指标&quot; class=&quot;headerlink&quot; title=&quot;性能指标&quot;&gt;&lt;/a&gt;性能指标&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Label:定义的HTTP请求名称&lt;/li&gt;
-&lt;li&gt;Samples:表示这次测试中一共发出了多少个请求&lt;/li&gt;
-&lt;li&gt;Average:访问页面的平均响应时间 &lt;/li&gt;
-&lt;li&gt;Min:访问页面的最小响应时间&lt;/li&gt;
-&lt;li&gt;Max:访问页面的最大响应时间&lt;/li&gt;
-&lt;li&gt;Error%:错误的请求的数量/请求的总数&lt;/li&gt;
-&lt;li&gt;Throughpu:每秒完成的请求数&lt;/li&gt;
-&lt;li&gt;KB/Sec:每秒从服务器端接收到的数据量&lt;/li&gt;
-&lt;li&gt;Median:50％的用户响应时间&lt;/li&gt;
-&lt;li&gt;90%Line:90％的用户响应时间&lt;/li&gt;
-&lt;li&gt;95%Line:95％的用户响应时间&lt;/li&gt;
-&lt;li&gt;99%Line:99％的用户响应时间&lt;br&gt;时间指标的单位都是毫秒。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;第一个web性能测试&quot;&gt;&lt;a href=&quot;#第一个web性能测试&quot; class=&quot;headerlink&quot; title=&quot;第一个web性能测试&quot;&gt;&lt;/a&gt;第一个web性能测试&lt;/h2&gt;&lt;p&gt;我做了一个博客网站首页的性能测试，只设置ThreadGroup,Sampler,Listener三项就可以运行。&lt;/p&gt;
-&lt;h4 id=&quot;ThreadGroup设置&quot;&gt;&lt;a href=&quot;#ThreadGroup设置&quot; class=&quot;headerlink&quot; title=&quot;ThreadGroup设置&quot;&gt;&lt;/a&gt;ThreadGroup设置&lt;/h4&gt;&lt;p&gt;一个性能测试请求负载是基于一个线程组完成的，jmeter中每个测试计划至少需要包含一个线程组。Test Plan右键菜单可新增ThreadGroup(add-&amp;gt;Threads-&amp;gt;ThreadGroup);&lt;br&gt;&lt;img src=&quot;/img/jmeter-3.png&quot; alt=&quot;ThreadGroup&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Number of Threads 线程数:虚拟用户数.一个虚拟用户占用一个进程或线程。&lt;/li&gt;
-&lt;li&gt;Ramp-up Period 准备时长:设置的虚拟用户数需要多长时间全部启动。&lt;/li&gt;
-&lt;li&gt;Loop Count 循环次数：每个线程发送请求的次数。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;Sample设置&quot;&gt;&lt;a href=&quot;#Sample设置&quot; class=&quot;headerlink&quot; title=&quot;Sample设置&quot;&gt;&lt;/a&gt;Sample设置&lt;/h4&gt;&lt;p&gt;在ThreadGroup上右键菜单可新增HttpRequest（add-&amp;gt;Sampler-&amp;gt;HttpRequest).Sampler是与服务器进行交互的单元.一个Sampler通常进行三部分的工作：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;向服务器发送请求&lt;/li&gt;
-&lt;li&gt;记录服务器的响应数据&lt;/li&gt;
-&lt;li&gt;记录相应时间信息&lt;br&gt;&lt;img src=&quot;/img/jmeter-4.png&quot; alt=&quot;HttpRequest&quot;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;Listener设置&quot;&gt;&lt;a href=&quot;#Listener设置&quot; class=&quot;headerlink&quot; title=&quot;Listener设置&quot;&gt;&lt;/a&gt;Listener设置&lt;/h4&gt;&lt;p&gt;脚本的主要部分设置完成后,需要通过某种方式获得性能测试中的测试结果。ThreadGroup上右键菜单可新增Listner（add-&amp;gt;Listener-&amp;gt;Aggregate Report).&lt;br&gt;&lt;img src=&quot;/img/jmeter-5.png&quot; alt=&quot;HttpRequest&quot;&gt;&lt;br&gt;我最关心的是我的博客响应时间，数据显示客户的平均响应时间为:337毫秒,99%的用户在1985毫秒内完成，也就不超2秒。最少用户响应时间为149毫秒，最大用户响应时间为5020毫秒&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近做性能优化工作，同时要给自己的工作给一个总结。需要自己弄性能测试及编写性能测试报告。在别人推荐下使用JMeter对项目进行性能测试。JMeter可以进行配置和执行负载测试、性能测试和压力测试的工具。了解一下几个概念:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;负载测试: 这类测试使系统或者应用程序在预先设计好的极端场景下测试运行。这类测试用来评估系统或者程序在极端条件下的行为。&lt;/li&gt;
-&lt;li&gt;性能测试: 这种测试被用来检测系统的性能表现，包括特定情况下，系统的响应能力和稳定性。&lt;/li&gt;
-&lt;li&gt;压力测试: 这类测试通过载入更多的外部资源，并使系统组件超越其所设定的能力范围,试图使系统挂掉.
     
     </summary>
     
