@@ -43,25 +43,19 @@
     <link href="http://binyanbin.github.io/2016/08/18/regex/"/>
     <id>http://binyanbin.github.io/2016/08/18/regex/</id>
     <published>2016-08-17T16:00:00.000Z</published>
-    <updated>2016-09-04T14:44:55.000Z</updated>
+    <updated>2016-09-04T14:50:13.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;关键表达式&quot;&gt;&lt;a href=&quot;#关键表达式&quot; class=&quot;headerlink&quot; title=&quot;关键表达式&quot;&gt;&lt;/a&gt;关键表达式&lt;/h2&gt;&lt;p&gt;.   :匹配任意字符&lt;br&gt;\   :转义&lt;br&gt;^  :行开始位置&lt;br&gt;$  :行结束位置&lt;/p&gt;
-&lt;h2 id=&quot;范围&quot;&gt;&lt;a href=&quot;#范围&quot; class=&quot;headerlink&quot; title=&quot;范围[  ]:&quot;&gt;&lt;/a&gt;范围[  ]:&lt;/h2&gt;&lt;p&gt;[0-9],[a-z] : 字符范围&lt;br&gt;^ : 取反   [^a]&lt;/p&gt;
-&lt;h2 id=&quot;重复&quot;&gt;&lt;a href=&quot;#重复&quot; class=&quot;headerlink&quot; title=&quot;重复{ }:&quot;&gt;&lt;/a&gt;重复{ }:&lt;/h2&gt;&lt;p&gt;a{3}   3次&lt;br&gt;a{3,5} 3到5次&lt;br&gt;?  = {0,1}&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;= {0,}&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;= {1,}&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;分组与选择&quot;&gt;&lt;a href=&quot;#分组与选择&quot; class=&quot;headerlink&quot; title=&quot;分组与选择 | :&quot;&gt;&lt;/a&gt;分组与选择 | :&lt;/h2&gt;&lt;p&gt;cat|dog, [cat|dog]&lt;br&gt;(cat|dog)&lt;/p&gt;
+    <content type="html">&lt;h2 id=&quot;元字符&quot;&gt;&lt;a href=&quot;#元字符&quot; class=&quot;headerlink&quot; title=&quot;元字符&quot;&gt;&lt;/a&gt;元字符&lt;/h2&gt;&lt;p&gt;.   :匹配任意字符&lt;br&gt;\   :转义&lt;br&gt;^  :行开始位置&lt;br&gt;$  :行结束位置&lt;/p&gt;
+&lt;h2 id=&quot;范围&quot;&gt;&lt;a href=&quot;#范围&quot; class=&quot;headerlink&quot; title=&quot;范围&quot;&gt;&lt;/a&gt;范围&lt;/h2&gt;&lt;p&gt;[  ]:&lt;br&gt;[0-9],[a-z] : 字符范围&lt;br&gt;^ : 取反   [^a]&lt;/p&gt;
+&lt;h2 id=&quot;重复&quot;&gt;&lt;a href=&quot;#重复&quot; class=&quot;headerlink&quot; title=&quot;重复&quot;&gt;&lt;/a&gt;重复&lt;/h2&gt;&lt;p&gt;{ }:&lt;br&gt;a{3}   3次&lt;br&gt;a{3,5} 3到5次&lt;br&gt;?等于{0,1}&lt;br&gt;*等于{0,}&lt;br&gt;+等于{1,}&lt;/p&gt;
+&lt;h2 id=&quot;分组与选择&quot;&gt;&lt;a href=&quot;#分组与选择&quot; class=&quot;headerlink&quot; title=&quot;分组与选择&quot;&gt;&lt;/a&gt;分组与选择&lt;/h2&gt;&lt;p&gt;|:&lt;br&gt;cat|dog, [cat|dog]&lt;br&gt;(cat|dog)&lt;/p&gt;
 &lt;h2 id=&quot;常用集合&quot;&gt;&lt;a href=&quot;#常用集合&quot; class=&quot;headerlink&quot; title=&quot;常用集合:&quot;&gt;&lt;/a&gt;常用集合:&lt;/h2&gt;&lt;p&gt;\w = [0-9A-Za-z]    \s  空格, 制表符,回车或换行符&lt;br&gt;\W = [^0-9A-Za-z]  \d   数值&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;关键表达式&quot;&gt;&lt;a href=&quot;#关键表达式&quot; class=&quot;headerlink&quot; title=&quot;关键表达式&quot;&gt;&lt;/a&gt;关键表达式&lt;/h2&gt;&lt;p&gt;.   :匹配任意字符&lt;br&gt;\   :转义&lt;br&gt;^  :行开始位置&lt;br&gt;$  :行结束位置&lt;/p&gt;
-&lt;h2 i
+      &lt;h2 id=&quot;元字符&quot;&gt;&lt;a href=&quot;#元字符&quot; class=&quot;headerlink&quot; title=&quot;元字符&quot;&gt;&lt;/a&gt;元字符&lt;/h2&gt;&lt;p&gt;.   :匹配任意字符&lt;br&gt;\   :转义&lt;br&gt;^  :行开始位置&lt;br&gt;$  :行结束位置&lt;/p&gt;
+&lt;h2 id=&quot;范围&quot;&gt;&lt;
     
     </summary>
     
