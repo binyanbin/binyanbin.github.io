@@ -39,6 +39,36 @@
   </entry>
   
   <entry>
+    <title>正则速记</title>
+    <link href="http://binyanbin.github.io/2016/08/18/regex/"/>
+    <id>http://binyanbin.github.io/2016/08/18/regex/</id>
+    <published>2016-08-17T16:00:00.000Z</published>
+    <updated>2016-09-04T14:44:55.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;关键表达式&quot;&gt;&lt;a href=&quot;#关键表达式&quot; class=&quot;headerlink&quot; title=&quot;关键表达式&quot;&gt;&lt;/a&gt;关键表达式&lt;/h2&gt;&lt;p&gt;.   :匹配任意字符&lt;br&gt;\   :转义&lt;br&gt;^  :行开始位置&lt;br&gt;$  :行结束位置&lt;/p&gt;
+&lt;h2 id=&quot;范围&quot;&gt;&lt;a href=&quot;#范围&quot; class=&quot;headerlink&quot; title=&quot;范围[  ]:&quot;&gt;&lt;/a&gt;范围[  ]:&lt;/h2&gt;&lt;p&gt;[0-9],[a-z] : 字符范围&lt;br&gt;^ : 取反   [^a]&lt;/p&gt;
+&lt;h2 id=&quot;重复&quot;&gt;&lt;a href=&quot;#重复&quot; class=&quot;headerlink&quot; title=&quot;重复{ }:&quot;&gt;&lt;/a&gt;重复{ }:&lt;/h2&gt;&lt;p&gt;a{3}   3次&lt;br&gt;a{3,5} 3到5次&lt;br&gt;?  = {0,1}&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;= {0,}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;= {1,}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;分组与选择&quot;&gt;&lt;a href=&quot;#分组与选择&quot; class=&quot;headerlink&quot; title=&quot;分组与选择 | :&quot;&gt;&lt;/a&gt;分组与选择 | :&lt;/h2&gt;&lt;p&gt;cat|dog, [cat|dog]&lt;br&gt;(cat|dog)&lt;/p&gt;
+&lt;h2 id=&quot;常用集合&quot;&gt;&lt;a href=&quot;#常用集合&quot; class=&quot;headerlink&quot; title=&quot;常用集合:&quot;&gt;&lt;/a&gt;常用集合:&lt;/h2&gt;&lt;p&gt;\w = [0-9A-Za-z]    \s  空格, 制表符,回车或换行符&lt;br&gt;\W = [^0-9A-Za-z]  \d   数值&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;关键表达式&quot;&gt;&lt;a href=&quot;#关键表达式&quot; class=&quot;headerlink&quot; title=&quot;关键表达式&quot;&gt;&lt;/a&gt;关键表达式&lt;/h2&gt;&lt;p&gt;.   :匹配任意字符&lt;br&gt;\   :转义&lt;br&gt;^  :行开始位置&lt;br&gt;$  :行结束位置&lt;/p&gt;
+&lt;h2 i
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>你确定真的要做互联网项目吗</title>
     <link href="http://binyanbin.github.io/2016/07/01/idea-1/"/>
     <id>http://binyanbin.github.io/2016/07/01/idea-1/</id>
@@ -816,39 +846,6 @@ sb.Append(str3);
     
       &lt;h2 id=&quot;为什么是C&quot;&gt;&lt;a href=&quot;#为什么是C&quot; class=&quot;headerlink&quot; title=&quot;为什么是C&quot;&gt;&lt;/a&gt;为什么是C&lt;/h2&gt;&lt;p&gt;很多牛B的开源项目都是C实现的，如redis,nginx,memcache,node等等。主要原因是C语言比较简单(相对C++来说)，编译器稳定可靠。C如果借鉴一些良好设计,C一样可以写的很好，如果习惯了，开发效率未必会比C++低。那么C怎么编译呢?&lt;/p&gt;
 &lt;h2 id=&quot;GCC&quot;&gt;&lt;a href=&quot;#GCC&quot; class=&quot;headerlink&quot; title=&quot;GCC&quot;&gt;&lt;/a&gt;GCC&lt;/h2&gt;&lt;p&gt;GCC(GNU Compiler Collection)，GNU编译器集合,是一套由 GNU 开发的编程语言编译器。其中包括了ANSI C Compiler。在现在遍地都是IDE的时代，很多开发人员都忘了怎么用cli去编译程序。gcc编译过程是分为四个阶段进行的，即预处理(也称预编译,Preprocessing)、编译(Compilation)、汇编(Assembly)和连接(Linking)。&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Javascript模块化开发</title>
-    <link href="http://binyanbin.github.io/2016/03/21/javascript-base-4/"/>
-    <id>http://binyanbin.github.io/2016/03/21/javascript-base-4/</id>
-    <published>2016-03-20T16:00:00.000Z</published>
-    <updated>2016-06-15T15:52:46.000Z</updated>
-    
-    <content type="html">&lt;p&gt;Javascript不算模块化编程语言，但是web开发需要团队开发和团队协做。现在javascript模块化开发已非常正熟，支持模块化开发的框架非常多。&lt;/p&gt;
-&lt;h2 id=&quot;原始写法&quot;&gt;&lt;a href=&quot;#原始写法&quot; class=&quot;headerlink&quot; title=&quot;原始写法&quot;&gt;&lt;/a&gt;原始写法&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;func1&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;func2&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;只要把不同的函数简单地放在一个文件中，就算是一个模块，通常一个文件一个模块。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;jquery时代&quot;&gt;&lt;a href=&quot;#jquery时代&quot; class=&quot;headerlink&quot; title=&quot;jquery时代&quot;&gt;&lt;/a&gt;jquery时代&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;　　&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; module1 = (&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;$, windows&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　　　&lt;span class=&quot;comment&quot;&gt;//...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　&amp;#125;)(jQuery, windows);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;通过立即执行匿名函数来达到封装的作用,如模块内部调用全局变量，则将其输入模块中。&lt;/p&gt;
-&lt;h2 id=&quot;commonjs时代&quot;&gt;&lt;a href=&quot;#commonjs时代&quot; class=&quot;headerlink&quot; title=&quot;commonjs时代&quot;&gt;&lt;/a&gt;commonjs时代&lt;/h2&gt;&lt;p&gt;commonjs规范是目前JavaScript模块化的事实标准。支持commonjs规范的框架及程序比较多，如node,seajs.规范中最重要的二点:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;require它是一个函数,引用其它模块使用require。&lt;/li&gt;
-&lt;li&gt;exports是一个对象，导出模块api使用exports，可供其它模块调用。&lt;br&gt;当然除了这两点还有一些其它细节不一一介绍。下面看一个示例:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;math.js&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;exports.add=&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;x,y&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; x+y;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;increment.js&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; add = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;math&#39;&lt;/span&gt;).add;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;exports.increment = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;val&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; add(val,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;program.js&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; inc = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;increment&#39;&lt;/span&gt;).increment;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;inc(a);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Javascript不算模块化编程语言，但是web开发需要团队开发和团队协做。现在javascript模块化开发已非常正熟，支持模块化开发的框架非常多。&lt;/p&gt;
-&lt;h2 id=&quot;原始写法&quot;&gt;&lt;a href=&quot;#原始写法&quot; class=&quot;headerlink&quot; title=&quot;原始写法&quot;&gt;&lt;/a&gt;原始写法&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;func1&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;func2&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;只要把不同的函数简单地放在一个文件中，就算是一个模块，通常一个文件一个模块。&lt;br&gt;
     
     </summary>
     
