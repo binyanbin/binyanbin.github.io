@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-09-09T17:14:10.000Z</updated>
+  <updated>2016-10-29T14:14:01.000Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux常用命令</title>
+    <link href="http://binyanbin.github.io/2016/10/28/bash-1/"/>
+    <id>http://binyanbin.github.io/2016/10/28/bash-1/</id>
+    <published>2016-10-27T16:00:00.000Z</published>
+    <updated>2016-10-29T14:14:01.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;5颗星&quot;&gt;&lt;a href=&quot;#5颗星&quot; class=&quot;headerlink&quot; title=&quot;5颗星&quot;&gt;&lt;/a&gt;5颗星&lt;/h2&gt;&lt;h3 id=&quot;ls&quot;&gt;&lt;a href=&quot;#ls&quot; class=&quot;headerlink&quot; title=&quot;ls&quot;&gt;&lt;/a&gt;ls&lt;/h3&gt;&lt;h4 id=&quot;列出当前目录文件及文件夹&quot;&gt;&lt;a href=&quot;#列出当前目录文件及文件夹&quot; class=&quot;headerlink&quot; title=&quot;列出当前目录文件及文件夹&quot;&gt;&lt;/a&gt;列出当前目录文件及文件夹&lt;/h4&gt;&lt;p&gt;格式: ls [选项] [目录名]&lt;br&gt;| 参数 | 描述 |&lt;br&gt;|—–|—–|&lt;br&gt;| -a | –all 列出目录下的所有文件，包括以 . 开头的隐含文件 |&lt;br&gt;| -l | 除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来 |&lt;br&gt;| -d | –directory 将目录象文件一样显示，而不是显示其下的文件 |&lt;br&gt;| -h | –human-readable 以容易理解的格式列出文件大小 (例如 1K 234M 2G) |&lt;br&gt;| -t | 以文件修改时间排序 |&lt;/p&gt;
+&lt;h4 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ls -al &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ls &lt;span class=&quot;_&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;_&quot;&gt;-l&lt;/span&gt; /home&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ls &lt;span class=&quot;_&quot;&gt;-l&lt;/span&gt; d*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ls -alh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;cd&quot;&gt;&lt;a href=&quot;#cd&quot; class=&quot;headerlink&quot; title=&quot;cd&quot;&gt;&lt;/a&gt;cd&lt;/h3&gt;&lt;h4 id=&quot;目录切换&quot;&gt;&lt;a href=&quot;#目录切换&quot; class=&quot;headerlink&quot; title=&quot;目录切换&quot;&gt;&lt;/a&gt;目录切换&lt;/h4&gt;&lt;p&gt;格式: cd [目录名]&lt;/p&gt;
+&lt;h4 id=&quot;示例-1&quot;&gt;&lt;a href=&quot;#示例-1&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ..&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; -&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;/根目录 ~用户主目录  ..上级目录 -上次所在目录&lt;/p&gt;
+&lt;h3 id=&quot;pwd&quot;&gt;&lt;a href=&quot;#pwd&quot; class=&quot;headerlink&quot; title=&quot;pwd&quot;&gt;&lt;/a&gt;pwd&lt;/h3&gt;&lt;h4 id=&quot;显示当前目录&quot;&gt;&lt;a href=&quot;#显示当前目录&quot; class=&quot;headerlink&quot; title=&quot;显示当前目录&quot;&gt;&lt;/a&gt;显示当前目录&lt;/h4&gt;&lt;p&gt;格式: pwd [选项]&lt;br&gt;| 参数 | 描述 |&lt;br&gt;|—–|—–|&lt;br&gt;| -P | 显示实际物理路径，而非使用连接（link）路径 |&lt;br&gt;| -L | 当目录为连接路径时，显示连接路径 |&lt;/p&gt;
+&lt;h4 id=&quot;示例-2&quot;&gt;&lt;a href=&quot;#示例-2&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;pwd&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;mkdir&quot;&gt;&lt;a href=&quot;#mkdir&quot; class=&quot;headerlink&quot; title=&quot;mkdir&quot;&gt;&lt;/a&gt;mkdir&lt;/h3&gt;&lt;h4 id=&quot;创建目录&quot;&gt;&lt;a href=&quot;#创建目录&quot; class=&quot;headerlink&quot; title=&quot;创建目录&quot;&gt;&lt;/a&gt;创建目录&lt;/h4&gt;&lt;p&gt;格式: mkdir [选项] 目录&lt;br&gt;| 参数 | 描述 |&lt;br&gt;|—–|—–|&lt;br&gt;| -m –mode=模式 | 设定权限&amp;lt;模式&amp;gt; |s&lt;br&gt;| -p –parents | 可以是一个路径名称。一次可以建立多个目录 |&lt;br&gt;| -v –verbose | 每次创建新目录都显示信息 |&lt;/p&gt;
+&lt;h4 id=&quot;示例-3&quot;&gt;&lt;a href=&quot;#示例-3&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir -p &lt;span class=&quot;built_in&quot;&gt;test&lt;/span&gt;/a&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir -m 777 &lt;span class=&quot;built_in&quot;&gt;test&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir -vp &lt;span class=&quot;built_in&quot;&gt;test&lt;/span&gt;/a&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;rm&quot;&gt;&lt;a href=&quot;#rm&quot; class=&quot;headerlink&quot; title=&quot;rm&quot;&gt;&lt;/a&gt;rm&lt;/h3&gt;&lt;h4 id=&quot;删除&quot;&gt;&lt;a href=&quot;#删除&quot; class=&quot;headerlink&quot; title=&quot;删除&quot;&gt;&lt;/a&gt;删除&lt;/h4&gt;&lt;p&gt;格式: rm [选项] 文件或目录&lt;br&gt;| 参数 | 描述 |&lt;br&gt;|—–|—–|&lt;br&gt;| -f –force | 忽略不存在的文件，从不给出提示 |&lt;br&gt;| -i –interactive | 进行交互式删除 |&lt;br&gt;| -r –recursive | 指示 rm 将参数中列出的全部目录和子目录均递归地删除 |&lt;br&gt;| -v –verbose | 详细显示进行的步骤 |&lt;/p&gt;
+&lt;h4 id=&quot;示例-4&quot;&gt;&lt;a href=&quot;#示例-4&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ rm &lt;span class=&quot;_&quot;&gt;-f&lt;/span&gt; my.log&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ rm -i *.log&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ rm -r &lt;span class=&quot;built_in&quot;&gt;log&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;5颗星&quot;&gt;&lt;a href=&quot;#5颗星&quot; class=&quot;headerlink&quot; title=&quot;5颗星&quot;&gt;&lt;/a&gt;5颗星&lt;/h2&gt;&lt;h3 id=&quot;ls&quot;&gt;&lt;a href=&quot;#ls&quot; class=&quot;headerlink&quot; title=&quot;ls&quot;&gt;&lt;/a&gt;ls&lt;/h3&gt;&lt;h
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>nginx 速记1</title>
@@ -45,10 +74,10 @@
     <link href="http://binyanbin.github.io/2016/09/04/shortcut/"/>
     <id>http://binyanbin.github.io/2016/09/04/shortcut/</id>
     <published>2016-09-03T16:00:00.000Z</published>
-    <updated>2016-09-25T16:48:38.000Z</updated>
+    <updated>2016-10-29T14:16:30.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;mac下的效率神器&quot;&gt;&lt;a href=&quot;#mac下的效率神器&quot; class=&quot;headerlink&quot; title=&quot;mac下的效率神器&quot;&gt;&lt;/a&gt;mac下的效率神器&lt;/h2&gt;&lt;p&gt;1.Alfred  效率神器，脚本之王，谁用谁知道。要破解版的直接找我:)。&lt;br&gt;2.iTerm  terminal分屏神器，当然不仅仅是分屏&lt;br&gt;3.CatchMouse  多屏显示器必备，最多可以支持四台显示器随意切换屏幕和光标。&lt;/p&gt;
-&lt;h2 id=&quot;跨平台工具&quot;&gt;&lt;a href=&quot;#跨平台工具&quot; class=&quot;headerlink&quot; title=&quot;跨平台工具&quot;&gt;&lt;/a&gt;跨平台工具&lt;/h2&gt;&lt;p&gt;1.Eclipse&lt;br&gt;2.Workbench  mysql客户端必备&lt;br&gt;3.Sublime Text&lt;br&gt;4.leanote 笔记本+blog,支持markdown,思维导图，最重要的是免费&lt;br&gt;5.Evernode 印像笔记本&lt;br&gt;6.Chrome&lt;br&gt;7.Postman  webapi测试专用&lt;br&gt;8.AxaTools  小工具集合，各种转换计算和正则测试。&lt;br&gt;9.atash UML作图专用&lt;br&gt;10.Jmeter  性能测试&lt;br&gt;11.Xccello 个人/团队任务管理&lt;/p&gt;
+&lt;h2 id=&quot;跨平台工具&quot;&gt;&lt;a href=&quot;#跨平台工具&quot; class=&quot;headerlink&quot; title=&quot;跨平台工具&quot;&gt;&lt;/a&gt;跨平台工具&lt;/h2&gt;&lt;p&gt;1.Eclipse&lt;br&gt;2.Workbench  mysql客户端必备&lt;br&gt;3.Sublime Text&lt;br&gt;4.leanote 笔记本+blog,支持markdown,思维导图，最重要的是免费&lt;br&gt;5.Evernode 印像笔记本&lt;br&gt;6.Chrome&lt;br&gt;7.Postman  webapi测试专用&lt;br&gt;8.AxaTools  小工具集合，各种转换计算和正则测试。&lt;br&gt;9.atash UML作图专用&lt;br&gt;10.Jmeter  性能测试&lt;br&gt;11.Xccello 个人/团队任务管理&lt;br&gt;12.f.lux 护眼必备&lt;/p&gt;
 &lt;h2 id=&quot;开启mac-移动硬盘ntfs格式的读写功能&quot;&gt;&lt;a href=&quot;#开启mac-移动硬盘ntfs格式的读写功能&quot; class=&quot;headerlink&quot; title=&quot;开启mac 移动硬盘ntfs格式的读写功能&quot;&gt;&lt;/a&gt;开启mac 移动硬盘ntfs格式的读写功能&lt;/h2&gt;&lt;p&gt;虽说exFAT 可以跨操作系统使用，但总感觉不如ntfs&lt;br&gt;如何开启:&lt;br&gt;在创建一个文件  sudo vim /etc/fstab&lt;br&gt;输入 LABEL=valume none ntfs rw,auto,nobrowse&lt;br&gt;第一列:LABEL=valume 表示移动硬盘的卷名&lt;br&gt;第二列:加入文件系统的位置&lt;br&gt;第三列:文件格式&lt;br&gt;第四列:文件系统状态 rw表示可读写&lt;br&gt;第五列:好像是是否备份的意思。&lt;br&gt;第六列:是否在finder中显示，nobrowse不显示。&lt;br&gt;如何使用:&lt;br&gt;保存fstab文件之后重启mac,在finder下 cmd+shift+g，输入/Volumes/valume进入(valume为你的移动硬盘卷名)&lt;/p&gt;
 &lt;h2 id=&quot;快捷键&quot;&gt;&lt;a href=&quot;#快捷键&quot; class=&quot;headerlink&quot; title=&quot;快捷键&quot;&gt;&lt;/a&gt;快捷键&lt;/h2&gt;&lt;p&gt;1.mac基础:&lt;br&gt;ctrl+上下左右   切屏&lt;br&gt;cmd+上下左右  定位&lt;br&gt;cmd+shift+上下左右  定位+选择&lt;br&gt;fn+上下左右  滚动&lt;br&gt;ctrl+cmd+f  全屏&lt;br&gt;cmd+w 关闭当前窗口&lt;br&gt;cmd+q 退出应用程序&lt;/p&gt;
 &lt;p&gt;2.chrome(你不可能不用的)&lt;br&gt;cmd+l 地址栏&lt;br&gt;cmd+option+左右 切页面&lt;br&gt;ctrl+tab 切页面&lt;br&gt;cmd+t 新页面&lt;br&gt;cmd+w 关闭页面&lt;br&gt;cmd+shift+w 关闭窗口&lt;br&gt;cmd+option+i 开发者工具&lt;/p&gt;
@@ -74,13 +103,14 @@
     <link href="http://binyanbin.github.io/2016/08/18/regex/"/>
     <id>http://binyanbin.github.io/2016/08/18/regex/</id>
     <published>2016-08-17T16:00:00.000Z</published>
-    <updated>2016-09-11T15:42:13.000Z</updated>
+    <updated>2016-10-26T07:03:23.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;元字符&quot;&gt;&lt;a href=&quot;#元字符&quot; class=&quot;headerlink&quot; title=&quot;元字符&quot;&gt;&lt;/a&gt;元字符&lt;/h2&gt;&lt;p&gt;.   :匹配任意字符&lt;br&gt;\   :转义&lt;br&gt;^  :行开始位置&lt;br&gt;$  :行结束位置&lt;/p&gt;
 &lt;h2 id=&quot;范围&quot;&gt;&lt;a href=&quot;#范围&quot; class=&quot;headerlink&quot; title=&quot;范围&quot;&gt;&lt;/a&gt;范围&lt;/h2&gt;&lt;p&gt;[  ]:&lt;br&gt;[0-9],[a-z] : 字符范围&lt;br&gt;^ : 取反   [^a]&lt;/p&gt;
 &lt;h2 id=&quot;重复&quot;&gt;&lt;a href=&quot;#重复&quot; class=&quot;headerlink&quot; title=&quot;重复&quot;&gt;&lt;/a&gt;重复&lt;/h2&gt;&lt;p&gt;{ }:&lt;br&gt;a{3}   3次&lt;br&gt;a{3,5} 3到5次&lt;br&gt;?等于{0,1}&lt;br&gt;*等于{0,}&lt;br&gt;+等于{1,}&lt;/p&gt;
 &lt;h2 id=&quot;分组与选择&quot;&gt;&lt;a href=&quot;#分组与选择&quot; class=&quot;headerlink&quot; title=&quot;分组与选择&quot;&gt;&lt;/a&gt;分组与选择&lt;/h2&gt;&lt;p&gt;|:&lt;br&gt;cat|dog, [cat|dog]&lt;br&gt;(cat|dog)&lt;/p&gt;
 &lt;h2 id=&quot;常用集合&quot;&gt;&lt;a href=&quot;#常用集合&quot; class=&quot;headerlink&quot; title=&quot;常用集合:&quot;&gt;&lt;/a&gt;常用集合:&lt;/h2&gt;&lt;p&gt;\w = [0-9A-Za-z]&lt;br&gt;\W = [^0-9A-Za-z]&lt;br&gt;\s  空格, 制表符,回车或换行符&lt;br&gt;\d   数值&lt;/p&gt;
+&lt;h2 id=&quot;替换&quot;&gt;&lt;a href=&quot;#替换&quot; class=&quot;headerlink&quot; title=&quot;替换&quot;&gt;&lt;/a&gt;替换&lt;/h2&gt;&lt;p&gt;Find what:       (.)([! ])                  //匹配．和后面紧挨着一个非空白字符&lt;br&gt;Replace with:   . \2                       //注意中间有空格，\2表示引用第二个括号匹配的内容&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -813,28 +843,6 @@ sb.Append(str3);
 &lt;li&gt;系统先把物理硬盘代码load到内存&lt;/li&gt;
 &lt;li&gt;系统再把c代码分成四个区&lt;/li&gt;
 &lt;li&gt;系统再找到main函数入口执行&lt;h2 id=&quot;程序的四区模型&quot;&gt;&lt;a href=&quot;#程序的四区模型&quot; class=&quot;headerlink&quot; title=&quot;程序的四区模型&quot;&gt;&lt;/a&gt;程序的四区模型&lt;/h2&gt;&lt;img src=&quot;/img/c-3.png&quot; alt=&quot;效果&quot;&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>C语言之个性化termial</title>
-    <link href="http://binyanbin.github.io/2016/03/24/c-2/"/>
-    <id>http://binyanbin.github.io/2016/03/24/c-2/</id>
-    <published>2016-03-23T16:00:00.000Z</published>
-    <updated>2016-06-15T15:52:46.000Z</updated>
-    
-    <content type="html">&lt;p&gt;很多牛人有自己的个性化的命令行，为什么我没有呢?晚上我就写了一个。效果如下:&lt;br&gt;&lt;img src=&quot;/img/c-1.png&quot; alt=&quot;效果&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;图形实现&quot;&gt;&lt;a href=&quot;#图形实现&quot; class=&quot;headerlink&quot; title=&quot;图形实现&quot;&gt;&lt;/a&gt;图形实现&lt;/h2&gt;&lt;p&gt;图形是使用C打出来的，就当练手。&lt;br&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i,j;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (i=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i&amp;lt;&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (j=&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;;j&amp;gt;i ;j-- ) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (j=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j&amp;lt;=i; j++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;*&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (i==&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;    write by binyanbin&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    system(&lt;span class=&quot;string&quot;&gt;&quot;c:&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;然后用gcc编译成exe。&lt;/p&gt;
-&lt;h2 id=&quot;cmd快捷方式&quot;&gt;&lt;a href=&quot;#cmd快捷方式&quot; class=&quot;headerlink&quot; title=&quot;cmd快捷方式&quot;&gt;&lt;/a&gt;cmd快捷方式&lt;/h2&gt;&lt;p&gt;新建快捷方式，输入C:\Windows\System32\cmd.exe /k “C:\yanbin\mycmd.exe”。最后为你编译exe的位置。&lt;br&gt;&lt;img src=&quot;/img/c-2.png&quot; alt=&quot;cmd快捷方式&quot;&gt;&lt;br&gt;这个cmd快捷方式就是你的个性terminal，当然你也可以打印出更漂亮的图形做你的terminal。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;很多牛人有自己的个性化的命令行，为什么我没有呢?晚上我就写了一个。效果如下:&lt;br&gt;&lt;img src=&quot;/img/c-1.png&quot; alt=&quot;效果&quot;&gt;&lt;br&gt;
     
     </summary>
     
