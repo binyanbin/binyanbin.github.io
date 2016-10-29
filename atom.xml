@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-10-29T14:14:01.000Z</updated>
+  <updated>2016-10-29T14:35:08.000Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -20,18 +20,115 @@
     <link href="http://binyanbin.github.io/2016/10/28/bash-1/"/>
     <id>http://binyanbin.github.io/2016/10/28/bash-1/</id>
     <published>2016-10-27T16:00:00.000Z</published>
-    <updated>2016-10-29T14:14:01.000Z</updated>
+    <updated>2016-10-29T14:35:08.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;5颗星&quot;&gt;&lt;a href=&quot;#5颗星&quot; class=&quot;headerlink&quot; title=&quot;5颗星&quot;&gt;&lt;/a&gt;5颗星&lt;/h2&gt;&lt;h3 id=&quot;ls&quot;&gt;&lt;a href=&quot;#ls&quot; class=&quot;headerlink&quot; title=&quot;ls&quot;&gt;&lt;/a&gt;ls&lt;/h3&gt;&lt;h4 id=&quot;列出当前目录文件及文件夹&quot;&gt;&lt;a href=&quot;#列出当前目录文件及文件夹&quot; class=&quot;headerlink&quot; title=&quot;列出当前目录文件及文件夹&quot;&gt;&lt;/a&gt;列出当前目录文件及文件夹&lt;/h4&gt;&lt;p&gt;格式: ls [选项] [目录名]&lt;br&gt;| 参数 | 描述 |&lt;br&gt;|—–|—–|&lt;br&gt;| -a | –all 列出目录下的所有文件，包括以 . 开头的隐含文件 |&lt;br&gt;| -l | 除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来 |&lt;br&gt;| -d | –directory 将目录象文件一样显示，而不是显示其下的文件 |&lt;br&gt;| -h | –human-readable 以容易理解的格式列出文件大小 (例如 1K 234M 2G) |&lt;br&gt;| -t | 以文件修改时间排序 |&lt;/p&gt;
+    <content type="html">&lt;h2 id=&quot;5颗星&quot;&gt;&lt;a href=&quot;#5颗星&quot; class=&quot;headerlink&quot; title=&quot;5颗星&quot;&gt;&lt;/a&gt;5颗星&lt;/h2&gt;&lt;h3 id=&quot;ls&quot;&gt;&lt;a href=&quot;#ls&quot; class=&quot;headerlink&quot; title=&quot;ls&quot;&gt;&lt;/a&gt;ls&lt;/h3&gt;&lt;h4 id=&quot;列出当前目录文件及文件夹&quot;&gt;&lt;a href=&quot;#列出当前目录文件及文件夹&quot; class=&quot;headerlink&quot; title=&quot;列出当前目录文件及文件夹&quot;&gt;&lt;/a&gt;列出当前目录文件及文件夹&lt;/h4&gt;&lt;p&gt;格式: ls [选项] [目录名]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;-a&lt;/td&gt;
+&lt;td&gt;–all 列出目录下的所有文件，包括以 . 开头的隐含文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-l&lt;/td&gt;
+&lt;td&gt;除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-d&lt;/td&gt;
+&lt;td&gt;–directory 将目录象文件一样显示，而不是显示其下的文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-h&lt;/td&gt;
+&lt;td&gt;–human-readable 以容易理解的格式列出文件大小 (例如 1K 234M 2G)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-t&lt;/td&gt;
+&lt;td&gt;以文件修改时间排序&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h4 id=&quot;示例&quot;&gt;&lt;a href=&quot;#示例&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ls -al &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ls &lt;span class=&quot;_&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;_&quot;&gt;-l&lt;/span&gt; /home&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ls &lt;span class=&quot;_&quot;&gt;-l&lt;/span&gt; d*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ls -alh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;cd&quot;&gt;&lt;a href=&quot;#cd&quot; class=&quot;headerlink&quot; title=&quot;cd&quot;&gt;&lt;/a&gt;cd&lt;/h3&gt;&lt;h4 id=&quot;目录切换&quot;&gt;&lt;a href=&quot;#目录切换&quot; class=&quot;headerlink&quot; title=&quot;目录切换&quot;&gt;&lt;/a&gt;目录切换&lt;/h4&gt;&lt;p&gt;格式: cd [目录名]&lt;/p&gt;
 &lt;h4 id=&quot;示例-1&quot;&gt;&lt;a href=&quot;#示例-1&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ..&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; -&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;/根目录 ~用户主目录  ..上级目录 -上次所在目录&lt;/p&gt;
-&lt;h3 id=&quot;pwd&quot;&gt;&lt;a href=&quot;#pwd&quot; class=&quot;headerlink&quot; title=&quot;pwd&quot;&gt;&lt;/a&gt;pwd&lt;/h3&gt;&lt;h4 id=&quot;显示当前目录&quot;&gt;&lt;a href=&quot;#显示当前目录&quot; class=&quot;headerlink&quot; title=&quot;显示当前目录&quot;&gt;&lt;/a&gt;显示当前目录&lt;/h4&gt;&lt;p&gt;格式: pwd [选项]&lt;br&gt;| 参数 | 描述 |&lt;br&gt;|—–|—–|&lt;br&gt;| -P | 显示实际物理路径，而非使用连接（link）路径 |&lt;br&gt;| -L | 当目录为连接路径时，显示连接路径 |&lt;/p&gt;
+&lt;h3 id=&quot;pwd&quot;&gt;&lt;a href=&quot;#pwd&quot; class=&quot;headerlink&quot; title=&quot;pwd&quot;&gt;&lt;/a&gt;pwd&lt;/h3&gt;&lt;h4 id=&quot;显示当前目录&quot;&gt;&lt;a href=&quot;#显示当前目录&quot; class=&quot;headerlink&quot; title=&quot;显示当前目录&quot;&gt;&lt;/a&gt;显示当前目录&lt;/h4&gt;&lt;p&gt;格式: pwd [选项]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;-P&lt;/td&gt;
+&lt;td&gt;显示实际物理路径，而非使用连接（link）路径&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-L&lt;/td&gt;
+&lt;td&gt;当目录为连接路径时，显示连接路径&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h4 id=&quot;示例-2&quot;&gt;&lt;a href=&quot;#示例-2&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;pwd&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;mkdir&quot;&gt;&lt;a href=&quot;#mkdir&quot; class=&quot;headerlink&quot; title=&quot;mkdir&quot;&gt;&lt;/a&gt;mkdir&lt;/h3&gt;&lt;h4 id=&quot;创建目录&quot;&gt;&lt;a href=&quot;#创建目录&quot; class=&quot;headerlink&quot; title=&quot;创建目录&quot;&gt;&lt;/a&gt;创建目录&lt;/h4&gt;&lt;p&gt;格式: mkdir [选项] 目录&lt;br&gt;| 参数 | 描述 |&lt;br&gt;|—–|—–|&lt;br&gt;| -m –mode=模式 | 设定权限&amp;lt;模式&amp;gt; |s&lt;br&gt;| -p –parents | 可以是一个路径名称。一次可以建立多个目录 |&lt;br&gt;| -v –verbose | 每次创建新目录都显示信息 |&lt;/p&gt;
+&lt;h3 id=&quot;mkdir&quot;&gt;&lt;a href=&quot;#mkdir&quot; class=&quot;headerlink&quot; title=&quot;mkdir&quot;&gt;&lt;/a&gt;mkdir&lt;/h3&gt;&lt;h4 id=&quot;创建目录&quot;&gt;&lt;a href=&quot;#创建目录&quot; class=&quot;headerlink&quot; title=&quot;创建目录&quot;&gt;&lt;/a&gt;创建目录&lt;/h4&gt;&lt;p&gt;格式: mkdir [选项] 目录&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;-m –mode=模式&lt;/td&gt;
+&lt;td&gt;设定权限&amp;lt;模式&amp;gt;&lt;/td&gt;
+&lt;td&gt;s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-p –parents&lt;/td&gt;
+&lt;td&gt;可以是一个路径名称。一次可以建立多个目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-v –verbose&lt;/td&gt;
+&lt;td&gt;每次创建新目录都显示信息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h4 id=&quot;示例-3&quot;&gt;&lt;a href=&quot;#示例-3&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir -p &lt;span class=&quot;built_in&quot;&gt;test&lt;/span&gt;/a&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir -m 777 &lt;span class=&quot;built_in&quot;&gt;test&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mkdir -vp &lt;span class=&quot;built_in&quot;&gt;test&lt;/span&gt;/a&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;rm&quot;&gt;&lt;a href=&quot;#rm&quot; class=&quot;headerlink&quot; title=&quot;rm&quot;&gt;&lt;/a&gt;rm&lt;/h3&gt;&lt;h4 id=&quot;删除&quot;&gt;&lt;a href=&quot;#删除&quot; class=&quot;headerlink&quot; title=&quot;删除&quot;&gt;&lt;/a&gt;删除&lt;/h4&gt;&lt;p&gt;格式: rm [选项] 文件或目录&lt;br&gt;| 参数 | 描述 |&lt;br&gt;|—–|—–|&lt;br&gt;| -f –force | 忽略不存在的文件，从不给出提示 |&lt;br&gt;| -i –interactive | 进行交互式删除 |&lt;br&gt;| -r –recursive | 指示 rm 将参数中列出的全部目录和子目录均递归地删除 |&lt;br&gt;| -v –verbose | 详细显示进行的步骤 |&lt;/p&gt;
+&lt;h3 id=&quot;rm&quot;&gt;&lt;a href=&quot;#rm&quot; class=&quot;headerlink&quot; title=&quot;rm&quot;&gt;&lt;/a&gt;rm&lt;/h3&gt;&lt;h4 id=&quot;删除&quot;&gt;&lt;a href=&quot;#删除&quot; class=&quot;headerlink&quot; title=&quot;删除&quot;&gt;&lt;/a&gt;删除&lt;/h4&gt;&lt;p&gt;格式: rm [选项] 文件或目录&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;-f –force&lt;/td&gt;
+&lt;td&gt;忽略不存在的文件，从不给出提示&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-i –interactive&lt;/td&gt;
+&lt;td&gt;进行交互式删除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-r –recursive&lt;/td&gt;
+&lt;td&gt;指示 rm 将参数中列出的全部目录和子目录均递归地删除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-v –verbose&lt;/td&gt;
+&lt;td&gt;详细显示进行的步骤&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h4 id=&quot;示例-4&quot;&gt;&lt;a href=&quot;#示例-4&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ rm &lt;span class=&quot;_&quot;&gt;-f&lt;/span&gt; my.log&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ rm -i *.log&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ rm -r &lt;span class=&quot;built_in&quot;&gt;log&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
     
