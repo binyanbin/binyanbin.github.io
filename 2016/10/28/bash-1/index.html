@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> linux常用命令 · 码工严彬 coding不仅仅是工作</title><meta name="description" content="linux"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/2015/12/20/self-introduce/" target="_self" class="nav-list-link">WECHAT</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">linux常用命令</h1><div class="post-meta"><div class="post-time">2016年10月28日</div></div><div class="post-content"><h2 id="5颗星"><a href="#5颗星" class="headerlink" title="5颗星"></a>5颗星</h2><h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><h4 id="列出当前目录文件及文件夹"><a href="#列出当前目录文件及文件夹" class="headerlink" title="列出当前目录文件及文件夹"></a>列出当前目录文件及文件夹</h4><p>格式: ls [选项] [目录名]</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>–all 列出目录下的所有文件，包括以 . 开头的隐含文件</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>–directory 将目录象文件一样显示，而不是显示其下的文件</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>–human-readable 以容易理解的格式列出文件大小 (例如 1K 234M 2G)</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>以文件修改时间排序</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ls -al </span><br><span class="line">$ ls <span class="_">-a</span> <span class="_">-l</span> /home</span><br><span class="line">$ ls <span class="_">-l</span> d*</span><br><span class="line">$ ls -alh</span><br></pre></td></tr></table></figure>
+<h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><h4 id="目录切换"><a href="#目录切换" class="headerlink" title="目录切换"></a>目录切换</h4><p>格式: cd [目录名]</p>
+<h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /</span><br><span class="line">$ <span class="built_in">cd</span> ~</span><br><span class="line">$ <span class="built_in">cd</span> ..</span><br><span class="line">$ <span class="built_in">cd</span> -</span><br></pre></td></tr></table></figure>
+<p>/根目录 ~用户主目录  ..上级目录 -上次所在目录</p>
+<h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3><h4 id="显示当前目录"><a href="#显示当前目录" class="headerlink" title="显示当前目录"></a>显示当前目录</h4><p>格式: pwd [选项]</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-P</td>
+<td>显示实际物理路径，而非使用连接（link）路径</td>
+</tr>
+<tr>
+<td>-L</td>
+<td>当目录为连接路径时，显示连接路径</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">pwd</span></span><br></pre></td></tr></table></figure>
+<h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h3><h4 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h4><p>格式: mkdir [选项] 目录</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-m –mode=模式</td>
+<td>设定权限&lt;模式&gt;</td>
+<td>s</td>
+</tr>
+<tr>
+<td>-p –parents</td>
+<td>可以是一个路径名称。一次可以建立多个目录</td>
+</tr>
+<tr>
+<td>-v –verbose</td>
+<td>每次创建新目录都显示信息</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir -p <span class="built_in">test</span>/a</span><br><span class="line">$ mkdir -m 777 <span class="built_in">test</span></span><br><span class="line">$ mkdir -vp <span class="built_in">test</span>/a</span><br></pre></td></tr></table></figure>
+<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><p>格式: rm [选项] 文件或目录</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-f –force</td>
+<td>忽略不存在的文件，从不给出提示</td>
+</tr>
+<tr>
+<td>-i –interactive</td>
+<td>进行交互式删除</td>
+</tr>
+<tr>
+<td>-r –recursive</td>
+<td>指示 rm 将参数中列出的全部目录和子目录均递归地删除</td>
+</tr>
+<tr>
+<td>-v –verbose</td>
+<td>详细显示进行的步骤</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ rm <span class="_">-f</span> my.log</span><br><span class="line">$ rm -i *.log</span><br><span class="line">$ rm -r <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+</div></article></div><div data-thread-key="2016/10/28/bash-1/" data-title="linux常用命令" data-url="http://binyanbin.github.io/2016/10/28/bash-1/" class="ds-share flat"><div class="ds-share-inline"><div class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a href="javascript:void(0)" class="ds-more">分享到:</a></li><li><a href="javascript:void(0);" data-service="weibo" class="ds-weibo">微博</a></li><li><a href="javascript:void(0);" data-service="qzone" class="ds-qzone">QQ空间</a></li><li><a href="javascript:void(0);" data-service="qqt" class="ds-qqt">QQ微博</a></li><li><a href="javascript:void(0);" data-service="wechat" class="ds-wechat">微信</a></li><div class="ds-share-icons-more"></div></div></div></div></section><footer><div class="paginator"><a href="/2016/09/10/nginx-1/" class="next">下一篇</a></div><div data-thread-key="2016/10/28/bash-1/" data-title="linux常用命令" data-url="http://binyanbin.github.io/2016/10/28/bash-1/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"binyanbin"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2016 <a href="http://binyanbin.github.io">严彬</a>, unless otherwise noted.</p></div></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?fcf7e8f303b6e03be86f5619636d0f7e";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></body></html>
