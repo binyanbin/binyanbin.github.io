@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> linux常用命令 · 码工严彬 coding不仅仅是工作</title><meta name="description" content="linux"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/2015/12/20/self-introduce/" target="_self" class="nav-list-link">WECHAT</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">linux常用命令</h1><div class="post-meta"><div class="post-time">2016年10月28日</div></div><div class="post-content"><h2 id="5颗星"><a href="#5颗星" class="headerlink" title="5颗星"></a>5颗星</h2><h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><h4 id="列出当前目录文件及文件夹"><a href="#列出当前目录文件及文件夹" class="headerlink" title="列出当前目录文件及文件夹"></a>列出当前目录文件及文件夹</h4><p>格式: ls [选项] [目录名]</p>
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> linux常用命令 · 码工严彬 coding不仅仅是工作</title><meta name="description" content="linux"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/2015/12/20/self-introduce/" target="_self" class="nav-list-link">WECHAT</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">linux常用命令</h1><div class="post-meta"><div class="post-time">2016年10月28日</div></div><div class="post-content"><h2 id="目录及文件操作"><a href="#目录及文件操作" class="headerlink" title="目录及文件操作"></a>目录及文件操作</h2><h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><h4 id="列出当前目录文件及文件夹"><a href="#列出当前目录文件及文件夹" class="headerlink" title="列出当前目录文件及文件夹"></a>列出当前目录文件及文件夹</h4><p>格式: ls [选项] [目录名]</p>
 <table>
 <thead>
 <tr>
@@ -106,6 +106,484 @@
 </tbody>
 </table>
 <h4 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ rm <span class="_">-f</span> my.log</span><br><span class="line">$ rm -i *.log</span><br><span class="line">$ rm -r <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+<h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><h4 id="移动或改名"><a href="#移动或改名" class="headerlink" title="移动或改名"></a>移动或改名</h4><p>格式: mv [选项] 源文件或目录 目标文件或目录</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-b –back</td>
+<td>若需覆盖文件，则覆盖前先行备份</td>
+</tr>
+<tr>
+<td>-f –force</td>
+<td>如果目标文件已经存在，不会询问而直接覆盖</td>
+</tr>
+<tr>
+<td>-i –interactive</td>
+<td>若目标文件已经存在时，就会询问是否覆盖</td>
+</tr>
+<tr>
+<td>-u –update</td>
+<td>若目标文件已经存在，且源文件比较新，才会更新</td>
+</tr>
+<tr>
+<td>-t –target</td>
+<td>该选项适用于移动多个源文件到一个目录的情况，此时目标目录在前，源文件在</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-5"><a href="#示例-5" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mv nginx.log nginx1.log</span><br><span class="line">$ mv <span class="_">-f</span> *.log /Users/yanbin/</span><br></pre></td></tr></table></figure>
+<h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><h4 id="拷贝"><a href="#拷贝" class="headerlink" title="拷贝"></a>拷贝</h4><p>格式: cp [选项] 源文件 目录 cp [选项] -t 目录 源文件</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-t –target-directory</td>
+<td>指定目标目录</td>
+</tr>
+<tr>
+<td>-i –interactive</td>
+<td>覆盖前询问(使前面的 -n 选项失效)</td>
+</tr>
+<tr>
+<td>-n –no-clobber</td>
+<td>不要覆盖已存在的文件(使前面的 -i 选项失效)</td>
+</tr>
+<tr>
+<td>-s –symbolic-link</td>
+<td>对源文件建立符号链接，而非复制文件</td>
+</tr>
+<tr>
+<td>-f –force</td>
+<td>强行复制文件或目录， 不论目的文件或目录是否已经存在</td>
+</tr>
+<tr>
+<td>-u –update</td>
+<td>使用这项参数之后，只会在源文件的修改时间较目的文件更新时，或是对应的目的文件并不存在，才复制文件</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-6"><a href="#示例-6" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cp <span class="_">-s</span> nignx.log ~/home/desktop/nginx.log</span><br><span class="line">$ cp -i *.log ~/home/desktop</span><br></pre></td></tr></table></figure>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><h4 id="一般输出"><a href="#一般输出" class="headerlink" title="一般输出"></a>一般输出</h4><p>格式: cat [选项] [文件]</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-A –show-all</td>
+<td>等价于 -vET</td>
+</tr>
+<tr>
+<td>-b –number-nonblank</td>
+<td>对非空输出行编号</td>
+</tr>
+<tr>
+<td>-e</td>
+<td>等价于 -vE</td>
+</tr>
+<tr>
+<td>-E</td>
+<td>–show-ends    在每行结束处显示 $</td>
+</tr>
+<tr>
+<td>-n –number</td>
+<td>对输出的所有行编号,由 1 开始对所有输出的行数编号</td>
+</tr>
+<tr>
+<td>-s –squeeze-blank</td>
+<td>有连续两行以上的空白行，就代换为一行的空白行</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>与 -vT 等价</td>
+</tr>
+<tr>
+<td>-T –show-tabs</td>
+<td>将跳格字符显示为 ^I</td>
+</tr>
+<tr>
+<td>-v –show-nonprinting</td>
+<td>使用 ^ 和 M- 引用，除了 LFD 和 TAB 之外</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-7"><a href="#示例-7" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cat -ns nginx.log &gt; new.log</span><br><span class="line">$ tac nginx.log</span><br></pre></td></tr></table></figure>
+<p>tac倒序输出</p>
+<h3 id="nl"><a href="#nl" class="headerlink" title="nl"></a>nl</h3><h4 id="带行号输出"><a href="#带行号输出" class="headerlink" title="带行号输出"></a>带行号输出</h4><p>格式: nl [选项] [文件]</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-b</td>
+<td>指定行号指定的方式，主要有两种：</td>
+</tr>
+<tr>
+<td>-b a</td>
+<td>表示不论是否为空行，也同样列出行号(类似 cat -n)</td>
+</tr>
+<tr>
+<td>-b t</td>
+<td>如果有空行，空的那一行不要列出行号(默认值)</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>列出行号表示的方法，主要有三种：</td>
+</tr>
+<tr>
+<td>-n ln</td>
+<td>行号在屏幕的最左方显示</td>
+</tr>
+<tr>
+<td>-n rn</td>
+<td>行号在自己栏位的最右方显示，且不加 0</td>
+</tr>
+<tr>
+<td>-n rz</td>
+<td>行号在自己栏位的最右方显示，且加 0</td>
+</tr>
+<tr>
+<td>-w</td>
+<td>行号栏位的占用的位数</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-8"><a href="#示例-8" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ nl -b t nginx.log</span><br><span class="line">$ nl -n ln nginx.log</span><br><span class="line">$ nl -n rz -w 3 niginx.log</span><br></pre></td></tr></table></figure>
+<h3 id="less"><a href="#less" class="headerlink" title="less"></a>less</h3><h4 id="分页输出"><a href="#分页输出" class="headerlink" title="分页输出"></a>分页输出</h4><p>格式: more [选项] 文件</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-e</td>
+<td>当文件显示结束后，自动离开</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>强迫打开特殊文件，例如外围设备代号、目录和二进制文件</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>忽略搜索时的大小写</td>
+</tr>
+<tr>
+<td>-m</td>
+<td>显示类似 more 命令的百分比</td>
+</tr>
+<tr>
+<td>-N</td>
+<td>显示每行的行号</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>显示连续空行为一行</td>
+</tr>
+</tbody>
+</table>
+<p>常用操作：<br>| 符号 | 描述 |<br>|—–|—–|<br>| /字符串 | 向下搜索“字符串”的功能 |<br>| ?字符串 | 向上搜索“字符串”的功能 |<br>| n | 重复前一个搜索（与 / 或 ? 有关）|<br>| N | 反向重复前一个搜索（与 / 或 ? 有关 |<br>| b | 向前翻一页 |<br>| d | 向后翻半页 |<br>| q | 退出 less 命令 |<br>| 空格键 | 向后翻一页 |<br>| 向上键 | 向上翻动一行 |<br>| 向下键 | 向下翻动一行 |</p>
+<h4 id="示例-9"><a href="#示例-9" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ less -N nginx.log</span><br><span class="line">$ less nginx.log</span><br><span class="line">$ ps <span class="_">-f</span> | less</span><br></pre></td></tr></table></figure>
+<h3 id="head"><a href="#head" class="headerlink" title="head"></a>head</h3><h4 id="头输出"><a href="#头输出" class="headerlink" title="头输出"></a>头输出</h4><p>格式: head [选项] [文件]</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-c&lt;字节&gt;</td>
+<td>显示字节数</td>
+</tr>
+<tr>
+<td>-n&lt;行数&gt;</td>
+<td>显示的行数</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-10"><a href="#示例-10" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ head -n 5 nginx.log</span><br><span class="line">$ head nginx.log</span><br></pre></td></tr></table></figure>
+<h3 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h3><h4 id="尾输出"><a href="#尾输出" class="headerlink" title="尾输出"></a>尾输出</h4><p>格式: tail [选项] [文件]</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-f</td>
+<td>循环读取</td>
+</tr>
+<tr>
+<td>-q</td>
+<td>不显示处理信息</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>显示详细的处理信息</td>
+</tr>
+<tr>
+<td>-c&lt;字节&gt;</td>
+<td>显示的字节数</td>
+</tr>
+<tr>
+<td>-n&lt;行数&gt;</td>
+<td>显示行数</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-11"><a href="#示例-11" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tail -n 5 nginx.log</span><br><span class="line">$ tail <span class="_">-f</span> catalina.out</span><br></pre></td></tr></table></figure>
+<h3 id="which"><a href="#which" class="headerlink" title="which"></a>which</h3><h4 id="查找可执行文件"><a href="#查找可执行文件" class="headerlink" title="查找可执行文件"></a>查找可执行文件</h4><p>格式: which 可执行文件名称</p>
+<h4 id="示例-12"><a href="#示例-12" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">which</span> gcc</span><br><span class="line">$ <span class="built_in">which</span> ls</span><br></pre></td></tr></table></figure>
+<h3 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h3><h4 id="查找文件"><a href="#查找文件" class="headerlink" title="查找文件"></a>查找文件</h4><p>格式: locate [选项] [搜索字符串</p>
+<p>常用参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-q</td>
+<td>安静模式，不会显示任何错误讯息</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>至多显示 n 个输出</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>使用正规表达式做寻找的条件</td>
+</tr>
+<tr>
+<td>-V</td>
+<td>显示版本讯息</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-13"><a href="#示例-13" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ locate /etc/cs*</span><br></pre></td></tr></table></figure>
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><h4 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h4><p>格式: find [选项] [搜索路径] [表达式]</p>
+<p>常用参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-print</td>
+<td>find 命令将匹配的文件输出到标准输出</td>
+</tr>
+<tr>
+<td>-exec</td>
+<td>find 命令对匹配的文件执行该参数所给出的 shell 命令</td>
+</tr>
+<tr>
+<td>-name</td>
+<td>按照文件名查找文件</td>
+</tr>
+<tr>
+<td>-type</td>
+<td>查找某一类型的文件</td>
+</tr>
+<tr>
+<td>-prune</td>
+<td>使用这一选项可以使 find 命令不在当前指定的目录中查找，如果同 时使用-depth 选项，那么-prune 将被 find 命令忽略</td>
+</tr>
+<tr>
+<td>-user</td>
+<td>按照文件属主来查找文件</td>
+</tr>
+<tr>
+<td>-group</td>
+<td>按照文件所属的组来查找文件</td>
+</tr>
+</tbody>
+</table>
+<h4 id="名称或路径匹配示例"><a href="#名称或路径匹配示例" class="headerlink" title="名称或路径匹配示例"></a>名称或路径匹配示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">find . -regex <span class="string">".*\(\.txt\|\.pdf\)$"</span></span><br><span class="line">find . \( -name <span class="string">"*.txt"</span> -o -name <span class="string">"*.pdf"</span> \)</span><br><span class="line">find /usr/ -path <span class="string">"*local*"</span></span><br></pre></td></tr></table></figure>
+<h4 id="文件类型搜索示例"><a href="#文件类型搜索示例" class="headerlink" title="文件类型搜索示例"></a>文件类型搜索示例</h4><p>f 普通文件, i 符号连接, d 目录, c 字符设备, b 块设备, s 套接字, p Fifo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -mindepth 2</span><br></pre></td></tr></table></figure>
+<h4 id="文件时间搜索"><a href="#文件时间搜索" class="headerlink" title="文件时间搜索"></a>文件时间搜索</h4><p>访问时间 -atime/天 -amin/分钟<br>修改时间 -mtime/天 -mmin/分钟<br>变化时间 -ctime/天 -cmin/分钟</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -attime +7</span><br><span class="line">find . -type f -amin -30</span><br></pre></td></tr></table></figure>
+<h4 id="文件大小搜索"><a href="#文件大小搜索" class="headerlink" title="文件大小搜索"></a>文件大小搜索</h4><p>b 块 c 字节 w 字 k 千字节 M 兆字节 G 吉字节</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -size +10k</span><br></pre></td></tr></table></figure>
+<h4 id="文件权限搜索"><a href="#文件权限搜索" class="headerlink" title="文件权限搜索"></a>文件权限搜索</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -perm 777</span><br></pre></td></tr></table></figure>
+<h4 id="exec选项"><a href="#exec选项" class="headerlink" title="-exec选项"></a>-exec选项</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -mtime +30 -name <span class="string">"*.log"</span> -exec cp &#123;&#125; old \;</span><br></pre></td></tr></table></figure>
+<h3 id="wc"><a href="#wc" class="headerlink" title="wc"></a>wc</h3><h4 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h4><p>格式: wc [选项] [文件]</p>
+<p>常用参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-c</td>
+<td>统计字节数</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>统计行数</td>
+</tr>
+<tr>
+<td>-m</td>
+<td>统计字符数，这个标志不能与 -c 标志一起使用</td>
+</tr>
+<tr>
+<td>-w</td>
+<td>统计字数，一个字被定义为由空白、跳格或换行字符分隔的字符串</td>
+</tr>
+<tr>
+<td>-L</td>
+<td>打印最长行的长度</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-14"><a href="#示例-14" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ wc -c c.txt</span><br><span class="line">$ cat test.txt | wc <span class="_">-l</span></span><br></pre></td></tr></table></figure>
+<h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><h4 id="内容匹配"><a href="#内容匹配" class="headerlink" title="内容匹配"></a>内容匹配</h4><p>格式: grep [选项] pattern [file]</p>
+<p>常用参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-c</td>
+<td>计算找到 ‘搜寻字符串’(即 pattern) 的次数</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>忽略大小写的不同，所以大小写视为相同</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>输出行号</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>反向选择，打印不匹配的行</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>递归搜索</td>
+</tr>
+<tr>
+<td>–color=auto</td>
+<td>将找到的关键词部分加上颜色显示</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-15"><a href="#示例-15" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ grep <span class="string">"root"</span> /etc/passwd --color=auto</span><br><span class="line">$ ps -ef | grep tomcat</span><br></pre></td></tr></table></figure>
+<h3 id="df"><a href="#df" class="headerlink" title="df"></a>df</h3><h4 id="磁盘空间占用情况查看"><a href="#磁盘空间占用情况查看" class="headerlink" title="磁盘空间占用情况查看"></a>磁盘空间占用情况查看</h4><p>格式: df [选项]</p>
+<p>常用参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>全部文件系统列表</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>方便阅读方式显示</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>显示 inode 信息</td>
+</tr>
+<tr>
+<td>-T</td>
+<td>文件系统类型</td>
+</tr>
+<tr>
+<td>-t&lt;文件系统类型&gt;</td>
+<td>只显示选定文件系统的磁盘信息</td>
+</tr>
+<tr>
+<td>-x&lt;文件系统类型&gt;</td>
+<td>不显示选定文件系统的磁盘信息</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-16"><a href="#示例-16" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ df -i</span><br><span class="line">$ df -t ext4</span><br></pre></td></tr></table></figure>
+<h3 id="du"><a href="#du" class="headerlink" title="du"></a>du</h3><h4 id="文件空间占用情况查看"><a href="#文件空间占用情况查看" class="headerlink" title="文件空间占用情况查看"></a>文件空间占用情况查看</h4><p>格式: df [选项] 文件</p>
+<p>常用参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>显示目录中个别文件的大小。</td>
+</tr>
+<tr>
+<td>-b</td>
+<td>显示目录或文件大小时，以 byte 为单位。</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和。</td>
+</tr>
+<tr>
+<td>-k</td>
+<td>以 KB(1024bytes)为单位输出。</td>
+</tr>
+<tr>
+<td>-m</td>
+<td>以 MB 为单位输出。</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>仅显示总计，只列出最后加总的值。</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>以 K，M，G 为单位，提高信息的可读</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例-17"><a href="#示例-17" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ du -h desktop</span><br><span class="line">$ df -h nginx.log</span><br></pre></td></tr></table></figure>
 </div></article></div><div data-thread-key="2016/10/28/bash-1/" data-title="linux常用命令" data-url="http://binyanbin.github.io/2016/10/28/bash-1/" class="ds-share flat"><div class="ds-share-inline"><div class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a href="javascript:void(0)" class="ds-more">分享到:</a></li><li><a href="javascript:void(0);" data-service="weibo" class="ds-weibo">微博</a></li><li><a href="javascript:void(0);" data-service="qzone" class="ds-qzone">QQ空间</a></li><li><a href="javascript:void(0);" data-service="qqt" class="ds-qqt">QQ微博</a></li><li><a href="javascript:void(0);" data-service="wechat" class="ds-wechat">微信</a></li><div class="ds-share-icons-more"></div></div></div></div></section><footer><div class="paginator"><a href="/2016/09/10/nginx-1/" class="next">下一篇</a></div><div data-thread-key="2016/10/28/bash-1/" data-title="linux常用命令" data-url="http://binyanbin.github.io/2016/10/28/bash-1/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"binyanbin"};
 (function() {
     var ds = document.createElement('script');
