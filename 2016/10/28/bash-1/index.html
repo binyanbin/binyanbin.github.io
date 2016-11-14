@@ -333,7 +333,57 @@
 </tr>
 </tbody>
 </table>
-<p>常用操作：<br>| 符号 | 描述 |<br>|—–|—–|<br>| /字符串 | 向下搜索“字符串”的功能 |<br>| ?字符串 | 向上搜索“字符串”的功能 |<br>| n | 重复前一个搜索（与 / 或 ? 有关）|<br>| N | 反向重复前一个搜索（与 / 或 ? 有关 |<br>| b | 向前翻一页 |<br>| d | 向后翻半页 |<br>| q | 退出 less 命令 |<br>| 空格键 | 向后翻一页 |<br>| 向上键 | 向上翻动一行 |<br>| 向下键 | 向下翻动一行 |</p>
+<p>常用操作：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/字符串</td>
+<td>向下搜索“字符串”的功能</td>
+</tr>
+<tr>
+<td>?字符串</td>
+<td>向上搜索“字符串”的功能</td>
+</tr>
+<tr>
+<td>n</td>
+<td>重复前一个搜索（与 / 或 ? 有关）</td>
+</tr>
+<tr>
+<td>N</td>
+<td>反向重复前一个搜索（与 / 或 ? 有关</td>
+</tr>
+<tr>
+<td>b</td>
+<td>向前翻一页</td>
+</tr>
+<tr>
+<td>d</td>
+<td>向后翻半页</td>
+</tr>
+<tr>
+<td>q</td>
+<td>退出 less 命令</td>
+</tr>
+<tr>
+<td>空格键</td>
+<td>向后翻一页</td>
+</tr>
+<tr>
+<td>向上键</td>
+<td>向上翻动一行</td>
+</tr>
+<tr>
+<td>向下键</td>
+<td>向下翻动一行</td>
+</tr>
+</tbody>
+</table>
 <h4 id="示例-9"><a href="#示例-9" class="headerlink" title="示例"></a>示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ less -N nginx.log</span><br><span class="line">$ less nginx.log</span><br><span class="line">$ ps <span class="_">-f</span> | less</span><br></pre></td></tr></table></figure>
 <h3 id="head"><a href="#head" class="headerlink" title="head"></a>head</h3><h4 id="头输出"><a href="#头输出" class="headerlink" title="头输出"></a>头输出</h4><p>格式: head [选项] [文件]</p>
 <table>

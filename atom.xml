@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://binyanbin.github.io/"/>
-  <updated>2016-11-14T05:58:33.000Z</updated>
+  <updated>2016-11-14T12:59:17.000Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://binyanbin.github.io/2016/10/28/bash-1/"/>
     <id>http://binyanbin.github.io/2016/10/28/bash-1/</id>
     <published>2016-10-27T16:00:00.000Z</published>
-    <updated>2016-11-14T05:58:33.000Z</updated>
+    <updated>2016-11-14T12:59:17.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;目录及文件操作&quot;&gt;&lt;a href=&quot;#目录及文件操作&quot; class=&quot;headerlink&quot; title=&quot;目录及文件操作&quot;&gt;&lt;/a&gt;目录及文件操作&lt;/h2&gt;&lt;h3 id=&quot;ls&quot;&gt;&lt;a href=&quot;#ls&quot; class=&quot;headerlink&quot; title=&quot;ls&quot;&gt;&lt;/a&gt;ls&lt;/h3&gt;&lt;h4 id=&quot;列出当前目录文件及文件夹&quot;&gt;&lt;a href=&quot;#列出当前目录文件及文件夹&quot; class=&quot;headerlink&quot; title=&quot;列出当前目录文件及文件夹&quot;&gt;&lt;/a&gt;列出当前目录文件及文件夹&lt;/h4&gt;&lt;p&gt;格式: ls [选项] [目录名]&lt;/p&gt;
 &lt;table&gt;
@@ -357,7 +357,57 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;常用操作：&lt;br&gt;| 符号 | 描述 |&lt;br&gt;|—–|—–|&lt;br&gt;| /字符串 | 向下搜索“字符串”的功能 |&lt;br&gt;| ?字符串 | 向上搜索“字符串”的功能 |&lt;br&gt;| n | 重复前一个搜索（与 / 或 ? 有关）|&lt;br&gt;| N | 反向重复前一个搜索（与 / 或 ? 有关 |&lt;br&gt;| b | 向前翻一页 |&lt;br&gt;| d | 向后翻半页 |&lt;br&gt;| q | 退出 less 命令 |&lt;br&gt;| 空格键 | 向后翻一页 |&lt;br&gt;| 向上键 | 向上翻动一行 |&lt;br&gt;| 向下键 | 向下翻动一行 |&lt;/p&gt;
+&lt;p&gt;常用操作：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;符号&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/字符串&lt;/td&gt;
+&lt;td&gt;向下搜索“字符串”的功能&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;?字符串&lt;/td&gt;
+&lt;td&gt;向上搜索“字符串”的功能&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;n&lt;/td&gt;
+&lt;td&gt;重复前一个搜索（与 / 或 ? 有关）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;N&lt;/td&gt;
+&lt;td&gt;反向重复前一个搜索（与 / 或 ? 有关&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;b&lt;/td&gt;
+&lt;td&gt;向前翻一页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;d&lt;/td&gt;
+&lt;td&gt;向后翻半页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;q&lt;/td&gt;
+&lt;td&gt;退出 less 命令&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;空格键&lt;/td&gt;
+&lt;td&gt;向后翻一页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;向上键&lt;/td&gt;
+&lt;td&gt;向上翻动一行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;向下键&lt;/td&gt;
+&lt;td&gt;向下翻动一行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h4 id=&quot;示例-9&quot;&gt;&lt;a href=&quot;#示例-9&quot; class=&quot;headerlink&quot; title=&quot;示例&quot;&gt;&lt;/a&gt;示例&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ less -N nginx.log&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ less nginx.log&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ps &lt;span class=&quot;_&quot;&gt;-f&lt;/span&gt; | less&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;head&quot;&gt;&lt;a href=&quot;#head&quot; class=&quot;headerlink&quot; title=&quot;head&quot;&gt;&lt;/a&gt;head&lt;/h3&gt;&lt;h4 id=&quot;头输出&quot;&gt;&lt;a href=&quot;#头输出&quot; class=&quot;headerlink&quot; title=&quot;头输出&quot;&gt;&lt;/a&gt;头输出&lt;/h4&gt;&lt;p&gt;格式: head [选项] [文件]&lt;/p&gt;
 &lt;table&gt;
