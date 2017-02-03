@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://binyanbin.github.io/"/>
-  <updated>2017-01-23T08:17:20.000Z</updated>
+  <updated>2017-02-03T16:12:10.000Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -16,15 +16,54 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>一家saas公司数据积累过程</title>
+    <title>saas体验总结</title>
     <link href="http://binyanbin.github.io/2017/01/25/meallink/"/>
     <id>http://binyanbin.github.io/2017/01/25/meallink/</id>
     <published>2017-01-24T16:00:00.000Z</published>
-    <updated>2017-01-23T08:17:20.000Z</updated>
+    <updated>2017-02-03T16:12:10.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;16年有幸参与了一个saas项目,也慢慢的知道前期客户及数据的累积是多么艰难，同时要运营一个saas项目，也是一个非常不容易的事情。&lt;/p&gt;
+&lt;h2 id=&quot;到16年底的项目情况如下&quot;&gt;&lt;a href=&quot;#到16年底的项目情况如下&quot; class=&quot;headerlink&quot; title=&quot;到16年底的项目情况如下:&quot;&gt;&lt;/a&gt;到16年底的项目情况如下:&lt;/h2&gt;&lt;p&gt;系统租户共34个,注册账号863个,注册门店:38个,在使用门店:20个,供应商:300个 在使用供应商:77个&lt;br&gt;每天交易单:130个左右,每个单平均物料:7.8个,每天api访问次数为:13000次左右&lt;/p&gt;
+&lt;h2 id=&quot;成交数的增长情况&quot;&gt;&lt;a href=&quot;#成交数的增长情况&quot; class=&quot;headerlink&quot; title=&quot;成交数的增长情况&quot;&gt;&lt;/a&gt;成交数的增长情况&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;月份&lt;/th&gt;
+&lt;th&gt;成交单数&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;16-09&lt;/td&gt;
+&lt;td&gt;1457&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16-10&lt;/td&gt;
+&lt;td&gt;1824&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16-11&lt;/td&gt;
+&lt;td&gt;2023&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16-12&lt;/td&gt;
+&lt;td&gt;3342&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17-01&lt;/td&gt;
+&lt;td&gt;3645&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;saas项目在初期的数据积累是比较缓慢，一方面推广的问题，一方面产品不成熟，也不急于推广。&lt;/p&gt;
+&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;h4 id=&quot;业务变动引起的问题&quot;&gt;&lt;a href=&quot;#业务变动引起的问题&quot; class=&quot;headerlink&quot; title=&quot;业务变动引起的问题&quot;&gt;&lt;/a&gt;业务变动引起的问题&lt;/h4&gt;&lt;p&gt;项目初期，业务变动是一个非常正常的事情，大多数创业公司也不会有足够的开发和测试。由于业务变动引起的系统的问题还是比较多，有一些边界问题和特殊情况没有考虑到，需要及时解决。这类问题也基本上也没有什么好办法，查看出错原因再修复它。&lt;br&gt;所以一个好的日志功能在saas系统中非常重要。不是每一个客户都会反馈问题，也许你可以在客户反馈前就把这个问题解决掉。比如在出错时系统能主动提醒你，如发短信或系统通知。然后你可以去查看原因并解决这个问题.让大部份客户都查觉不到问题的存在。&lt;/p&gt;
+&lt;h4 id=&quot;系统宕机&quot;&gt;&lt;a href=&quot;#系统宕机&quot; class=&quot;headerlink&quot; title=&quot;系统宕机&quot;&gt;&lt;/a&gt;系统宕机&lt;/h4&gt;&lt;p&gt;服务宕机是一个非常严重的问题，在项目初期也很容易碰到，大多数是以下这几种原因引起的：&lt;br&gt;1.数据库连接数达到上限&lt;br&gt;2.数据库死锁某些记录死锁&lt;br&gt;3.服务器内存达到上限&lt;br&gt;一般来说saas系统初期都是单库，宕机的原因多半是数据库出问题了，常见的问题就是连接数达到上线。比如未释放连接，或数据库出现死锁引起无法释放连接。这此情况都碰到过。死锁出现的原因一般都是事务并发修改相同数据引起的。&lt;br&gt;常用解决方式：队列，锁或去事务。&lt;br&gt;服务器内存达上限，基本上是代码问题，需要有经验的开发人员去查代码。&lt;br&gt;同时要防止宕机，定时查看服务器和数据库的状态非常重要，这样我们或许可以提早发现一些问题，早一步做好防范措施。&lt;/p&gt;
+&lt;p&gt;当然随着用户的增多，你还会遇到更多问题，同时你也会做出很多调整去解决这类问题，就像其它公司那样。&lt;/p&gt;
+</content>
     
     <summary type="html">
+    
+      &lt;p&gt;16年有幸参与了一个saas项目,也慢慢的知道前期客户及数据的累积是多么艰难，同时要运营一个saas项目，也是一个非常不容易的事情。&lt;/p&gt;
+&lt;h2 id=&quot;到16年底的项目情况如下&quot;&gt;&lt;a href=&quot;#到16年底的项目情况如下&quot; class=&quot;headerlink&quot; t
     
     </summary>
     

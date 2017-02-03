@@ -1,4 +1,40 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 一家saas公司数据积累过程 · 码工严彬 coding不仅仅是工作</title><meta name="description" content="总结 web研发技术"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/2015/12/20/self-introduce/" target="_self" class="nav-list-link">WECHAT</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">一家saas公司数据积累过程</h1><div class="post-meta"><div class="post-time">2017年1月25日</div></div><div class="post-content"></div></article></div><div data-thread-key="2017/01/25/meallink/" data-title="一家saas公司数据积累过程" data-url="http://binyanbin.github.io/2017/01/25/meallink/" class="ds-share flat"><div class="ds-share-inline"><div class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a href="javascript:void(0)" class="ds-more">分享到:</a></li><li><a href="javascript:void(0);" data-service="weibo" class="ds-weibo">微博</a></li><li><a href="javascript:void(0);" data-service="qzone" class="ds-qzone">QQ空间</a></li><li><a href="javascript:void(0);" data-service="qqt" class="ds-qqt">QQ微博</a></li><li><a href="javascript:void(0);" data-service="wechat" class="ds-wechat">微信</a></li><div class="ds-share-icons-more"></div></div></div></div></section><footer><div class="paginator"><a href="/2016/12/10/vim/" class="next">下一篇</a></div><div data-thread-key="2017/01/25/meallink/" data-title="一家saas公司数据积累过程" data-url="http://binyanbin.github.io/2017/01/25/meallink/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"binyanbin"};
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> saas体验总结 · 码工严彬 coding不仅仅是工作</title><meta name="description" content="总结 web研发技术"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/2015/12/20/self-introduce/" target="_self" class="nav-list-link">WECHAT</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">saas体验总结</h1><div class="post-meta"><div class="post-time">2017年1月25日</div></div><div class="post-content"><p>16年有幸参与了一个saas项目,也慢慢的知道前期客户及数据的累积是多么艰难，同时要运营一个saas项目，也是一个非常不容易的事情。</p>
+<h2 id="到16年底的项目情况如下"><a href="#到16年底的项目情况如下" class="headerlink" title="到16年底的项目情况如下:"></a>到16年底的项目情况如下:</h2><p>系统租户共34个,注册账号863个,注册门店:38个,在使用门店:20个,供应商:300个 在使用供应商:77个<br>每天交易单:130个左右,每个单平均物料:7.8个,每天api访问次数为:13000次左右</p>
+<h2 id="成交数的增长情况"><a href="#成交数的增长情况" class="headerlink" title="成交数的增长情况"></a>成交数的增长情况</h2><table>
+<thead>
+<tr>
+<th>月份</th>
+<th>成交单数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16-09</td>
+<td>1457</td>
+</tr>
+<tr>
+<td>16-10</td>
+<td>1824</td>
+</tr>
+<tr>
+<td>16-11</td>
+<td>2023</td>
+</tr>
+<tr>
+<td>16-12</td>
+<td>3342</td>
+</tr>
+<tr>
+<td>17-01</td>
+<td>3645</td>
+</tr>
+</tbody>
+</table>
+<p>saas项目在初期的数据积累是比较缓慢，一方面推广的问题，一方面产品不成熟，也不急于推广。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h4 id="业务变动引起的问题"><a href="#业务变动引起的问题" class="headerlink" title="业务变动引起的问题"></a>业务变动引起的问题</h4><p>项目初期，业务变动是一个非常正常的事情，大多数创业公司也不会有足够的开发和测试。由于业务变动引起的系统的问题还是比较多，有一些边界问题和特殊情况没有考虑到，需要及时解决。这类问题也基本上也没有什么好办法，查看出错原因再修复它。<br>所以一个好的日志功能在saas系统中非常重要。不是每一个客户都会反馈问题，也许你可以在客户反馈前就把这个问题解决掉。比如在出错时系统能主动提醒你，如发短信或系统通知。然后你可以去查看原因并解决这个问题.让大部份客户都查觉不到问题的存在。</p>
+<h4 id="系统宕机"><a href="#系统宕机" class="headerlink" title="系统宕机"></a>系统宕机</h4><p>服务宕机是一个非常严重的问题，在项目初期也很容易碰到，大多数是以下这几种原因引起的：<br>1.数据库连接数达到上限<br>2.数据库死锁某些记录死锁<br>3.服务器内存达到上限<br>一般来说saas系统初期都是单库，宕机的原因多半是数据库出问题了，常见的问题就是连接数达到上线。比如未释放连接，或数据库出现死锁引起无法释放连接。这此情况都碰到过。死锁出现的原因一般都是事务并发修改相同数据引起的。<br>常用解决方式：队列，锁或去事务。<br>服务器内存达上限，基本上是代码问题，需要有经验的开发人员去查代码。<br>同时要防止宕机，定时查看服务器和数据库的状态非常重要，这样我们或许可以提早发现一些问题，早一步做好防范措施。</p>
+<p>当然随着用户的增多，你还会遇到更多问题，同时你也会做出很多调整去解决这类问题，就像其它公司那样。</p>
+</div></article></div><div data-thread-key="2017/01/25/meallink/" data-title="saas体验总结" data-url="http://binyanbin.github.io/2017/01/25/meallink/" class="ds-share flat"><div class="ds-share-inline"><div class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a href="javascript:void(0)" class="ds-more">分享到:</a></li><li><a href="javascript:void(0);" data-service="weibo" class="ds-weibo">微博</a></li><li><a href="javascript:void(0);" data-service="qzone" class="ds-qzone">QQ空间</a></li><li><a href="javascript:void(0);" data-service="qqt" class="ds-qqt">QQ微博</a></li><li><a href="javascript:void(0);" data-service="wechat" class="ds-wechat">微信</a></li><div class="ds-share-icons-more"></div></div></div></div></section><footer><div class="paginator"><a href="/2016/12/10/vim/" class="next">下一篇</a></div><div data-thread-key="2017/01/25/meallink/" data-title="saas体验总结" data-url="http://binyanbin.github.io/2017/01/25/meallink/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"binyanbin"};
 (function() {
     var ds = document.createElement('script');
     ds.type = 'text/javascript';ds.async = true;
