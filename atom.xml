@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>码工严彬 coding不仅仅是工作</title>
+  <title>老白开发</title>
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://binyanbin.github.io/"/>
-  <updated>2017-02-03T16:12:10.000Z</updated>
+  <updated>2017-07-12T03:04:15.000Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -16,11 +16,157 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>saas体验总结</title>
+    <title>餐链系统17半年总结</title>
+    <link href="http://binyanbin.github.io/2017/06/30/meallink-2/"/>
+    <id>http://binyanbin.github.io/2017/06/30/meallink-2/</id>
+    <published>2017-06-29T16:00:00.000Z</published>
+    <updated>2017-07-12T03:04:15.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;在线日志查询&quot;&gt;&lt;a href=&quot;#在线日志查询&quot; class=&quot;headerlink&quot; title=&quot;在线日志查询&quot;&gt;&lt;/a&gt;在线日志查询&lt;/h1&gt;&lt;p&gt;  提供正式环境在线日志服务，能在线查询访问日志，异常日志及超时响应日志。&lt;/p&gt;
+&lt;h1 id=&quot;新版本管理方案&quot;&gt;&lt;a href=&quot;#新版本管理方案&quot; class=&quot;headerlink&quot; title=&quot;新版本管理方案&quot;&gt;&lt;/a&gt;新版本管理方案&lt;/h1&gt;&lt;p&gt;  由之前的单线，改为正式线，开发线及测试线相分离。需要紧急修复问题时，直接修改正式线的代码，进行发布。&lt;/p&gt;
+&lt;h1 id=&quot;新人培训&quot;&gt;&lt;a href=&quot;#新人培训&quot; class=&quot;headerlink&quot; title=&quot;新人培训&quot;&gt;&lt;/a&gt;新人培训&lt;/h1&gt;&lt;p&gt;  建立新人入职培训机制:从搭环境，然后带着问题学习代码及业务，最后做培训成果测试，淘汰不合适公司的新人。&lt;/p&gt;
+&lt;h1 id=&quot;系统安全&quot;&gt;&lt;a href=&quot;#系统安全&quot; class=&quot;headerlink&quot; title=&quot;系统安全&quot;&gt;&lt;/a&gt;系统安全&lt;/h1&gt;&lt;p&gt;  使用token+signature加强api接口安全,同时建立异常账户识别及处理的机制。&lt;/p&gt;
+&lt;h1 id=&quot;按模块发布&quot;&gt;&lt;a href=&quot;#按模块发布&quot; class=&quot;headerlink&quot; title=&quot;按模块发布&quot;&gt;&lt;/a&gt;按模块发布&lt;/h1&gt;&lt;p&gt;  使用springboot进行业务拆分,一模块一人负责，版本发布安模块进行。&lt;/p&gt;
+&lt;h1 id=&quot;系统发布流程&quot;&gt;&lt;a href=&quot;#系统发布流程&quot; class=&quot;headerlink&quot; title=&quot;系统发布流程&quot;&gt;&lt;/a&gt;系统发布流程&lt;/h1&gt;&lt;p&gt;  备份数据，执行数据升级脚本，依次发布各服务器进行验证,最后备份源码。&lt;/p&gt;
+&lt;h1 id=&quot;服务器运维&quot;&gt;&lt;a href=&quot;#服务器运维&quot; class=&quot;headerlink&quot; title=&quot;服务器运维&quot;&gt;&lt;/a&gt;服务器运维&lt;/h1&gt;&lt;p&gt;  总结服务器常见问题及处理方法,建立运维定期工作内容及标准。&lt;/p&gt;
+&lt;h1 id=&quot;建立线上问题反馈标准及线上数据申请修改标准&quot;&gt;&lt;a href=&quot;#建立线上问题反馈标准及线上数据申请修改标准&quot; class=&quot;headerlink&quot; title=&quot;建立线上问题反馈标准及线上数据申请修改标准&quot;&gt;&lt;/a&gt;建立线上问题反馈标准及线上数据申请修改标准&lt;/h1&gt;&lt;p&gt;  减少不必要的沟通&lt;/p&gt;
+&lt;h1 id=&quot;系统增长情况&quot;&gt;&lt;a href=&quot;#系统增长情况&quot; class=&quot;headerlink&quot; title=&quot;系统增长情况&quot;&gt;&lt;/a&gt;系统增长情况&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;月份&lt;/th&gt;
+&lt;th&gt;成交单数&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;17-01&lt;/td&gt;
+&lt;td&gt;2945&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17-02&lt;/td&gt;
+&lt;td&gt;3100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17-03&lt;/td&gt;
+&lt;td&gt;4670&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17-04&lt;/td&gt;
+&lt;td&gt;5877&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17-05&lt;/td&gt;
+&lt;td&gt;8155&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17-06&lt;/td&gt;
+&lt;td&gt;11094&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;月份&lt;/th&gt;
+&lt;th&gt;用户数&lt;/th&gt;
+&lt;th&gt;门店数&lt;/th&gt;
+&lt;th&gt;日均接口访问&lt;/th&gt;
+&lt;th&gt;接口访问峰值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;17-01&lt;/td&gt;
+&lt;td&gt;593&lt;/td&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;12000&lt;/td&gt;
+&lt;td&gt;23000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17-06&lt;/td&gt;
+&lt;td&gt;1273&lt;/td&gt;
+&lt;td&gt;75&lt;/td&gt;
+&lt;td&gt;80000&lt;/td&gt;
+&lt;td&gt;140000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;在线日志查询&quot;&gt;&lt;a href=&quot;#在线日志查询&quot; class=&quot;headerlink&quot; title=&quot;在线日志查询&quot;&gt;&lt;/a&gt;在线日志查询&lt;/h1&gt;&lt;p&gt;  提供正式环境在线日志服务，能在线查询访问日志，异常日志及超时响应日志。&lt;/p&gt;
+&lt;h1 id=&quot;新版本管
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>springboot webapi示例</title>
+    <link href="http://binyanbin.github.io/2017/05/17/springboot/"/>
+    <id>http://binyanbin.github.io/2017/05/17/springboot/</id>
+    <published>2017-05-16T16:00:00.000Z</published>
+    <updated>2017-07-12T03:04:21.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;这是一个使用Spring Boot示例项目, 可以直接使它做生产环境的骨架，也可以当作一个学习示例，它集成了一个Web框架常用的东东。
+
+你需要有的开发环境: JDK8+  Maven  JetBrainsIDEA  Mysql  Mongo  Redis  ActiveMQ  Solr
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;Features&quot;&gt;&lt;a href=&quot;#Features&quot; class=&quot;headerlink&quot; title=&quot;Features&quot;&gt;&lt;/a&gt;Features&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;1) Spring Boot + MyBatis = Web API
+
+2) 统一异常处理
+
+3) 日志处理, 根据不同的active profile激活不同的日志级别
+
+4) 多环境配置: 正式(prod)/开发(dev)/测试(test)/本地(local)
+
+5) 对返回的JSON进行统一的封装
+
+6) 使用YAML而不是properties
+
+7) 使用配置类代替spring.xml
+
+8) 单元测试(完善中)
+
+9) 启用spring缓存管理
+
+10) 集成mysql,mongod,redis,ActiveMQ,Solr
+
+11) mongo日志存储,访问日志，异常日志,超时响应日志
+
+12) mongo序列服务
+
+13) 缓存配置服务
+
+14) token+signature接口安全机制
+
+15) mysql读写分离
+
+16) ActiveMQ示例
+
+17) Solr示例(完善中)
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;1) 初始化数据库, 在你自己的MySQL中执行/resource/user.sql
+
+2) 运行Application.java
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/binyanbin/springboot-api&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;源码查看&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;这是一个使用Spring Boot示例项目,
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>餐链系统16年终总结</title>
     <link href="http://binyanbin.github.io/2017/01/25/meallink/"/>
     <id>http://binyanbin.github.io/2017/01/25/meallink/</id>
     <published>2017-01-24T16:00:00.000Z</published>
-    <updated>2017-02-03T16:12:10.000Z</updated>
+    <updated>2017-07-12T02:22:35.000Z</updated>
     
     <content type="html">&lt;p&gt;16年有幸参与了一个saas项目,也慢慢的知道前期客户及数据的累积是多么艰难，同时要运营一个saas项目，也是一个非常不容易的事情。&lt;/p&gt;
 &lt;h2 id=&quot;到16年底的项目情况如下&quot;&gt;&lt;a href=&quot;#到16年底的项目情况如下&quot; class=&quot;headerlink&quot; title=&quot;到16年底的项目情况如下:&quot;&gt;&lt;/a&gt;到16年底的项目情况如下:&lt;/h2&gt;&lt;p&gt;系统租户共34个,注册账号863个,注册门店:38个,在使用门店:20个,供应商:300个 在使用供应商:77个&lt;br&gt;每天交易单:130个左右,每个单平均物料:7.8个,每天api访问次数为:13000次左右&lt;/p&gt;
@@ -1476,56 +1622,6 @@ sb.Append(str3);
 &lt;ul&gt;
 &lt;li&gt;针对高并发，我们如何解耦后端压力，特别是数据库的压力。&lt;/li&gt;
 &lt;li&gt;如何保障库存可靠。
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>C windows版开源http服务</title>
-    <link href="http://binyanbin.github.io/2016/04/17/c-7/"/>
-    <id>http://binyanbin.github.io/2016/04/17/c-7/</id>
-    <published>2016-04-16T16:00:00.000Z</published>
-    <updated>2016-06-15T15:52:46.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;minhttpd&quot;&gt;&lt;a href=&quot;#minhttpd&quot; class=&quot;headerlink&quot; title=&quot;minhttpd&quot;&gt;&lt;/a&gt;minhttpd&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/binyanbin/minihttpd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;minihttpd&lt;/a&gt;一个超小型静态资源http服务器,,去掉注释及空行的剩余代码量小于300行。可支持windows和linux gcc编译。&lt;/p&gt;
-&lt;h4 id=&quot;功能及目的&quot;&gt;&lt;a href=&quot;#功能及目的&quot; class=&quot;headerlink&quot; title=&quot;功能及目的&quot;&gt;&lt;/a&gt;功能及目的&lt;/h4&gt;&lt;p&gt;此服务的功能仅支持静态资源上传与下载，如图片,js,html,css等静态资源，以此作为单独静态资源服务器使用,使静态资源与web主服务器分离。这个服务也可以让你更了解http服务器的运作方式及基本原理,也是用纯C开发网络服务的一个示例。&lt;/p&gt;
-&lt;h4 id=&quot;windwos-MinGW编译&quot;&gt;&lt;a href=&quot;#windwos-MinGW编译&quot; class=&quot;headerlink&quot; title=&quot;windwos MinGW编译:&quot;&gt;&lt;/a&gt;windwos MinGW编译:&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;gcc -o http http.c &lt;span class=&quot;_&quot;&gt;-l&lt;/span&gt; wsock32&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;站点搭建&quot;&gt;&lt;a href=&quot;#站点搭建&quot; class=&quot;headerlink&quot; title=&quot;站点搭建&quot;&gt;&lt;/a&gt;站点搭建&lt;/h4&gt;&lt;p&gt;站点搭建:&lt;br&gt;创建站点目录，把http.exe复制到目录下，创建www目录并把网站的所有静态页面copy到目录下。&lt;br&gt;启动服务&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http 8080&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h4 id=&quot;历史&quot;&gt;&lt;a href=&quot;#历史&quot; class=&quot;headerlink&quot; title=&quot;历史&quot;&gt;&lt;/a&gt;历史&lt;/h4&gt;&lt;p&gt;v0.1.0 第一个版本，支持动词get及html。 [2016-4-17]&lt;br&gt;v0.1.1 支持图片(最大为1m),css。[2016-5-4]&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/binyanbin/minihttpd&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;源码查看&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;minhttpd&quot;&gt;&lt;a href=&quot;#minhttpd&quot; class=&quot;headerlink&quot; title=&quot;minhttpd&quot;&gt;&lt;/a&gt;minhttpd&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/binyanbin/minihttp
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>C语言之socket 简易客户端</title>
-    <link href="http://binyanbin.github.io/2016/04/13/c-6/"/>
-    <id>http://binyanbin.github.io/2016/04/13/c-6/</id>
-    <published>2016-04-12T16:00:00.000Z</published>
-    <updated>2016-06-15T15:52:46.000Z</updated>
-    
-    <content type="html">&lt;p&gt;昨天做了一个简易服务端，今天尝试做一个简易客户端，东西比较少，很顺利就完成了。客户端socket操作步骤:1.创建socket 2.连接服务端 3.接收服务端返回数据&lt;/p&gt;
-&lt;h1 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h1&gt;&lt;p&gt;1.连接:&lt;br&gt;int connect(int fd, const struct sockaddr* addr, socklen_t address_len));&lt;br&gt;fd：套接字描述符。&lt;br&gt;addr：返回连接着的地址&lt;br&gt;address_len：确定address缓冲区的长度&lt;br&gt;返回值：如果函数执行成功，返回值为0，否则为-1。&lt;/p&gt;
-&lt;p&gt;2.接收&lt;br&gt;int recv(SOCKET socket, char FAR* buf, int len, int flags);&lt;br&gt;socket：一个标识已连接套接口的描述字。&lt;br&gt;buf：用于接收数据的缓冲区。&lt;br&gt;len：缓冲区长度。&lt;br&gt;flags：指定调用方式。&lt;br&gt;返回值：若无错误发生,recv()返回读入的字节数.如果连接已中止，返回0.否则的话,返回SOCKET_ERROR错误.&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;服务端示例&quot;&gt;&lt;a href=&quot;#服务端示例&quot; class=&quot;headerlink&quot; title=&quot;服务端示例&quot;&gt;&lt;/a&gt;服务端示例&lt;/h1&gt;&lt;p&gt;新建client.c文件&lt;br&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;81&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;82&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;83&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;84&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;85&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;86&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;87&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;88&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; MINGW32&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;ifdef&lt;/span&gt; MINGW32&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;winsock2.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;sys/socket.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;arpa/inet.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;endif&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; MAXLINE 1024&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; argc,&lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; **argv)&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; sockfd,n;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; receline[MAXLINE+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;struct&lt;/span&gt; sockaddr_in serveraddr;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//输入参数太少，退出&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(argc != &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;Usage :%s IP_address\n&quot;&lt;/span&gt;, argv[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;ifdef&lt;/span&gt; MINGW32&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//Winsows下启用socket&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	WSADATA wsadata;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(WSAStartup(MAKEWORD(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;),&amp;amp;wsadata)==SOCKET_ERROR)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;WSAStartup() fail\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;endif&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//建立socket&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;((sockfd=socket(AF_INET,SOCK_STREAM,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;))==&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;socket() fail\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//设置协议及Port&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;memset&lt;/span&gt;(&amp;amp;serveraddr,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;keyword&quot;&gt;sizeof&lt;/span&gt;(serveraddr));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	serveraddr.sin_family = AF_INET;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	serveraddr.sin_port=htons(&lt;span class=&quot;number&quot;&gt;1024&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//设置IP&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	serveraddr.sin_addr.s_addr=inet_addr(argv[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//连接&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(connect(sockfd,(&lt;span class=&quot;keyword&quot;&gt;struct&lt;/span&gt; sockaddr *)&amp;amp;serveraddr,&lt;span class=&quot;keyword&quot;&gt;sizeof&lt;/span&gt;(serveraddr))==&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;connect() fail\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//读取数据并输入到标准输出&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;ifdef&lt;/span&gt; MINGW32&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;((n=recv(sockfd,receline,MAXLINE,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;))&amp;gt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;((n=read(sockfd,receline,MAXLINE))&amp;gt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;endif&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		receline[n]=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;fputs&lt;/span&gt;(receline,&lt;span class=&quot;built_in&quot;&gt;stdout&lt;/span&gt;)==EOF)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;fputs() error\r\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//没有获取数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(n&amp;lt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;read() fail\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;ifdef&lt;/span&gt; MINGW32&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//Winsows下关闭socket&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	closesocket(sockfd);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	WSACleanup();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;endif&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;编译:gcc -g -o client client.c -l wsock32&lt;br&gt;执行:&lt;br&gt;服务端 server&lt;br&gt;客户端连接 client 127.0.0.1&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;昨天做了一个简易服务端，今天尝试做一个简易客户端，东西比较少，很顺利就完成了。客户端socket操作步骤:1.创建socket 2.连接服务端 3.接收服务端返回数据&lt;/p&gt;
-&lt;h1 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h1&gt;&lt;p&gt;1.连接:&lt;br&gt;int connect(int fd, const struct sockaddr* addr, socklen_t address_len));&lt;br&gt;fd：套接字描述符。&lt;br&gt;addr：返回连接着的地址&lt;br&gt;address_len：确定address缓冲区的长度&lt;br&gt;返回值：如果函数执行成功，返回值为0，否则为-1。&lt;/p&gt;
-&lt;p&gt;2.接收&lt;br&gt;int recv(SOCKET socket, char FAR* buf, int len, int flags);&lt;br&gt;socket：一个标识已连接套接口的描述字。&lt;br&gt;buf：用于接收数据的缓冲区。&lt;br&gt;len：缓冲区长度。&lt;br&gt;flags：指定调用方式。&lt;br&gt;返回值：若无错误发生,recv()返回读入的字节数.如果连接已中止，返回0.否则的话,返回SOCKET_ERROR错误.&lt;/p&gt;
     
     </summary>
     

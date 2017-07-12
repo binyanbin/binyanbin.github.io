@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 餐链系统17半年总结 · 老白开发</title><meta name="description" content="半年总结"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/2015/12/20/self-introduce/" target="_self" class="nav-list-link">WECHAT</a></li><li class="nav-list-item"><a href="https://www.github.com/binyanbin" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">餐链系统17半年总结</h1><div class="post-meta"><div class="post-time">2017年6月30日</div></div><div class="post-content"><h1 id="在线日志查询"><a href="#在线日志查询" class="headerlink" title="在线日志查询"></a>在线日志查询</h1><p>  提供正式环境在线日志服务，能在线查询访问日志，异常日志及超时响应日志。</p>
+<h1 id="新版本管理方案"><a href="#新版本管理方案" class="headerlink" title="新版本管理方案"></a>新版本管理方案</h1><p>  由之前的单线，改为正式线，开发线及测试线相分离。需要紧急修复问题时，直接修改正式线的代码，进行发布。</p>
+<h1 id="新人培训"><a href="#新人培训" class="headerlink" title="新人培训"></a>新人培训</h1><p>  建立新人入职培训机制:从搭环境，然后带着问题学习代码及业务，最后做培训成果测试，淘汰不合适公司的新人。</p>
+<h1 id="系统安全"><a href="#系统安全" class="headerlink" title="系统安全"></a>系统安全</h1><p>  使用token+signature加强api接口安全,同时建立异常账户识别及处理的机制。</p>
+<h1 id="按模块发布"><a href="#按模块发布" class="headerlink" title="按模块发布"></a>按模块发布</h1><p>  使用springboot进行业务拆分,一模块一人负责，版本发布安模块进行。</p>
+<h1 id="系统发布流程"><a href="#系统发布流程" class="headerlink" title="系统发布流程"></a>系统发布流程</h1><p>  备份数据，执行数据升级脚本，依次发布各服务器进行验证,最后备份源码。</p>
+<h1 id="服务器运维"><a href="#服务器运维" class="headerlink" title="服务器运维"></a>服务器运维</h1><p>  总结服务器常见问题及处理方法,建立运维定期工作内容及标准。</p>
+<h1 id="建立线上问题反馈标准及线上数据申请修改标准"><a href="#建立线上问题反馈标准及线上数据申请修改标准" class="headerlink" title="建立线上问题反馈标准及线上数据申请修改标准"></a>建立线上问题反馈标准及线上数据申请修改标准</h1><p>  减少不必要的沟通</p>
+<h1 id="系统增长情况"><a href="#系统增长情况" class="headerlink" title="系统增长情况"></a>系统增长情况</h1><table>
+<thead>
+<tr>
+<th>月份</th>
+<th>成交单数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17-01</td>
+<td>2945</td>
+</tr>
+<tr>
+<td>17-02</td>
+<td>3100</td>
+</tr>
+<tr>
+<td>17-03</td>
+<td>4670</td>
+</tr>
+<tr>
+<td>17-04</td>
+<td>5877</td>
+</tr>
+<tr>
+<td>17-05</td>
+<td>8155</td>
+</tr>
+<tr>
+<td>17-06</td>
+<td>11094</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>月份</th>
+<th>用户数</th>
+<th>门店数</th>
+<th>日均接口访问</th>
+<th>接口访问峰值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17-01</td>
+<td>593</td>
+<td>22</td>
+<td>12000</td>
+<td>23000</td>
+</tr>
+<tr>
+<td>17-06</td>
+<td>1273</td>
+<td>75</td>
+<td>80000</td>
+<td>140000</td>
+</tr>
+</tbody>
+</table>
+</div></article></div><div data-thread-key="2017/06/30/meallink-2/" data-title="餐链系统17半年总结" data-url="http://binyanbin.github.io/2017/06/30/meallink-2/" class="ds-share flat"><div class="ds-share-inline"><div class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a href="javascript:void(0)" class="ds-more">分享到:</a></li><li><a href="javascript:void(0);" data-service="weibo" class="ds-weibo">微博</a></li><li><a href="javascript:void(0);" data-service="qzone" class="ds-qzone">QQ空间</a></li><li><a href="javascript:void(0);" data-service="qqt" class="ds-qqt">QQ微博</a></li><li><a href="javascript:void(0);" data-service="wechat" class="ds-wechat">微信</a></li><div class="ds-share-icons-more"></div></div></div></div></section><footer><div class="paginator"><a href="/2017/05/17/springboot/" class="next">下一篇</a></div><div data-thread-key="2017/06/30/meallink-2/" data-title="餐链系统17半年总结" data-url="http://binyanbin.github.io/2017/06/30/meallink-2/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"binyanbin"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2016 - 2017 <a href="http://binyanbin.github.io">严彬</a>, unless otherwise noted.</p></div></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?fcf7e8f303b6e03be86f5619636d0f7e";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></body></html>
