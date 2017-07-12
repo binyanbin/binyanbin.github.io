@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://binyanbin.github.io/"/>
-  <updated>2017-07-12T03:06:43.000Z</updated>
+  <updated>2017-07-12T03:08:27.000Z</updated>
   <id>http://binyanbin.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://binyanbin.github.io/2017/06/30/meallink-2/"/>
     <id>http://binyanbin.github.io/2017/06/30/meallink-2/</id>
     <published>2017-06-29T16:00:00.000Z</published>
-    <updated>2017-07-12T03:06:43.000Z</updated>
+    <updated>2017-07-12T03:08:27.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;在线日志查询&quot;&gt;&lt;a href=&quot;#在线日志查询&quot; class=&quot;headerlink&quot; title=&quot;在线日志查询&quot;&gt;&lt;/a&gt;在线日志查询&lt;/h1&gt;&lt;p&gt;  提供正式环境在线日志服务，能在线查询访问日志，异常日志及超时响应日志。&lt;/p&gt;
 &lt;h1 id=&quot;新版本管理方案&quot;&gt;&lt;a href=&quot;#新版本管理方案&quot; class=&quot;headerlink&quot; title=&quot;新版本管理方案&quot;&gt;&lt;/a&gt;新版本管理方案&lt;/h1&gt;&lt;p&gt;  由之前的单线，改为正式线，开发线及测试线相分离。需要紧急修复问题时，直接修改正式线的代码，进行发布。&lt;/p&gt;
@@ -30,7 +30,7 @@
 &lt;h1 id=&quot;系统发布流程&quot;&gt;&lt;a href=&quot;#系统发布流程&quot; class=&quot;headerlink&quot; title=&quot;系统发布流程&quot;&gt;&lt;/a&gt;系统发布流程&lt;/h1&gt;&lt;p&gt;  备份数据，执行数据升级脚本，依次发布各服务器进行验证,最后备份源码。&lt;/p&gt;
 &lt;h1 id=&quot;服务器运维&quot;&gt;&lt;a href=&quot;#服务器运维&quot; class=&quot;headerlink&quot; title=&quot;服务器运维&quot;&gt;&lt;/a&gt;服务器运维&lt;/h1&gt;&lt;p&gt;  总结服务器常见问题及处理方法,建立运维定期工作内容及标准。&lt;/p&gt;
 &lt;h1 id=&quot;建立线上问题反馈标准及线上数据申请修改标准&quot;&gt;&lt;a href=&quot;#建立线上问题反馈标准及线上数据申请修改标准&quot; class=&quot;headerlink&quot; title=&quot;建立线上问题反馈标准及线上数据申请修改标准&quot;&gt;&lt;/a&gt;建立线上问题反馈标准及线上数据申请修改标准&lt;/h1&gt;&lt;p&gt;  减少不必要的沟通&lt;/p&gt;
-&lt;h1 id=&quot;系统增长情况&quot;&gt;&lt;a href=&quot;#系统增长情况&quot; class=&quot;headerlink&quot; title=&quot;系统增长情况&quot;&gt;&lt;/a&gt;系统增长情况&lt;/h1&gt;&lt;table&gt;
+&lt;h1 id=&quot;订单情况&quot;&gt;&lt;a href=&quot;#订单情况&quot; class=&quot;headerlink&quot; title=&quot;订单情况&quot;&gt;&lt;/a&gt;订单情况&lt;/h1&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;月份&lt;/th&gt;
@@ -64,7 +64,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;table&gt;
+&lt;h1 id=&quot;其它情况&quot;&gt;&lt;a href=&quot;#其它情况&quot; class=&quot;headerlink&quot; title=&quot;其它情况&quot;&gt;&lt;/a&gt;其它情况&lt;/h1&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;月份&lt;/th&gt;
